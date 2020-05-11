@@ -121,6 +121,10 @@ Part 3: Correlation: relationship between variables
 confidence intervals, p-value, z-score, t-test
 [todo]
 
+Ressources: 
+1. Crash Course: https://www.youtube.com/playlist?list=PL8dPuuaLjXtNM_Y-bUAhblSAdWRnmBUcr
+
+
 ##### 5. Unix command line
 
 pwd, cd, mkdir, rm, cp, chmod, grep, cut, less, wc, head, tail, find, 
