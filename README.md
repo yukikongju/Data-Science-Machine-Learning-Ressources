@@ -74,12 +74,16 @@ I have also documented my machine learning process in my "Machine-Learning-Resso
 dplyr functions: groupby, mutate, select, filter, summarise, aggregate, arrange, rename, count
 tidyr: join, pivot_longer, pivot_wider, unite, separate
 
+Ressources: 1. Data Wrangling from RStudio: https://www.youtube.com/watch?v=jOd65mR1zfw&list=PL9HYL-VRX0oQOWAFoKHFQAsWAI3ImbNPk
+
 [todo]
 
 ##### 2. Data visualization with ggplot
 
 ggplot: 
 more package: plotly, ggAnimate, ggExtra, ggThemes
+
+Ressources: 
 
 [to do]
 
@@ -88,6 +92,11 @@ more package: plotly, ggAnimate, ggExtra, ggThemes
 Part 1: Central Tendencies
 
 Mean, median, mode, standard deviation, 
+
+Ressources: 
+1. Statquest with Josh Starmer: https://www.youtube.com/watch?v=qBigTkBLU6g&list=PLblh5JKOoLUK0FLuzwntyYI10UQFUhsY9
+2. UC Business: http://uc-r.github.io/descriptive
+
 [to do]
 
 Part 2: Variation: What happens within a variables
@@ -107,4 +116,17 @@ Part 3: Correlation: relationship between variables
 ##### 4. Statistical Inferences and Hypothesis Testing
 
 confidence intervals, p-value, z-score, t-test
+[todo]
+
+##### 5. Unix command line
+
+pwd, cd, mkdir, rm, cp, chmod, grep, cut, less, wc, head, tail, find, 
+[to do]
+
+##### 6. Data Scrapping with rvest 
+
+Ressources:
+1. Using Chrome Extension: https://www.youtube.com/watch?v=4IYfYx4yoAI&t=9s
+2. Scrapping Table: https://www.youtube.com/watch?v=0mvlZhYk44E&t=912s
+
 [todo]
