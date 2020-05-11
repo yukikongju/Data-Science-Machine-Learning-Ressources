@@ -20,6 +20,9 @@ Data science combines the field of statistics and programmation to describe data
 
 7. Refine the model: [to do]
 
+Ressources: 
+1. Decisive Data: https://www.youtube.com/watch?v=24G_pfcl3qE&list=PLwM2SFDcolcK9WIpn50JkELC0grYP5Pyu
+
 ### Some questions I had when I first started learning Data Science?
 
 ##### What programming languages should I learn?
