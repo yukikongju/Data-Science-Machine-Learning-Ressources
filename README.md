@@ -44,6 +44,9 @@ Calculus Checklist:
 Linear Algebra:
 [to do]
 
+Ressources:
+1. The Elements of Statistical Learning: https://web.stanford.edu/~hastie/Papers/ESLII.pdf
+
 ##### How can I apply data science in real life?
 
 [to do]
@@ -79,9 +82,14 @@ I have also documented my machine learning process in my "Machine-Learning-Resso
 
 Ressources:
 1. MIT Missing Semester Course: https://missing.csail.mit.edu/2020/  https://missing.csail.mit.edu/2019/
+2. Data Science at the Command Line by Jeroen Janssens: https://www.datascienceatthecommandline.com
+
 
 ##### 1. Basics of R
 
+Ressources:
+1. R Programming for Data Science by Roger Peng: https://bookdown.org/rdpeng/rprogdatascience/
+2. R for Data Science by Hadley Wickham: https://r4ds.had.co.nz/
 [to do]
 
 ##### 2. Data Wrangling with dplyr and tidyr
@@ -101,6 +109,8 @@ Ressources:
 - more package: plotly, ggAnimate, ggExtra, ggThemes
 
 Ressources: 
+1. Data Visualization with R by Rob Kabacoff: https://rkabacoff.github.io/datavis/
+2. Data Visualization: an Introduction by Kieran Healy:https://socviz.co/index.html#preface
 
 [to do]
 
@@ -153,6 +163,11 @@ Ressources:
 
 ##### 7. Modelling
 
+- Machine Learning
+- Neural Network
+- Reinforcement Learning
+
 Ressources:
 1. Machine Learning Playlist by Statquest : https://www.youtube.com/watch?v=Gv9_4yMHFhI&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF
 2.
+3. Forcasting Principles and Practices: https://otexts.com/fpp2/
