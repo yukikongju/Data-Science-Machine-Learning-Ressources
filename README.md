@@ -46,6 +46,8 @@ Linear Algebra:
 
 ##### How can I apply data science in real life?
 
+[to do]
+
 ##### How do I get started on my data science journey?
 
 From my experience, there are 3 principal specialization in data science:
@@ -68,39 +70,48 @@ I have also documented my machine learning process in my "Machine-Learning-Resso
 
 ### How I assembled my curriculum?
 
-##### 0. Basics of R
+##### 0. Get proficient with your tools
+
+- Shell Scripting and Command Line
+- Data Wrangling in Bash
+- Version Control (git)
+- Get familiar with editors
+
+Ressources:
+1. MIT Missing Semester Course: https://missing.csail.mit.edu/2020/  https://missing.csail.mit.edu/2019/
+
+##### 1. Basics of R
 
 [to do]
 
-##### 1. Data Wrangling with dplyr and tidyr
+##### 2. Data Wrangling with dplyr and tidyr
 
-dplyr functions: groupby, mutate, select, filter, summarise, aggregate, arrange, rename, count
-tidyr: join, pivot_longer, pivot_wider, unite, separate
+- dplyr functions: groupby, mutate, select, filter, summarise, aggregate, arrange, rename, count
+- tidyr: join, pivot_longer, pivot_wider, unite, separate
+- data wrangling in bash
 
 Ressources:
 1. Data Wrangling from RStudio: https://www.youtube.com/watch?v=jOd65mR1zfw&list=PL9HYL-VRX0oQOWAFoKHFQAsWAI3ImbNPk
 
-2. Shell Scripting and Data Wrangling with Bash: https://missing.csail.mit.edu/2020/  https://missing.csail.mit.edu/2019/
-
 [todo]       
 
-##### 2. Data visualization with ggplot
+##### 3. Data visualization with ggplot
 
-ggplot: 
-more package: plotly, ggAnimate, ggExtra, ggThemes
+- ggplot: 
+- more package: plotly, ggAnimate, ggExtra, ggThemes
 
 Ressources: 
 
 [to do]
 
-##### 3. Introduction to Central tendencies, variation and correlation
+##### 4. Introduction to Central tendencies, variation and correlation
 
 Part 1: Central Tendencies
 
-Mean, median, mode, standard deviation, 
+- Mean, median, mode, standard deviation, 
 
 Ressources: 
-1. Statquest with Josh Starmer: https://www.youtube.com/watch?v=qBigTkBLU6g&list=PLblh5JKOoLUK0FLuzwntyYI10UQFUhsY9
+1. Statistic Fundamentals Playlist by Statquest : https://www.youtube.com/watch?v=qBigTkBLU6g&list=PLblh5JKOoLUK0FLuzwntyYI10UQFUhsY9
 2. UC Business: http://uc-r.github.io/descriptive
 
 [to do]
@@ -119,24 +130,29 @@ Part 3: Correlation: relationship between variables
 2. Visualization: scatter plot, qqplot
 3. Metrics: R-squared, 
 
-##### 4. Statistical Inferences and Hypothesis Testing
+##### 5. Statistical Inferences and Hypothesis Testing
 
-confidence intervals, p-value, z-score, t-test
+- confidence intervals, p-value, z-score, t-test
+
 [todo]
 
 Ressources: 
 1. Crash Course: https://www.youtube.com/playlist?list=PL8dPuuaLjXtNM_Y-bUAhblSAdWRnmBUcr
 
-
-##### 5. Unix command line
-
-pwd, cd, mkdir, rm, cp, chmod, grep, cut, less, wc, head, tail, find, 
-[to do]
-
 ##### 6. Data Scrapping with rvest 
+
+- get data table from website
+- get text data from website
+- use lynx on bash
 
 Ressources:
 1. Using Chrome Extension: https://www.youtube.com/watch?v=4IYfYx4yoAI&t=9s
 2. Scrapping Table: https://www.youtube.com/watch?v=0mvlZhYk44E&t=912s
 
 [todo]
+
+##### 7. Modelling
+
+Ressources:
+1. Machine Learning Playlist by Statquest : https://www.youtube.com/watch?v=Gv9_4yMHFhI&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF
+2.
