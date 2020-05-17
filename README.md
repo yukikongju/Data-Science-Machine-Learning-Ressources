@@ -77,9 +77,12 @@ I have also documented my machine learning process in my "Machine-Learning-Resso
 dplyr functions: groupby, mutate, select, filter, summarise, aggregate, arrange, rename, count
 tidyr: join, pivot_longer, pivot_wider, unite, separate
 
-Ressources: 1. Data Wrangling from RStudio: https://www.youtube.com/watch?v=jOd65mR1zfw&list=PL9HYL-VRX0oQOWAFoKHFQAsWAI3ImbNPk
+Ressources:
+1. Data Wrangling from RStudio: https://www.youtube.com/watch?v=jOd65mR1zfw&list=PL9HYL-VRX0oQOWAFoKHFQAsWAI3ImbNPk
 
-[todo]
+2. Shell Scripting and Data Wrangling with Bash: https://missing.csail.mit.edu/2020/  https://missing.csail.mit.edu/2019/
+
+[todo]       
 
 ##### 2. Data visualization with ggplot
 
