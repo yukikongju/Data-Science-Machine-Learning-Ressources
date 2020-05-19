@@ -171,6 +171,6 @@ Ressources:
 Ressources:
 1. Theory: Machine Learning Playlist by Statquest : https://www.youtube.com/watch?v=Gv9_4yMHFhI&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF
 2. Theory: MIT Deep Learning Playlist by Alexander Amini: https://www.youtube.com/watch?v=njKP3FqW3Sk&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI
-3. Book: Machine Learning with Python by Chris Albon: 
-4. Book: Deep Learning with Python by Francois Chollet:
+3. Book: Machine Learning with Python by Chris Albon (focus on data preprocessing and all the ML algotihms): 
+4. Book: Deep Learning with Python by Francois Chollet (focus on neural network and their applications):
 3. Book: Forcasting Principles and Practices: https://otexts.com/fpp2/
