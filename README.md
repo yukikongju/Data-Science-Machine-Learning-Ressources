@@ -83,7 +83,8 @@ I have also documented my machine learning process in my "Machine-Learning-Resso
 Ressources:
 1. MIT Missing Semester Course: https://missing.csail.mit.edu/2020/  https://missing.csail.mit.edu/2019/
 2. Data Science at the Command Line by Jeroen Janssens: https://www.datascienceatthecommandline.com
-
+3. Advanced Bash Usage Conference by James Pannacciulli et OSCON2014: https://www.youtube.com/watch?v=uqHjc7hlqd0&t=1303s
+4. Advanced Bash Usage Conference by James Pannacciulli at LinuxFest2017: https://www.youtube.com/watch?v=BJ0uHhBkzOQ&t=462s
 
 ##### 1. Basics of R
 
@@ -168,6 +169,8 @@ Ressources:
 - Reinforcement Learning
 
 Ressources:
-1. Machine Learning Playlist by Statquest : https://www.youtube.com/watch?v=Gv9_4yMHFhI&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF
-2.
-3. Forcasting Principles and Practices: https://otexts.com/fpp2/
+1. Theory: Machine Learning Playlist by Statquest : https://www.youtube.com/watch?v=Gv9_4yMHFhI&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF
+2. Theory: MIT Deep Learning Playlist by Alexander Amini: https://www.youtube.com/watch?v=njKP3FqW3Sk&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI
+3. Book: Machine Learning with Python by Chris Albon: 
+4. Book: Deep Learning with Python by Francois Chollet:
+3. Book: Forcasting Principles and Practices: https://otexts.com/fpp2/
