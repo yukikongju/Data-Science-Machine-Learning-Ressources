@@ -186,12 +186,19 @@ Ressources:
 - Reinforcement Learning
 - Genetic algorithm
 
-Ressources:
+Ressources for Machine Learning:
 1. Theory: Machine Learning Playlist by Statquest : https://www.youtube.com/watch?v=Gv9_4yMHFhI&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF
-2. Theory: MIT Deep Learning Playlist by Alexander Amini: https://www.youtube.com/watch?v=njKP3FqW3Sk&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI
+2. Book: Machine Learning with Python by Chris Albon (focus on data preprocessing and all the ML algorithms)
 3. Book: Introduction to Machine Learning with Python by Andreas Muller (focus on model visualization)
-4. Book: Machine Learning with Python by Chris Albon (focus on data preprocessing and all the ML algorithms)
-5. Book: Deep Learning with Python by Francois Chollet (focus on basics Neural Networks)
 6. Book: Feature Engineering for Machine Learning by Alice Zheng (focus on featurization)
 7. Book: Forcasting Principles and Practices: https://otexts.com/fpp2/ (focus on time-series and forecasting)
 
+Ressources for Neural Network:
+4. Theory: MIT Deep Learning Playlist by Alexander Amini: https://www.youtube.com/watch?v=njKP3FqW3Sk&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI
+5. Book: Deep Learning with Python by Francois Chollet (focus on basics Neural Networks)
+
+Ressources for Reinforcement Learning:
+12. Reinforcement Learning Course given by David Silver on Deep Mind. In-depth explanation on agent, environment, decision processes and policies. Link: https://www.youtube.com/watch?v=2pWv7GOvuf0&list=PLqYmG7hTraZDM-OYHWgPebj2MfCFzFObQ
+
+Ressources for Genetic Algorithms:
+15. Genetic algorithm by The Coding Train - 9.2. Great Overview of fitness function, parents selection, crossover, and mutation. Link: https://www.youtube.com/watch?v=RxTfc4JLYKs
