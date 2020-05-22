@@ -139,7 +139,6 @@ More: web applications and package creation. I have little experience in web dev
 3. Data visualization with ggplot, plotly, ggAnimate, ggExtra, ggThemes, and more
     1. Data Visualization with R by Rob Kabacoff: https://rkabacoff.github.io/datavis/
     2. Data Visualization: an Introduction by Kieran Healy:https://socviz.co/index.html#preface
-    3. Book: Python Data Science Handbook by Jake VanderPlas (focus on data manipulation and data visualization)
     
     Checklist:
     - Basic plots: geom_point(), geom_line(), geom_bar(), ...
@@ -174,10 +173,11 @@ More: web applications and package creation. I have little experience in web dev
 ### Part 3: Modelling with Python
 1. Machine Learning:
     1. Theory: Machine Learning Playlist by Statquest : https://www.youtube.com/watch?v=Gv9_4yMHFhI&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF
-    2. Book: Machine Learning with Python by Chris Albon (focus on data preprocessing and all the ML algorithms)
-    3. Book: Introduction to Machine Learning with Python by Andreas Muller (focus on model visualization)
-    4. Book: Feature Engineering for Machine Learning by Alice Zheng (focus on featurization)
-    5. Book: Forcasting Principles and Practices: https://otexts.com/fpp2/ (focus on time-series and forecasting)
+    2. Book: Python Data Science Handbook by Jake VanderPlas (focus on data manipulation and data visualization)
+    3. Book: Machine Learning with Python by Chris Albon (focus on data preprocessing and all the ML algorithms)
+    4. Book: Introduction to Machine Learning with Python by Andreas Muller (focus on model visualization)
+    5. Book: Feature Engineering for Machine Learning by Alice Zheng (focus on featurization)
+    6. Book: Forcasting Principles and Practices: https://otexts.com/fpp2/ (focus on time-series and forecasting)
 
 2. Neural Network:
     1. Theory: MIT Deep Learning Playlist by Alexander Amini: https://www.youtube.com/watch?v=njKP3FqW3Sk&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI
