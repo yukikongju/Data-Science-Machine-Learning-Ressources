@@ -1,3 +1,6 @@
+### What is this repository about?
+I document my learning process and the most interesting ressources I found to learn data science. 
+
 ### What is data science?
 
 Data science combines the field of statistics and programmation to describe data, predict values and prescribe recommendations based on the predictions made in a specific domain, such as business analytics, sport analytics and bioinformatics. It helps us understand how the decisions we take influence our world, quantify if the changes implemented have been helpful, and suggest how should we correct our comportement to reach our goals. 
@@ -36,13 +39,19 @@ Additionally, if you do plan to become a data scientist, you will need to know h
 One should have strong statistical, calculus and linear algebra knowlegde to master data science. Statistical analysis is mostly used in the descriptive analysis and data exploration process, where as calculus and linear algebra are mostly used for modelling. 
 
 Statistics Checklist:
-[to do]
+1. Probability and distribution
+2. Bayes Theorem. Used for naive Bayes classifier
+3. Hypothesis testing
 
 Calculus Checklist:
-[to do]
+1. Integrals: calculate the area under a curve. Used for ROC and AUC
+2. Derivatives: calculate the slope of a curve. Used for gradient descent
+3. Partial Derivative and Chain Rule. Used for Backpropagation
 
 Linear Algebra:
-[to do]
+1. Vectors and Matrices operations: matrices multiplication, dot product, transpose, identity matrix. Used for data manipulation
+2. Eighten values, unit vectors. Used for PCA, SVM, LDA, ...
+3. Hyperplanes and distances: Used for K-Means Clustering, SVM, ...
 
 Ressources:
 1. The Elements of Statistical Learning: https://web.stanford.edu/~hastie/Papers/ESLII.pdf
@@ -65,140 +74,124 @@ The order in which you learn data science greatly depends on which of these 3 fi
 
 Personnally, I would suggest starting with statistical understanding and data visualization as it doesn't require as much mathematical knowledge as modelling, nor specific field knowledge to understand the business needs requires to construct a web applications.
 
-### What this repository is about?
+### What is my learning style?
 
-I document my learning process and the most interesting ressources I found to learn data science. In this repository, I will mostly focus on the statistical, analytics and visualization part of data science. Most of the code will be on R.
+As of 2020-05-22, my learning method is somewhat arbitrary. I do some research on a subject, add it to one of the path, and learn it somewhere along the line. To be honest, I don't really have a way to determine which subject to learn next, but when I am choosing the ext subject to learn, I submerge myself completely. I don't really give myself a deadline, but I do keep track of my progress and fix goals periodically. I usually try to learn the theory first and then code.
 
-I have also documented my machine learning process in my "Machine-Learning-Ressources" repository. However, I have yet to learn the web application process. I only did a quick web application in R using the shiny package.
+### How did I build my curriculum?
+As I see it, we can divide the data science learning process in four parts:
 
-### How I assembled my curriculum?
+1. Computer Science tools with the command line
+In this section, we focus on the tools that we use to write our code. We have to learn how to use an editor efficiently, how to do basic version control on git, and to use the command lines to search for files and data wrangling. I chose vim as my editor.
 
-##### 0. Get proficient with your tools
+2. Data manipulation, visualization, statistical analysis with R
+In this section, we focus on the statistical analysis, data visualization and data wrangling part of data science. Most of the code will be on R.
 
-- Shell Scripting and Command Line
-- Data Wrangling in Bash
-- Version Control (git)
-- Get familiar with editors: vim
+3. Modelling with Python
+We create Machine Learning models and neural networks for data science. We build models for classification and regression. We explore computer vision and text generation. Later, we explore reinforcement learning and genetic algorithms, altought they are not required to learn.
 
-Learning Path:
-1. General Command: pwd, cd, mkdir, rm, rmdir, mv, cat, echo, head, tail
-2. Basic Vim:
-  2.1. Normal, Insert, Visual Mode
-  2.2. Basic command: [dd,yy,p] [a,s,i,c] [gg,G] [w,b,W,B,e,gb] , more...
-  2.3. Create new tab: [:tabnew, gt, gT] 
-  2.4. Split screen: [:split, C-w + hjlk, ctrl+w ><]
-  2.5. customize vim with .vimrc: NERDTree
-  2.6. Recording Macros
-3. Advanced commands: sed, cut, join, sort, awk, uniq, fmt, wc, pr 
-  3.1. Book: Classic Shell Scripting by Arnold Robbins 
-4. Regular Expressions:
-5. In depth sed & awk:
-6. Version Control
+4. Applications of Machine Learning
+We go in-depth in the applications of machine learning: computer vision, language processing, speech recognition, and bioinformatics.
 
-General Ressources:
+More: web applications and package creation. I have little experience in web development, but I did create a dashboard for data visualization in R with shiny.   
+
+### Part 1: Get proficicient with your tools
 1. MIT Missing Semester Course: https://missing.csail.mit.edu/2020/  https://missing.csail.mit.edu/2019/
 2. Data Science at the Command Line by Jeroen Janssens: https://www.datascienceatthecommandline.com
 3. Advanced Bash Usage Conference by James Pannacciulli at LinuxFest2017: https://www.youtube.com/watch?v=BJ0uHhBkzOQ&t=462s
+4. Classic Shell Scripting by Arnold Robbins (focuses on data wrangling and file sear)
 
-##### 1. Basics of R
+   Checklist:
+   - General Commandline: pwd, cd, ls, mkdir, rm, rmdir, mv, cat, echo, head, tail, ...
+   - Data Wrangling: sed, cut, join, sort, awk, uniq, fmt, wc, pr 
+   - Regular Expressions:
+   - Version Control: init, push, commit, merge, pull
+   - Web Scrapping: curl, lynx
+   - Basic Vim:
+        1. Normal, Insert, Visual Mode
+        2. Basic command: [dd,yy,p] [a,s,i,c] [gg,G] [w,b,W,B,e,gb] , more...
+        3. Create new tab: [:tabnew, gt, gT] 
+        4. Split screen: [:split, C-w + hjlk, ctrl+w ><]
+        5. customize vim with .vimrc: NERDTree
+        6. Recording Macros
+    
+### Part 2: Data Manipulation, data visualization and data analysis with R
+1. Basics of R
+    1. R Programming for Data Science by Roger Peng: https://bookdown.org/rdpeng/rprogdatascience/
+    2. R for Data Science by Hadley Wickham: https://r4ds.had.co.nz/
+    
+    Checklist:
+    - import data
+    - functions, if/else, for, while, apply
+    - summary
+    - column
+     
+2. Data Wrangling and cleaning with dplyr, tidyr, and stringr
+    1. Data Wrangling from RStudio: https://www.youtube.com/watch?v=jOd65mR1zfw&list=PL9HYL-VRX0oQOWAFoKHFQAsWAI3ImbNPk
+    2. [Strings manipulation with stringr] [todo]
+    
+    Checklist:
+    - pipe command
+    - dplyr functions: groupby, mutate, select, filter, summarise, aggregate, arrange, rename, count
+    - tidyr: join, pivot_longer, pivot_wider, unite, separate
+    - stringr: string manipulation
+    
+3. Data visualization with ggplot, plotly, ggAnimate, ggExtra, ggThemes, and more
+    1. Data Visualization with R by Rob Kabacoff: https://rkabacoff.github.io/datavis/
+    2. Data Visualization: an Introduction by Kieran Healy:https://socviz.co/index.html#preface
+    3. Book: Python Data Science Handbook by Jake VanderPlas (focus on data manipulation and data visualization)
+    
+    Checklist:
+    - Basic plots: geom_point(), geom_line(), geom_bar(), ...
+    - More Plot Features with aes(): alpha, color, shape, size, ...
+    - Grouping: facet_wrap, facet_grid
+    - Advanced plots: correlation plots, time-series, heat map, ...
+ 
+4. Introduction to Central tendencies, variation and correlation 
+    1. Statistic Fundamentals Playlist by Statquest : https://www.youtube.com/watch?v=qBigTkBLU6g&list=PLblh5JKOoLUK0FLuzwntyYI10UQFUhsY9
+    2. UC Business: http://uc-r.github.io/descriptive
 
-Ressources:
-1. R Programming for Data Science by Roger Peng: https://bookdown.org/rdpeng/rprogdatascience/
-2. R for Data Science by Hadley Wickham: https://r4ds.had.co.nz/
-[to do]
+    Checklist:
+    - Central Tendencies: Mean, median, mode, standard deviation,
+    - Variation: What happens within a variables. Assumption (normalization), visualization (histogram and barplots), metrics (variance)
+    - Correlation: relationship between variables. Assumptions (homogeneity), visualization (scatter plot, qqplot), metrics (R-squared)
 
-##### 2. Data Wrangling with dplyr and tidyr
+5. Statistical Inferences and Hypothesis Testing 
+   1. Statistics Playlist by Crash Course: https://www.youtube.com/playlist?list=PL8dPuuaLjXtNM_Y-bUAhblSAdWRnmBUcr
 
-- dplyr functions: groupby, mutate, select, filter, summarise, aggregate, arrange, rename, count
-- tidyr: join, pivot_longer, pivot_wider, unite, separate
-- data wrangling in bash
+   Checklist:
+   - confidence intervals, p-value, z-score, t-test, chi-square
+   - statistical inference
 
-Ressources:
-1. Data Wrangling from RStudio: https://www.youtube.com/watch?v=jOd65mR1zfw&list=PL9HYL-VRX0oQOWAFoKHFQAsWAI3ImbNPk
+6. Data Scrapping with rvest 
+    1. Using Chrome Extension: https://www.youtube.com/watch?v=4IYfYx4yoAI&t=9s
+    2. Scrapping Table: https://www.youtube.com/watch?v=0mvlZhYk44E&t=912s
 
-[todo]       
+    Checklist:
+    - get data table from website
+    - get text data from website
 
-##### 3. Data visualization with ggplot
+### Part 3: Modelling with Python
+1. Machine Learning:
+    1. Theory: Machine Learning Playlist by Statquest : https://www.youtube.com/watch?v=Gv9_4yMHFhI&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF
+    2. Book: Machine Learning with Python by Chris Albon (focus on data preprocessing and all the ML algorithms)
+    3. Book: Introduction to Machine Learning with Python by Andreas Muller (focus on model visualization)
+    4. Book: Feature Engineering for Machine Learning by Alice Zheng (focus on featurization)
+    5. Book: Forcasting Principles and Practices: https://otexts.com/fpp2/ (focus on time-series and forecasting)
 
-- ggplot: 
-- more package: plotly, ggAnimate, ggExtra, ggThemes
+2. Neural Network:
+    1. Theory: MIT Deep Learning Playlist by Alexander Amini: https://www.youtube.com/watch?v=njKP3FqW3Sk&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI
+    2. Book: Deep Learning with Python by Francois Chollet (focus on basics Neural Networks)
+
+3. Reinforcement Learning:
+    1. Reinforcement Learning Course given by David Silver on Deep Mind. In-depth explanation on agent, environment, decision processes and policies. Link: https://www.youtube.com/watch?v=2pWv7GOvuf0&list=PLqYmG7hTraZDM-OYHWgPebj2MfCFzFObQ
+
+4. Genetic Algorithms:
+    1. Genetic algorithm by The Coding Train - 9.2. Great Overview of fitness function, parents selection, crossover, and mutation. Link: https://www.youtube.com/watch?v=RxTfc4JLYKs
+
+### Part 4: Applications of Machine Learning 
+
+Ressources for Bioinformatics:
+1. Book: Deep Learning for Life Science by Peter Eastman
 
 
-Ressources: 
-1. Data Visualization with R by Rob Kabacoff: https://rkabacoff.github.io/datavis/
-2. Data Visualization: an Introduction by Kieran Healy:https://socviz.co/index.html#preface
-3. Book: Python Data Science Handbook by Jake VanderPlas (focus on data manipulation and data visualization)
-[to do]
-
-
-
-##### 4. Introduction to Central tendencies, variation and correlation
-
-Part 1: Central Tendencies
-
-- Mean, median, mode, standard deviation, 
-
-Ressources: 
-1. Statistic Fundamentals Playlist by Statquest : https://www.youtube.com/watch?v=qBigTkBLU6g&list=PLblh5JKOoLUK0FLuzwntyYI10UQFUhsY9
-2. UC Business: http://uc-r.github.io/descriptive
-
-[to do]
-
-Part 2: Variation: What happens within a variables
-
-1. Assumptions: Normalisation
-2. Visualization: Histogram and barplots
-3. Metrics: Variance
-
-[to do]
-
-Part 3: Correlation: relationship between variables
-
-1. Assumptions:
-2. Visualization: scatter plot, qqplot
-3. Metrics: R-squared, 
-
-##### 5. Statistical Inferences and Hypothesis Testing
-
-- confidence intervals, p-value, z-score, t-test
-
-[todo]
-
-Ressources: 
-1. Crash Course: https://www.youtube.com/playlist?list=PL8dPuuaLjXtNM_Y-bUAhblSAdWRnmBUcr
-
-##### 6. Data Scrapping with rvest 
-
-- get data table from website
-- get text data from website
-- use lynx on bash
-
-Ressources:
-1. Using Chrome Extension: https://www.youtube.com/watch?v=4IYfYx4yoAI&t=9s
-2. Scrapping Table: https://www.youtube.com/watch?v=0mvlZhYk44E&t=912s
-
-[todo]
-
-##### 7. Modelling
-
-- Machine Learning
-- Neural Network
-- Reinforcement Learning
-- Genetic algorithm
-
-Ressources for Machine Learning:
-1. Theory: Machine Learning Playlist by Statquest : https://www.youtube.com/watch?v=Gv9_4yMHFhI&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF
-2. Book: Machine Learning with Python by Chris Albon (focus on data preprocessing and all the ML algorithms)
-3. Book: Introduction to Machine Learning with Python by Andreas Muller (focus on model visualization)
-6. Book: Feature Engineering for Machine Learning by Alice Zheng (focus on featurization)
-7. Book: Forcasting Principles and Practices: https://otexts.com/fpp2/ (focus on time-series and forecasting)
-
-Ressources for Neural Network:
-4. Theory: MIT Deep Learning Playlist by Alexander Amini: https://www.youtube.com/watch?v=njKP3FqW3Sk&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI
-5. Book: Deep Learning with Python by Francois Chollet (focus on basics Neural Networks)
-
-Ressources for Reinforcement Learning:
-12. Reinforcement Learning Course given by David Silver on Deep Mind. In-depth explanation on agent, environment, decision processes and policies. Link: https://www.youtube.com/watch?v=2pWv7GOvuf0&list=PLqYmG7hTraZDM-OYHWgPebj2MfCFzFObQ
-
-Ressources for Genetic Algorithms:
-15. Genetic algorithm by The Coding Train - 9.2. Great Overview of fitness function, parents selection, crossover, and mutation. Link: https://www.youtube.com/watch?v=RxTfc4JLYKs
