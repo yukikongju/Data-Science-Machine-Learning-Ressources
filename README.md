@@ -191,7 +191,13 @@ More: web applications and package creation. I have little experience in web dev
 
 ### Part 4: Applications of Machine Learning 
 
-Ressources for Bioinformatics:
+Tutorial for Bioinformatics:
 1. Book: Deep Learning for Life Science by Peter Eastman
 
+      Checklist:
+      - Central Dogma
 
+      Ressources:
+      - Scitable by Nature Education: https://www.nature.com/scitable/topics/
+      
+         
