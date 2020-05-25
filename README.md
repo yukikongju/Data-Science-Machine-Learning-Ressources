@@ -117,8 +117,8 @@ More: web applications and package creation. I have little experience in web dev
     
 ### Part 2: Data Manipulation, data visualization and data analysis with R
 1. Basics of R
-    1. R Programming for Data Science by Roger Peng: https://bookdown.org/rdpeng/rprogdatascience/
-    2. R for Data Science by Hadley Wickham: https://r4ds.had.co.nz/
+    1. Practice Book: R Programming for Data Science by Roger Peng: https://bookdown.org/rdpeng/rprogdatascience/
+    2. Practice Book: R for Data Science by Hadley Wickham: https://r4ds.had.co.nz/
     
     Checklist:
     - import data
@@ -127,7 +127,7 @@ More: web applications and package creation. I have little experience in web dev
     - column
      
 2. Data Wrangling and cleaning with dplyr, tidyr, and stringr
-    1. Data Wrangling from RStudio: https://www.youtube.com/watch?v=jOd65mR1zfw&list=PL9HYL-VRX0oQOWAFoKHFQAsWAI3ImbNPk
+    1. Practice: Data Wrangling from RStudio: https://www.youtube.com/watch?v=jOd65mR1zfw&list=PL9HYL-VRX0oQOWAFoKHFQAsWAI3ImbNPk
     2. [Strings manipulation with stringr] [todo]
     
     Checklist:
@@ -139,6 +139,7 @@ More: web applications and package creation. I have little experience in web dev
 3. Data visualization with ggplot, plotly, ggAnimate, ggExtra, ggThemes, and more
     1. Data Visualization with R by Rob Kabacoff: https://rkabacoff.github.io/datavis/
     2. Data Visualization: an Introduction by Kieran Healy:https://socviz.co/index.html#preface
+    3. Practice Book: R Graphics Cookbook by Winston Chang (focus on ggplot)
     
     Checklist:
     - Basic plots: geom_point(), geom_line(), geom_bar(), ...
@@ -147,8 +148,8 @@ More: web applications and package creation. I have little experience in web dev
     - Advanced plots: correlation plots, time-series, heat map, ...
  
 4. Introduction to Central tendencies, variation and correlation 
-    1. Statistic Fundamentals Playlist by Statquest : https://www.youtube.com/watch?v=qBigTkBLU6g&list=PLblh5JKOoLUK0FLuzwntyYI10UQFUhsY9
-    2. UC Business: http://uc-r.github.io/descriptive
+    1. Theory: Statistic Fundamentals Playlist by Statquest : https://www.youtube.com/watch?v=qBigTkBLU6g&list=PLblh5JKOoLUK0FLuzwntyYI10UQFUhsY9
+    2. Theory: UC Business: http://uc-r.github.io/descriptive
 
     Checklist:
     - Central Tendencies: Mean, median, mode, standard deviation,
@@ -156,15 +157,15 @@ More: web applications and package creation. I have little experience in web dev
     - Correlation: relationship between variables. Assumptions (homogeneity), visualization (scatter plot, qqplot), metrics (R-squared)
 
 5. Statistical Inferences and Hypothesis Testing 
-   1. Statistics Playlist by Crash Course: https://www.youtube.com/playlist?list=PL8dPuuaLjXtNM_Y-bUAhblSAdWRnmBUcr
+   1. Theory: Statistics Playlist by Crash Course: https://www.youtube.com/playlist?list=PL8dPuuaLjXtNM_Y-bUAhblSAdWRnmBUcr
 
    Checklist:
    - confidence intervals, p-value, z-score, t-test, chi-square
    - statistical inference
 
 6. Data Scrapping with rvest 
-    1. Using Chrome Extension: https://www.youtube.com/watch?v=4IYfYx4yoAI&t=9s
-    2. Scrapping Table: https://www.youtube.com/watch?v=0mvlZhYk44E&t=912s
+    1. Code: Using Chrome Extension: https://www.youtube.com/watch?v=4IYfYx4yoAI&t=9s
+    2. Code: Scrapping Table: https://www.youtube.com/watch?v=0mvlZhYk44E&t=912s
 
     Checklist:
     - get data table from website
@@ -173,21 +174,21 @@ More: web applications and package creation. I have little experience in web dev
 ### Part 3: Modelling with Python
 1. Machine Learning:
     1. Theory: Machine Learning Playlist by Statquest : https://www.youtube.com/watch?v=Gv9_4yMHFhI&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF
-    2. Book: Python Data Science Handbook by Jake VanderPlas (focus on data manipulation and data visualization)
-    3. Book: Machine Learning with Python by Chris Albon (focus on data preprocessing and all the ML algorithms)
-    4. Book: Introduction to Machine Learning with Python by Andreas Muller (focus on model visualization)
-    5. Book: Feature Engineering for Machine Learning by Alice Zheng (focus on featurization)
-    6. Book: Forcasting Principles and Practices: https://otexts.com/fpp2/ (focus on time-series and forecasting)
+    2. Practice Book: Python Data Science Handbook by Jake VanderPlas (focus on data manipulation and data visualization)
+    3. Practice Book: Machine Learning with Python by Chris Albon (focus on data preprocessing and all the ML algorithms)
+    4. Practice Book: Introduction to Machine Learning with Python by Andreas Muller (focus on model visualization)
+    5. Practice Book: Feature Engineering for Machine Learning by Alice Zheng (focus on featurization)
+    6. Practice Book: Forcasting Principles and Practices with R: https://otexts.com/fpp2/ (focus on time-series and forecasting)
 
 2. Neural Network:
     1. Theory: MIT Deep Learning Playlist by Alexander Amini: https://www.youtube.com/watch?v=njKP3FqW3Sk&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI
-    2. Book: Deep Learning with Python by Francois Chollet (focus on basics Neural Networks)
+    2. Practice Book: Deep Learning with Python by Francois Chollet (focus on basics Neural Networks)
 
 3. Reinforcement Learning:
-    1. Reinforcement Learning Course given by David Silver on Deep Mind. In-depth explanation on agent, environment, decision processes and policies. Link: https://www.youtube.com/watch?v=2pWv7GOvuf0&list=PLqYmG7hTraZDM-OYHWgPebj2MfCFzFObQ
+    1. Theory: Reinforcement Learning Course given by David Silver on Deep Mind. In-depth explanation on agent, environment, decision processes and policies. Link: https://www.youtube.com/watch?v=2pWv7GOvuf0&list=PLqYmG7hTraZDM-OYHWgPebj2MfCFzFObQ
 
 4. Genetic Algorithms:
-    1. Genetic algorithm by The Coding Train - 9.2. Great Overview of fitness function, parents selection, crossover, and mutation. Link: https://www.youtube.com/watch?v=RxTfc4JLYKs
+    1. Theory: Genetic algorithm by The Coding Train - 9.2. Great Overview of fitness function, parents selection, crossover, and mutation. Link: https://www.youtube.com/watch?v=RxTfc4JLYKs
 
 ### Part 4: Applications of Machine Learning 
 
