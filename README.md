@@ -200,4 +200,6 @@ Tutorial for Bioinformatics:
       Ressources:
       - Scitable by Nature Education: https://www.nature.com/scitable/topics/
       
-         
+      Modules:
+      - DeepChem
+      - Biopython
