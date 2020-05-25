@@ -150,6 +150,7 @@ More: web applications and package creation. I have little experience in web dev
 4. Introduction to Central tendencies, variation and correlation 
     1. Theory: Statistic Fundamentals Playlist by Statquest : https://www.youtube.com/watch?v=qBigTkBLU6g&list=PLblh5JKOoLUK0FLuzwntyYI10UQFUhsY9
     2. Theory: UC Business: http://uc-r.github.io/descriptive
+    3. Practical Book: Applied Statistics in R: https://daviddalpiaz.github.io/appliedstats/applied_statistics.pdf
 
     Checklist:
     - Central Tendencies: Mean, median, mode, standard deviation,
