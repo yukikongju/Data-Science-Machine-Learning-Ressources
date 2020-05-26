@@ -131,7 +131,7 @@ More: web applications and package creation. I have little experience in web dev
     2. [Strings manipulation with stringr] [todo]
     
     Checklist:
-    - pipe command
+    - pipe command, %in%
     - dplyr functions: groupby, mutate, select, filter, summarise, aggregate, arrange, rename, count
     - tidyr: join, pivot_longer, pivot_wider, unite, separate
     - stringr: string manipulation
@@ -139,7 +139,9 @@ More: web applications and package creation. I have little experience in web dev
 3. Data visualization with ggplot, plotly, ggAnimate, ggExtra, ggThemes, and more
     1. Data Visualization with R by Rob Kabacoff: https://rkabacoff.github.io/datavis/
     2. Data Visualization: an Introduction by Kieran Healy:https://socviz.co/index.html#preface
-    3. Practice Book: R Graphics Cookbook by Winston Chang (focus on ggplot)
+    3. Practice Book: R Graphics Cookbook by Winston Chang (focus on ggplot) or R Visualization Workshop: http://stulp.gmw.rug.nl/ggplotworkshop/ (focus on advanced plottind method)`
+    4. Exploratory Data Analysis book by Roger Peng: https://bookdown.org/rdpeng/exdata/ (focus on clustering, dimensional reduction and plotting principles)
+    
     
     Checklist:
     - Basic plots: geom_point(), geom_line(), geom_bar(), ...
