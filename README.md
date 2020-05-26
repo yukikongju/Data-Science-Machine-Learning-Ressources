@@ -74,6 +74,12 @@ The order in which you learn data science greatly depends on which of these 3 fi
 
 Personnally, I would suggest starting with statistical understanding and data visualization as it doesn't require as much mathematical knowledge as modelling, nor specific field knowledge to understand the business needs requires to construct a web applications.
 
+Let's keep in mind that a Data Scientist has to be familiar with these 4 following subfields, altought they tend to specialize in one:
+1. Data Mining
+2. Data Visualization
+3. Machine Learning
+4. Statistical Analysis
+
 ### What is my learning style?
 
 As of 2020-05-22, my learning method is somewhat arbitrary. I do some research on a subject, add it to one of the path, and learn it somewhere along the line. To be honest, I don't really have a way to determine which subject to learn next, but when I am choosing the ext subject to learn, I submerge myself completely. I don't really give myself a deadline, but I do keep track of my progress and fix goals periodically. I usually try to learn the theory first and then code.
@@ -115,7 +121,7 @@ More: web applications and package creation. I have little experience in web dev
         5. customize vim with .vimrc: NERDTree
         6. Recording Macros
     
-### Part 2: Data Manipulation, data visualization and data analysis with R
+### Part 2: Data Manipulation and Visualization with R
 1. Basics of R
     1. Practice Book: R Programming for Data Science by Roger Peng: https://bookdown.org/rdpeng/rprogdatascience/
     2. Practice Book: R for Data Science by Hadley Wickham: https://r4ds.had.co.nz/
@@ -142,14 +148,15 @@ More: web applications and package creation. I have little experience in web dev
     3. Practice Book: R Graphics Cookbook by Winston Chang (focus on ggplot) or R Visualization Workshop: http://stulp.gmw.rug.nl/ggplotworkshop/ (focus on advanced plottind method)`
     4. Exploratory Data Analysis book by Roger Peng: https://bookdown.org/rdpeng/exdata/ (focus on clustering, dimensional reduction and plotting principles)
     
-    
     Checklist:
     - Basic plots: geom_point(), geom_line(), geom_bar(), ...
     - More Plot Features with aes(): alpha, color, shape, size, ...
     - Grouping: facet_wrap, facet_grid
     - Advanced plots: correlation plots, time-series, heat map, ...
- 
-4. Introduction to Central tendencies, variation and correlation 
+
+### Part 3: Data Analysis with R
+
+1. Introduction to Central tendencies, variation and correlation 
     1. Theory: Statistic Fundamentals Playlist by Statquest : https://www.youtube.com/watch?v=qBigTkBLU6g&list=PLblh5JKOoLUK0FLuzwntyYI10UQFUhsY9
     2. Theory: UC Business: http://uc-r.github.io/descriptive
     3. Practical Book: Applied Statistics in R: https://daviddalpiaz.github.io/appliedstats/applied_statistics.pdf
@@ -159,22 +166,16 @@ More: web applications and package creation. I have little experience in web dev
     - Variation: What happens within a variables. Assumption (normalization), visualization (histogram and barplots), metrics (variance)
     - Correlation: relationship between variables. Assumptions (homogeneity), visualization (scatter plot, qqplot), metrics (R-squared)
 
-5. Statistical Inferences and Hypothesis Testing 
+2. Statistical Inferences and Hypothesis Testing 
    1. Theory: Statistics Playlist by Crash Course: https://www.youtube.com/playlist?list=PL8dPuuaLjXtNM_Y-bUAhblSAdWRnmBUcr
 
    Checklist:
    - confidence intervals, p-value, z-score, t-test, chi-square
    - statistical inference
 
-6. Data Scrapping with rvest 
-    1. Code: Using Chrome Extension: https://www.youtube.com/watch?v=4IYfYx4yoAI&t=9s
-    2. Code: Scrapping Table: https://www.youtube.com/watch?v=0mvlZhYk44E&t=912s
+### Part 4: Modelling with Python (and R)
+0. Introduction to Python
 
-    Checklist:
-    - get data table from website
-    - get text data from website
-
-### Part 3: Modelling with Python
 1. Machine Learning:
     1. Theory: Machine Learning Playlist by Statquest : https://www.youtube.com/watch?v=Gv9_4yMHFhI&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF
     2. Practice Book: Python Data Science Handbook by Jake VanderPlas (focus on data manipulation and data visualization)
@@ -182,10 +183,24 @@ More: web applications and package creation. I have little experience in web dev
     4. Practice Book: Introduction to Machine Learning with Python by Andreas Muller (focus on model visualization)
     5. Practice Book: Feature Engineering for Machine Learning by Alice Zheng (focus on featurization)
     6. Practice Book: Forcasting Principles and Practices with R: https://otexts.com/fpp2/ (focus on time-series and forecasting)
+    
+    Checklist:
+    - Data Preprocessing: [todo]
+    - Modelling: [todo]
+    - Visualizing Models
 
 2. Neural Network:
     1. Theory: MIT Deep Learning Playlist by Alexander Amini: https://www.youtube.com/watch?v=njKP3FqW3Sk&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI
     2. Practice Book: Deep Learning with Python by Francois Chollet (focus on basics Neural Networks)
+    
+    Checklist:
+    - Neural Network Models:
+         a. Multi-layers Perceptrons
+         b. Convolutional Neural Network
+         c. Recurrent Neural Network, LSTM
+         d. Autoencoders, GAN, GRU
+    - Hyperparameters Tuning with GridSearch
+    - Using Tensorboard and callbacks
 
 3. Reinforcement Learning:
     1. Theory: Reinforcement Learning Course given by David Silver on Deep Mind. In-depth explanation on agent, environment, decision processes and policies. Link: https://www.youtube.com/watch?v=2pWv7GOvuf0&list=PLqYmG7hTraZDM-OYHWgPebj2MfCFzFObQ
@@ -193,7 +208,17 @@ More: web applications and package creation. I have little experience in web dev
 4. Genetic Algorithms:
     1. Theory: Genetic algorithm by The Coding Train - 9.2. Great Overview of fitness function, parents selection, crossover, and mutation. Link: https://www.youtube.com/watch?v=RxTfc4JLYKs
 
-### Part 4: Applications of Machine Learning 
+### Part 5: Data Mining with R and the command line
+
+1. Data Scrapping with rvest 
+    1. Code: Using Chrome Extension: https://www.youtube.com/watch?v=4IYfYx4yoAI&t=9s
+    2. Code: Scrapping Table: https://www.youtube.com/watch?v=0mvlZhYk44E&t=912s
+
+    Checklist:
+    - get data table from website
+    - get text data from website
+
+### Part 6: Applications of Machine Learning 
 
 Tutorial for Bioinformatics:
 1. Book: Deep Learning for Life Science by Peter Eastman
