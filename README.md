@@ -152,6 +152,7 @@ More: web applications and package creation. I have little experience in web dev
     - Basic plots: geom_point(), geom_line(), geom_bar(), ...
     - More Plot Features with aes(): alpha, color, shape, size, ...
     - Grouping: facet_wrap, facet_grid
+    - themes, axis, ...
     - Advanced plots: correlation plots, time-series, heat map, ...
 
 ### Part 3: Data Analysis with R
@@ -174,7 +175,10 @@ More: web applications and package creation. I have little experience in web dev
    - statistical inference
 
 ### Part 4: Modelling with Python (and R)
+
 0. Introduction to Python
+
+[todo]
 
 1. Machine Learning:
     1. Theory: Machine Learning Playlist by Statquest : https://www.youtube.com/watch?v=Gv9_4yMHFhI&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF
@@ -185,8 +189,23 @@ More: web applications and package creation. I have little experience in web dev
     6. Practice Book: Forcasting Principles and Practices with R: https://otexts.com/fpp2/ (focus on time-series and forecasting)
     
     Checklist:
-    - Data Preprocessing: [todo]
-    - Modelling: [todo]
+    - Data Preprocessing: 
+         a. Renaming Columns, Replacing Values, Delete Rows/Columns, Handling Missing values and outliers, Grouping columns/rows/dataframe
+         b. Normalization and Standardization of Data:
+               i. Numerical Data: rescaling, standardize, normalize, missing values, outliers
+               ii. Categorical Data: Encode nominal and categorical features with OneHotEncoder, Imputer, ...
+               iii. Text: cleaning, remove punctuations, tokenize, remove stop words, bag-of-words, weight word importance
+               iv. Dates and Time:
+               v. Images: Resize, Crop, Blurring, Enhancing, Edge/Corner Detection
+    - Dimension Reduction for Feature Selection and Feature Extraction
+    - Modelling:
+         a. Linear Regression, Logistic Regression, K-Nearest Neighbor
+         b. Ensemble: Trees, Random Forests
+         c. Dimension Reduction: PCA, LDA, K-Means Custering, DBSCAN, Hierarchical Clustering
+         d. Suport Vector Machine, MDS and PCoAs, 
+         e. Naive Bayes
+    - Model Evaluation and Selection with with Exhaustive and Randomized Search 
+    - Training Faster: Parallelization
     - Visualizing Models
 
 2. Neural Network:
@@ -199,8 +218,13 @@ More: web applications and package creation. I have little experience in web dev
          b. Convolutional Neural Network
          c. Recurrent Neural Network, LSTM
          d. Autoencoders, GAN, GRU
+    - Functions:
+         a. Loss: sparse_categorical_crossentropy,categorical_crossentropy, binary_crossentropy, mse, mae
+         b. Activation: sigmoid, softmax, relu, adam, ...
+         c. optimizer: rmsprop, sgd, ...
     - Hyperparameters Tuning with GridSearch
     - Using Tensorboard and callbacks
+    - concatenate layers for multi inputs/outputs models
 
 3. Reinforcement Learning:
     1. Theory: Reinforcement Learning Course given by David Silver on Deep Mind. In-depth explanation on agent, environment, decision processes and policies. Link: https://www.youtube.com/watch?v=2pWv7GOvuf0&list=PLqYmG7hTraZDM-OYHWgPebj2MfCFzFObQ
