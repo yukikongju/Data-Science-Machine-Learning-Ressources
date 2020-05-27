@@ -245,14 +245,22 @@ More: web applications and package creation. I have little experience in web dev
 ### Part 6: Applications of Machine Learning 
 
 Tutorial for Bioinformatics:
-1. Book: Deep Learning for Life Science by Peter Eastman
+1. Theory: [to do]
 
       Checklist:
-      - Central Dogma
+      - Cell Structures: [to do]
+      - DNA, RNA, DNA replication and repair
+      - Central Dogma: transcription, translation, structures, mutations
 
       Ressources:
+      - Youtube: Porfessor Dave Explains
       - Scitable by Nature Education: https://www.nature.com/scitable/topics/
-      
+      - Book Theory: Concepts in Bioninformatics and Genomics by Jamil Momand
+      - Book Theory: Applied Bioinformatics by Paul Selzer
+      - Book Theory: Phylogenomics: An Introduction by Christoph Bleidorn
+      - Book Theory:
+      - Book Practice: Deep Learning for Life Science by Peter Eastman
+
       Modules:
       - DeepChem
       - Biopython
