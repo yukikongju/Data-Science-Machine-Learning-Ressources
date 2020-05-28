@@ -199,11 +199,11 @@ More: web applications and package creation. I have little experience in web dev
                v. Images: Resize, Crop, Blurring, Enhancing, Edge/Corner Detection
     - Dimension Reduction for Feature Selection and Feature Extraction
     - Modelling:
-         a. Linear Regression, Logistic Regression, K-Nearest Neighbor
-         b. Ensemble: Trees, Random Forests
-         c. Dimension Reduction: PCA, LDA, K-Means Custering, DBSCAN, Hierarchical Clustering
-         d. Suport Vector Machine, MDS and PCoAs, 
-         e. Naive Bayes
+      1. Linear Regression, Logistic Regression, K-Nearest Neighbor
+      2. Ensemble: Trees, Random Forests
+      3. Dimension Reduction: PCA, LDA, K-Means Custering, DBSCAN, Hierarchical Clustering
+      4. Suport Vector Machine, MDS and PCoAs, 
+      5. Naive Bayes
     - Model Evaluation and Selection with with Exhaustive and Randomized Search 
     - Training Faster: Parallelization
     - Visualizing Models
@@ -227,7 +227,8 @@ More: web applications and package creation. I have little experience in web dev
     - concatenate layers for multi inputs/outputs models
 
 3. Reinforcement Learning:
-    1. Theory: Reinforcement Learning Course given by David Silver on Deep Mind. In-depth explanation on agent, environment, decision processes and policies. Link: https://www.youtube.com/watch?v=2pWv7GOvuf0&list=PLqYmG7hTraZDM-OYHWgPebj2MfCFzFObQ
+    1. Theory: Introduction to Artificial Intelligence by Harvard's CS50: https://www.youtube.com/watch?v=WbzNRTTrX0g&list=PLhQjrBD2T382Nz7z1AEXmioc27axa19Kv&index=2 
+    2. Theory: Reinforcement Learning Course given by David Silver on Deep Mind. In-depth explanation on agent, environment, decision processes and policies. Link: https://www.youtube.com/watch?v=2pWv7GOvuf0&list=PLqYmG7hTraZDM-OYHWgPebj2MfCFzFObQ
 
 4. Genetic Algorithms:
     1. Theory: Genetic algorithm by The Coding Train - 9.2. Great Overview of fitness function, parents selection, crossover, and mutation. Link: https://www.youtube.com/watch?v=RxTfc4JLYKs
@@ -264,3 +265,12 @@ Tutorial for Bioinformatics:
       Modules:
       - DeepChem
       - Biopython
+
+### Part 7: Exploring other Computer Science Fields
+
+ - Web Development Basics:
+    1. Theory: Web Programming with Python and JS by Harvard's CS50: https://www.youtube.com/watch?v=zFZrkCIc2Oc&list=PLhQjrBD2T380xvFSUmToMMzERZ3qB5Ueu&index=2
+    2. Application: Web applications with Shiny: https://shiny.rstudio.com/tutorial/
+      
+ - Data Structure and Algorithms:      
+    
