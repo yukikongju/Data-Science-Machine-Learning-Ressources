@@ -180,7 +180,11 @@ More: web applications and package creation. I have little experience in web dev
 
 [todo]
 
-1. Machine Learning:
+1. Artificial Intelligence Basics
+	1. CS50 - Intro to Artificial Intelligence: https://www.youtube.com/watch?v=WbzNRTTrX0g&list=PLhQjrBD2T382Nz7z1AEXmioc27axa19Kv&index=2
+	2. Artificial Intelligence by Stanford CS221: https://www.youtube.com/playlist?list=PLoROMvodv4rO1NB9TD4iUZ3qghGEGtqNX 
+
+2. Machine Learning:
     1. Theory: Machine Learning Playlist by Statquest : https://www.youtube.com/watch?v=Gv9_4yMHFhI&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF
     2. Practice Book: Python Data Science Handbook by Jake VanderPlas (focus on data manipulation and data visualization)
     3. Practice Book: Machine Learning with Python by Chris Albon (focus on data preprocessing and all the ML algorithms)
@@ -208,7 +212,7 @@ More: web applications and package creation. I have little experience in web dev
     - Training Faster: Parallelization
     - Visualizing Models
 
-2. Neural Network:
+3. Neural Network:
     1. Theory: MIT Deep Learning Playlist by Alexander Amini: https://www.youtube.com/watch?v=njKP3FqW3Sk&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI
     2. Practice Book: Deep Learning with Python by Francois Chollet (focus on basics Neural Networks)
     
@@ -272,5 +276,4 @@ Tutorial for Bioinformatics:
     1. Theory: Web Programming with Python and JS by Harvard's CS50: https://www.youtube.com/watch?v=zFZrkCIc2Oc&list=PLhQjrBD2T380xvFSUmToMMzERZ3qB5Ueu&index=2
     2. Application: Web applications with Shiny: https://shiny.rstudio.com/tutorial/
       
- - Data Structure and Algorithms:      
     
