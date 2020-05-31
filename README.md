@@ -113,6 +113,8 @@ More: web applications and package creation. I have little experience in web dev
    - Regular Expressions:
    - Version Control: init, push, commit, merge, pull
    - Web Scrapping: curl, lynx
+   - Version Control with Git: init, add, push, pull, merge, branch, status,
+	 log
    - Basic Vim:
         1. Normal, Insert, Visual Mode
         2. Basic command: [dd,yy,p] [a,s,i,c] [gg,G] [w,b,W,B,e,gb] , more...
@@ -263,7 +265,6 @@ Tutorial for Bioinformatics:
       - Book Theory: Concepts in Bioninformatics and Genomics by Jamil Momand
       - Book Theory: Applied Bioinformatics by Paul Selzer
       - Book Theory: Phylogenomics: An Introduction by Christoph Bleidorn
-      - Book Theory:
       - Book Practice: Deep Learning for Life Science by Peter Eastman
 
       Modules:
