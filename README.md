@@ -271,6 +271,19 @@ Tutorial for Bioinformatics:
       - DeepChem
       - Biopython
 
+Natural Language Processing:
+1. Theory: [todo]
+
+	Checklist: [todo]
+	- Parsing Trees
+	- n-grams, tokenization, word frequencies for autocompletion
+	- Bags-of-words with Naive Bayes for sentiment analysis
+	- TF-IDF for information retrieval
+	- Word Representation: one-hot encoder, word vectorization
+
+	Ressources:
+	- nltk book: https://www.nltk.org/book/
+
 ### Part 7: Exploring other Computer Science Fields
 
  - Web Development Basics:
