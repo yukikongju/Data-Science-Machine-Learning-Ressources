@@ -188,11 +188,12 @@ More: web applications and package creation. I have little experience in web dev
 
 2. Machine Learning:
     1. Theory: Machine Learning Playlist by Statquest : https://www.youtube.com/watch?v=Gv9_4yMHFhI&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF
-    2. Practice Book: Python Data Science Handbook by Jake VanderPlas (focus on data manipulation and data visualization)
-    3. Practice Book: Machine Learning with Python by Chris Albon (focus on data preprocessing and all the ML algorithms)
-    4. Practice Book: Introduction to Machine Learning with Python by Andreas Muller (focus on model visualization)
-    5. Practice Book: Feature Engineering for Machine Learning by Alice Zheng (focus on featurization)
-    6. Practice Book: Forcasting Principles and Practices with R: https://otexts.com/fpp2/ (focus on time-series and forecasting)
+	2. Theory: Standford CS229: Machine Learning by Andrew Ng: https://www.youtube.com/watch?v=jGwO_UgTS7I&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU
+    3. Practice Book: Python Data Science Handbook by Jake VanderPlas (focus on data manipulation and data visualization)
+    4. Practice Book: Machine Learning with Python by Chris Albon (focus on data preprocessing and all the ML algorithms)
+    5. Practice Book: Introduction to Machine Learning with Python by Andreas Muller (focus on model visualization)
+    6. Practice Book: Feature Engineering for Machine Learning by Alice Zheng (focus on featurization)
+    7. Practice Book: Forcasting Principles and Practices with R: https://otexts.com/fpp2/ (focus on time-series and forecasting)
     
     Checklist:
     - Data Preprocessing: 
@@ -253,6 +254,7 @@ More: web applications and package creation. I have little experience in web dev
 
 Tutorial for Bioinformatics:
 1. Theory: [to do]
+	1. Introduction to Biology by MIT: https://www.youtube.com/watch?v=KlVHqq38KJU&list=PLUl4u3cNGP63LmSVIVzy584-ZbjbJ-Y63
 
       Checklist:
       - Cell Structures: [to do]
