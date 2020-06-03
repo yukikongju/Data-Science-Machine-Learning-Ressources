@@ -240,6 +240,9 @@ More: web applications and package creation. I have little experience in web dev
 4. Genetic Algorithms:
     1. Theory: Genetic algorithm by The Coding Train - 9.2. Great Overview of fitness function, parents selection, crossover, and mutation. Link: https://www.youtube.com/watch?v=RxTfc4JLYKs
 
+	Ressources:
+	- Book: Reinforcement Learning: An Intro by Richard Sutton and Andrew
+	  Barto: http://incompleteideas.net/book/first/ebook/the-book.html
 ### Part 5: Data Mining with R and the command line
 
 1. Data Scrapping with rvest 
