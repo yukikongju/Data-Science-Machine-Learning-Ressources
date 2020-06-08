@@ -122,6 +122,9 @@ More: web applications and package creation. I have little experience in web dev
         4. Split screen: [:split, C-w + hjlk, ctrl+w ><]
         5. customize vim with .vimrc: NERDTree
         6. Recording Macros
+		7. Remapping keys
+		8. Buffers
+		9. sentences in vim
     
 ### Part 2: Data Manipulation and Visualization with R
 1. Basics of R
@@ -179,6 +182,15 @@ More: web applications and package creation. I have little experience in web dev
 ### Part 4: Modelling with Python (and R)
 
 0. Introduction to Python
+	1. Practice Python: https://www.practicepython.org/
+
+	Checklist:
+	1. Basics: 
+		1. Conditions: if/else
+		2. Loops: for, while, do while
+		3. Dictionnaries, sets, lists
+		4. List Comprehension
+		5. Try Except
 
 [todo]
 
@@ -188,12 +200,14 @@ More: web applications and package creation. I have little experience in web dev
 
 2. Machine Learning:
     1. Theory: Machine Learning Playlist by Statquest : https://www.youtube.com/watch?v=Gv9_4yMHFhI&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF
-	2. Theory: Standford CS229: Machine Learning by Andrew Ng: https://www.youtube.com/watch?v=jGwO_UgTS7I&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU
-    3. Practice Book: Python Data Science Handbook by Jake VanderPlas (focus on data manipulation and data visualization)
-    4. Practice Book: Machine Learning with Python by Chris Albon (focus on data preprocessing and all the ML algorithms)
-    5. Practice Book: Introduction to Machine Learning with Python by Andreas Muller (focus on model visualization)
-    6. Practice Book: Feature Engineering for Machine Learning by Alice Zheng (focus on featurization)
-    7. Practice Book: Forcasting Principles and Practices with R: https://otexts.com/fpp2/ (focus on time-series and forecasting)
+	2. Theory: DeepMind Deep Leacture Series: https://www.youtube.com/watch?v=7R52wiUgxZI&list=PLqYmG7hTraZCDxZ44o4p3N5Anz3lLRVZF
+	3. Theory: Standford CS229: Machine Learning by Andrew Ng: https://www.youtube.com/watch?v=jGwO_UgTS7I&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU
+	
+    4. Practice Book: Python Data Science Handbook by Jake VanderPlas (focus on data manipulation and data visualization)
+    5. Practice Book: Machine Learning with Python by Chris Albon (focus on data preprocessing and all the ML algorithms)
+    6. Practice Book: Introduction to Machine Learning with Python by Andreas Muller (focus on model visualization)
+    7. Practice Book: Feature Engineering for Machine Learning by Alice Zheng (focus on featurization)
+    8. Practice Book: Forcasting Principles and Practices with R: https://otexts.com/fpp2/ (focus on time-series and forecasting)
     
     Checklist:
     - Data Preprocessing: 
