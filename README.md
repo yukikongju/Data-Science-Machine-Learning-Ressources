@@ -198,6 +198,54 @@ More: web applications and package creation. I have little experience in web dev
 	1. CS50 - Intro to Artificial Intelligence: https://www.youtube.com/watch?v=WbzNRTTrX0g&list=PLhQjrBD2T382Nz7z1AEXmioc27axa19Kv&index=2
 	2. Artificial Intelligence by Stanford CS221: https://www.youtube.com/playlist?list=PLoROMvodv4rO1NB9TD4iUZ3qghGEGtqNX 
 
+	Checklist:
+	- Searching:
+		1. Definitions: agent, environment, transition states, goal test, path
+		   cost
+		2. Uninformed Search: Depth-First Search vs Breadth-First Search
+		3. Informed Search: Greedy Best-First Seearch vs A* Max
+		4. Adversial Search
+	- Knowledge Based Agent
+		1. Propositional Logic and Truth Table: not, and, or, implication,
+		   biconditional, or disjuntive
+		2. Model Checking: Check all states
+			1. Make Statement about the world: P, Q, R
+			2. Make Knowledge about the rules using propositional logic
+			3. Solve all states using truth table
+		3. Knowledge Distilling
+			1. Conjunctive Normal Form
+			2. Inference Rules: modus ponens, modus tollens, De Morgan's Law,
+			   Distribution Law, double negation, and elimination, implication
+			   elimination, biconditional elimination
+			3. [todo]
+	- Uncertainty and Probability
+		1. Probability
+			1. Unconditional Probability: [todo]
+			2. Conditional Probability: [todo]
+		2. Reverse Conditional Probability
+			1. Naive Bayes
+			2. Joint Probability
+		3. Probability Rules
+			1. Negation
+			2. Inclusion-Exlusion
+			3. Marginalisation
+			4. Conditionning
+		4. Bayesian Network and Inference: [todo]
+		5. Approximating Inference 
+			1. Sampling
+			2. Likelihood Sampling
+		6. Changing Probabilities with Markov Decision Processes 
+	- Optimization
+		1. Local Search
+			1. Hill Climbing
+			2. Simulated Annealing
+		2. Linear Programming
+			1. Simplex
+			2. Interior Point
+		3. Constraint Satisfaction
+			1. Arc Constraint
+			2. Backtracking
+
 2. Machine Learning:
     1. Theory: Machine Learning Playlist by Statquest : https://www.youtube.com/watch?v=Gv9_4yMHFhI&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF
 	2. Theory: DeepMind Deep Leacture Series: https://www.youtube.com/watch?v=7R52wiUgxZI&list=PLqYmG7hTraZCDxZ44o4p3N5Anz3lLRVZF
@@ -207,8 +255,7 @@ More: web applications and package creation. I have little experience in web dev
     5. Practice Book: Machine Learning with Python by Chris Albon (focus on data preprocessing and all the ML algorithms)
     6. Practice Book: Introduction to Machine Learning with Python by Andreas Muller (focus on model visualization)
     7. Practice Book: Feature Engineering for Machine Learning by Alice Zheng (focus on featurization)
-    8. Practice Book: Forcasting Principles and Practices with R: https://otexts.com/fpp2/ (focus on time-series and forecasting)
-    
+   
     Checklist:
     - Data Preprocessing: 
          a. Renaming Columns, Replacing Values, Delete Rows/Columns, Handling Missing values and outliers, Grouping columns/rows/dataframe
@@ -218,7 +265,13 @@ More: web applications and package creation. I have little experience in web dev
                iii. Text: cleaning, remove punctuations, tokenize, remove stop words, bag-of-words, weight word importance
                iv. Dates and Time:
                v. Images: Resize, Crop, Blurring, Enhancing, Edge/Corner Detection
-    - Dimension Reduction for Feature Selection and Feature Extraction
+	- Preventing Overfitting:
+	  1. Crossvalidation
+	  2. Dropout
+	  3. Regularization
+	  4. Feature Selection with Dimension Reduction
+	  5. Feature Extraction with Dimension Reduction
+	  6. Early Stopping
     - Modelling:
       1. Linear Regression, Logistic Regression, K-Nearest Neighbor
       2. Ensemble: Trees, Random Forests
@@ -228,23 +281,28 @@ More: web applications and package creation. I have little experience in web dev
     - Model Evaluation and Selection with with Exhaustive and Randomized Search 
     - Training Faster: Parallelization
     - Visualizing Models
-
+	
 3. Neural Network:
     1. Theory: MIT Deep Learning Playlist by Alexander Amini: https://www.youtube.com/watch?v=njKP3FqW3Sk&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI
     2. Practice Book: Deep Learning with Python by Francois Chollet (focus on basics Neural Networks)
     
     Checklist:
+	- Basics: 
+		1. Perceptrons: weight, bias
+		2. What are activation function? Loss Function? Backpropagation? 
     - Neural Network Models:
          a. Multi-layers Perceptrons
          b. Convolutional Neural Network
-         c. Recurrent Neural Network, LSTM
-         d. Autoencoders, GAN, GRU
-    - Functions:
+         c. Recurrent Neural Network, LSTM, GRU
+         d. Autoencoders
+		 e. Generative Adversial Network (GAN)
+    - Choosing the right Functions:
          a. Loss: sparse_categorical_crossentropy,categorical_crossentropy, binary_crossentropy, mse, mae
          b. Activation: sigmoid, softmax, relu, adam, ...
          c. optimizer: rmsprop, sgd, ...
-    - Hyperparameters Tuning with GridSearch
+	- Hyperparameters Tuning with GridSearch
     - Using Tensorboard and callbacks
+	- Preventing Vanishing/Exploding Gradient
     - concatenate layers for multi inputs/outputs models
 
 3. Reinforcement Learning:
@@ -257,6 +315,57 @@ More: web applications and package creation. I have little experience in web dev
 	Ressources:
 	- Book: Reinforcement Learning: An Intro by Richard Sutton and Andrew
 	  Barto: http://incompleteideas.net/book/first/ebook/the-book.html
+
+5. Time-Series:
+	1. Practice Book: Forcasting Principles and Practices with R: https://otexts.com/fpp2/ (focus on time-series and forecasting)
+    
+	  
+	Checklist:
+	- Why use Time-Series:
+	   1. Measure Strength of trend
+	   2. Forecasting
+	- Assumptions
+	- Basics
+	   0. Additive vs Multiplicative Models
+	   1. Time Series Pattern: Trend, Seasonality, Cyclic
+	   2. Types of plots: seasonal plots, scatterplots, lag plots,
+		  autocorrelation, white noise
+	   3. Forecasting Method:
+			1. Average Method
+			2. Naive Method
+			3. Season Naive Method
+			4. Drift Method
+	   4. Transformation Adjustements:
+			1. Calendar Adjustements
+			2. Population Adjustements
+			3. Inflation Adjustements
+			4. Mathematical Transformation
+			5. Bias Adjustements
+	   5. Residual Diagnostic 
+	   6. Testing for Autocorrelation: Portmanteau Test, Box-Pierce Test,
+		  Ljung-Box Test
+	- Evaluating Forecast:
+	   1. Accuracy:
+		   1. Scale-Dependent Errors
+		   2. Percentage Errors
+		   3. Scaled Errors
+	   2. Prediction Intervals
+		   1. One-Step Interval, Multi-Step Prediction Intervals, Prediction
+			  Intervals from Boostrapped Residuals, Prediction Intervals from
+			  Transformation
+		   2. Benchmark methods: Mean Forecast, Naive Forecast, Seasonal Naive
+			  Forecast, Drift Forecast
+	- Models
+	   1. Regression models
+	   2. Time Series Decomposition: X11, SEATS, STL
+	   3. Exponential Smoothing with ETS 
+	   4. Autoregressive and Moving Average models with ARIMA
+	   5. Dynamic Regression models: (regression + ARIMA)
+	   6. Hierarchical Time-Series
+	   7. Vector Autoregression
+	   8. Neural Network Models
+
+
 ### Part 5: Data Mining with R and the command line
 
 1. Data Scrapping with rvest 
@@ -302,6 +411,11 @@ Natural Language Processing:
 
 	Ressources:
 	- nltk book: https://www.nltk.org/book/
+
+Quantitative Analysis
+
+	Ressources:
+	- Quantopian
 
 ### Part 7: Exploring other Computer Science Fields
 
