@@ -114,7 +114,7 @@ More: web applications and package creation. I have little experience in web dev
    - Version Control: init, push, commit, merge, pull
    - Web Scrapping: curl, lynx
    - Version Control with Git: init, add, push, pull, merge, branch, status,
-	 log
+	 log, checkout
    - Basic Vim:
         1. Normal, Insert, Visual Mode
         2. Basic command: [dd,yy,p] [a,s,i,c] [gg,G] [w,b,W,B,e,gb] , more...
@@ -165,12 +165,26 @@ More: web applications and package creation. I have little experience in web dev
 1. Introduction to Central tendencies, variation and correlation 
     1. Theory: Statistic Fundamentals Playlist by Statquest : https://www.youtube.com/watch?v=qBigTkBLU6g&list=PLblh5JKOoLUK0FLuzwntyYI10UQFUhsY9
     2. Theory: UC Business: http://uc-r.github.io/descriptive
-    3. Practical Book: Applied Statistics in R: https://daviddalpiaz.github.io/appliedstats/applied_statistics.pdf
+	3. Theory: Crash Course Statistics: https://www.youtube.com/watch?v=9TDjifpGj-k&list=PL8dPuuaLjXtNM_Y-bUAhblSAdWRnmBUcr
+    4. Practical Book: Applied Statistics in R: https://daviddalpiaz.github.io/appliedstats/applied_statistics.pdf
+	5. Practical: Think Stats: Exploratory Data Analysis in Python by Allen
+	   B Downney
+	6. Practical: An Introduction to Bayesian Thinking with R by Merlisle
+	   Clyde: https://statswithr.github.io/book/
+	
 
     Checklist:
     - Central Tendencies: Mean, median, mode, standard deviation,
+	- Distributions: normal, binomial, geometric
+	- Confidence Intervals
+	- Test Statistics: Z-score and percentiles, sampling distribution
+	- p-value, R-squared
+	
     - Variation: What happens within a variables. Assumption (normalization), visualization (histogram and barplots), metrics (variance)
     - Correlation: relationship between variables. Assumptions (homogeneity), visualization (scatter plot, qqplot), metrics (R-squared)
+	
+	- Bayesian Statistics
+	- Replicability
 
 2. Statistical Inferences and Hypothesis Testing 
    1. Theory: Statistics Playlist by Crash Course: https://www.youtube.com/playlist?list=PL8dPuuaLjXtNM_Y-bUAhblSAdWRnmBUcr
@@ -183,14 +197,20 @@ More: web applications and package creation. I have little experience in web dev
 
 0. Introduction to Python
 	1. Practice Python: https://www.practicepython.org/
+	2. NewCoder: http://newcoder.io/tutorials/
+	3. Write Cleaner Code in Python: https://www.youtube.com/watch?v=OSGv2VnC0go
 
 	Checklist:
 	1. Basics: 
 		1. Conditions: if/else
 		2. Loops: for, while, do while
 		3. Dictionnaries, sets, lists
-		4. List Comprehension
+		4. List Comprehension, zip
 		5. Try Except
+		6. Switch Statement
+		7. break, pass, return
+	2. Modules
+	3. Object Oriented
 
 [todo]
 
