@@ -158,7 +158,7 @@ More: web applications and package creation. I have little experience in web dev
     - More Plot Features with aes(): alpha, color, shape, size, ...
     - Grouping: facet_wrap, facet_grid
     - themes, axis, ...
-    - Advanced plots: correlation plots, time-series, heat map, ...
+    - Advanced plots: correlation plots, time-series, heat map, ..
 
 ### Part 3: Data Analysis with R
 
@@ -166,10 +166,11 @@ More: web applications and package creation. I have little experience in web dev
     1. Theory: Statistic Fundamentals Playlist by Statquest : https://www.youtube.com/watch?v=qBigTkBLU6g&list=PLblh5JKOoLUK0FLuzwntyYI10UQFUhsY9
     2. Theory: UC Business: http://uc-r.github.io/descriptive
 	3. Theory: Crash Course Statistics: https://www.youtube.com/watch?v=9TDjifpGj-k&list=PL8dPuuaLjXtNM_Y-bUAhblSAdWRnmBUcr
-    4. Practical Book: Applied Statistics in R: https://daviddalpiaz.github.io/appliedstats/applied_statistics.pdf
-	5. Practical: Think Stats: Exploratory Data Analysis in Python by Allen
+	4. Theory Questions: Maths is Fun: https://www.mathsisfun.com/data/index.html#stats
+    5. Practical Book: Applied Statistics in R: https://daviddalpiaz.github.io/appliedstats/applied_statistics.pdf
+	6. Practical: Think Stats: Exploratory Data Analysis in Python by Allen
 	   B Downney
-	6. Practical: An Introduction to Bayesian Thinking with R by Merlisle
+	7. Practical: An Introduction to Bayesian Thinking with R by Merlisle
 	   Clyde: https://statswithr.github.io/book/
 	
 
