@@ -172,7 +172,7 @@ More: web applications and package creation. I have little experience in web dev
 	   B Downney
 	7. Practical: An Introduction to Bayesian Thinking with R by Merlisle
 	   Clyde: https://statswithr.github.io/book/
-	
+	8. Theorical: OpenIntro Statistics by OpenIntro
 
     Checklist:
     - Central Tendencies: Mean, median, mode, standard deviation,
