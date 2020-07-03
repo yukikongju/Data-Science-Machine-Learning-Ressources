@@ -444,4 +444,3 @@ Quantitative Analysis
     1. Theory: Web Programming with Python and JS by Harvard's CS50: https://www.youtube.com/watch?v=zFZrkCIc2Oc&list=PLhQjrBD2T380xvFSUmToMMzERZ3qB5Ueu&index=2
     2. Application: Web applications with Shiny: https://shiny.rstudio.com/tutorial/
       
-    
