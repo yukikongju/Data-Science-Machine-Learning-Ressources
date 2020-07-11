@@ -90,16 +90,19 @@ As I see it, we can divide the data science learning process in four parts:
 1. Computer Science tools with the command line
 In this section, we focus on the tools that we use to write our code. We have to learn how to use an editor efficiently, how to do basic version control on git, and to use the command lines to search for files and data wrangling. I chose vim as my editor.
 
-2. Data manipulation, visualization, statistical analysis with R
+1. Data manipulation, visualization, statistical analysis with R
 In this section, we focus on the statistical analysis, data visualization and data wrangling part of data science. Most of the code will be on R.
 
-3. Modelling with Python
+1. Modelling with Python
 We create Machine Learning models and neural networks for data science. We build models for classification and regression. We explore computer vision and text generation. Later, we explore reinforcement learning and genetic algorithms, altought they are not required to learn.
 
-4. Applications of Machine Learning
+1. Applications of Machine Learning
 We go in-depth in the applications of machine learning: computer vision, language processing, speech recognition, and bioinformatics.
 
 More: web applications and package creation. I have little experience in web development, but I did create a dashboard for data visualization in R with shiny.   
+
+Ressources and Inspiration:
+  - MIT Curriculum Guide: https://ocw.mit.edu/courses/mit-curriculum-guide/#map
 
 ### Part 1: Get proficicient with your tools
 1. MIT Missing Semester Course: https://missing.csail.mit.edu/2020/  https://missing.csail.mit.edu/2019/
@@ -173,6 +176,7 @@ More: web applications and package creation. I have little experience in web dev
 	7. Practical: An Introduction to Bayesian Thinking with R by Merlisle
 	   Clyde: https://statswithr.github.io/book/
 	8. Theorical: OpenIntro Statistics by OpenIntro
+	9. MIT 18.05 - Intro to Probability and Statistics: https://ocw.mit.edu/courses/mathematics/18-05-introduction-to-probability-and-statistics-spring-2014/
 
     Checklist:
     - Central Tendencies: Mean, median, mode, standard deviation,
@@ -196,7 +200,7 @@ More: web applications and package creation. I have little experience in web dev
 
 ### Part 4: Modelling with Python (and R)
 
-0. Introduction to Python
+1. Introduction to Python
 	1. Practice Python: https://www.practicepython.org/
 	2. NewCoder: http://newcoder.io/tutorials/
 	3. Write Cleaner Code in Python: https://www.youtube.com/watch?v=OSGv2VnC0go
@@ -218,6 +222,7 @@ More: web applications and package creation. I have little experience in web dev
 1. Artificial Intelligence Basics
 	1. CS50 - Intro to Artificial Intelligence: https://www.youtube.com/watch?v=WbzNRTTrX0g&list=PLhQjrBD2T382Nz7z1AEXmioc27axa19Kv&index=2
 	2. Artificial Intelligence by Stanford CS221: https://www.youtube.com/playlist?list=PLoROMvodv4rO1NB9TD4iUZ3qghGEGtqNX 
+	3. MIT 6.0002 - Introduction to Computational Thinking and Data Science: https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0002-introduction-to-computational-thinking-and-data-science-fall-2016/
 
 	Checklist:
 	- Searching:
@@ -326,18 +331,18 @@ More: web applications and package creation. I have little experience in web dev
 	- Preventing Vanishing/Exploding Gradient
     - concatenate layers for multi inputs/outputs models
 
-3. Reinforcement Learning:
+4. Reinforcement Learning:
     1. Theory: Introduction to Artificial Intelligence by Harvard's CS50: https://www.youtube.com/watch?v=WbzNRTTrX0g&list=PLhQjrBD2T382Nz7z1AEXmioc27axa19Kv&index=2 
     2. Theory: Reinforcement Learning Course given by David Silver on Deep Mind. In-depth explanation on agent, environment, decision processes and policies. Link: https://www.youtube.com/watch?v=2pWv7GOvuf0&list=PLqYmG7hTraZDM-OYHWgPebj2MfCFzFObQ
 
-4. Genetic Algorithms:
+5. Genetic Algorithms:
     1. Theory: Genetic algorithm by The Coding Train - 9.2. Great Overview of fitness function, parents selection, crossover, and mutation. Link: https://www.youtube.com/watch?v=RxTfc4JLYKs
 
 	Ressources:
 	- Book: Reinforcement Learning: An Intro by Richard Sutton and Andrew
 	  Barto: http://incompleteideas.net/book/first/ebook/the-book.html
 
-5. Time-Series:
+6. Time-Series:
 	1. Practice Book: Forcasting Principles and Practices with R: https://otexts.com/fpp2/ (focus on time-series and forecasting)
     
 	  
@@ -347,23 +352,23 @@ More: web applications and package creation. I have little experience in web dev
 	   2. Forecasting
 	- Assumptions
 	- Basics
-	   0. Additive vs Multiplicative Models
-	   1. Time Series Pattern: Trend, Seasonality, Cyclic
-	   2. Types of plots: seasonal plots, scatterplots, lag plots,
+	   1. Additive vs Multiplicative Models
+	   2. Time Series Pattern: Trend, Seasonality, Cyclic
+	   3. Types of plots: seasonal plots, scatterplots, lag plots,
 		  autocorrelation, white noise
-	   3. Forecasting Method:
+	   4. Forecasting Method:
 			1. Average Method
 			2. Naive Method
 			3. Season Naive Method
 			4. Drift Method
-	   4. Transformation Adjustements:
+	   5. Transformation Adjustements:
 			1. Calendar Adjustements
 			2. Population Adjustements
 			3. Inflation Adjustements
 			4. Mathematical Transformation
 			5. Bias Adjustements
-	   5. Residual Diagnostic 
-	   6. Testing for Autocorrelation: Portmanteau Test, Box-Pierce Test,
+	   6. Residual Diagnostic 
+	   7. Testing for Autocorrelation: Portmanteau Test, Box-Pierce Test,
 		  Ljung-Box Test
 	- Evaluating Forecast:
 	   1. Accuracy:
@@ -402,21 +407,23 @@ More: web applications and package creation. I have little experience in web dev
 Tutorial for Bioinformatics:
 1. Theory: [to do]
 	1. Introduction to Biology by MIT: https://www.youtube.com/watch?v=KlVHqq38KJU&list=PLUl4u3cNGP63LmSVIVzy584-ZbjbJ-Y63
+	2. MIT 6.802J - Foundations of Computational and System Biology: https://ocw.mit.edu/courses/biology/7-91j-foundations-of-computational-and-systems-biology-spring-2014/lecture-slides/
 
-      Checklist:
-      - Cell Structures: [to do]
-      - DNA, RNA, DNA replication and repair
-      - Central Dogma: transcription, translation, structures, mutations
+	Checklist:
+	- Cell Structures: [to do]
+	- DNA, RNA, DNA replication and repair
+	- Central Dogma: transcription, translation, structures, mutations
 
-      Ressources:
-      - Youtube: Porfessor Dave Explains
-      - Scitable by Nature Education: https://www.nature.com/scitable/topics/
-      - Book Theory: Concepts in Bioninformatics and Genomics by Jamil Momand
-      - Book Theory: Applied Bioinformatics by Paul Selzer
-      - Book Theory: Phylogenomics: An Introduction by Christoph Bleidorn
-      - Book Practice: Deep Learning for Life Science by Peter Eastman
+	Ressources:
+	- Youtube: Porfessor Dave Explains
+	- Scitable by Nature Education: https://www.nature.com/scitable/topics/
+	- Book Theory: Concepts in Bioninformatics and Genomics by Jamil Momand
+	- Book Theory: Applied Bioinformatics by Paul Selzer
+	- Book Theory: Phylogenomics: An Introduction by Christoph Bleidorn
+	- Book Practice: Deep Learning for Life Science by Peter Eastman
+	- Life Sciences Courses by MIT: https://ocw.mit.edu/courses/life-sciences/
 
-      Modules:
+	Modules:
       - DeepChem
       - Biopython
 
