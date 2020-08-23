@@ -25,6 +25,7 @@ Data science combines the field of statistics and programmation to describe data
 
 Ressources: 
 1. Decisive Data: https://www.youtube.com/watch?v=24G_pfcl3qE&list=PLwM2SFDcolcK9WIpn50JkELC0grYP5Pyu
+2. WikiStat: http://wikistat.fr/
 
 ### Some questions I had when I first started learning Data Science?
 
@@ -206,7 +207,7 @@ Ressources and Inspiration:
 	3. Write Cleaner Code in Python: https://www.youtube.com/watch?v=OSGv2VnC0go
 
 	Checklist:
-	1. Basics: 
+	1. Python Basics: 
 		1. Conditions: if/else
 		2. Loops: for, while, do while
 		3. Dictionnaries, sets, lists
@@ -276,11 +277,17 @@ Ressources and Inspiration:
     1. Theory: Machine Learning Playlist by Statquest : https://www.youtube.com/watch?v=Gv9_4yMHFhI&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF
 	2. Theory: DeepMind Deep Leacture Series: https://www.youtube.com/watch?v=7R52wiUgxZI&list=PLqYmG7hTraZCDxZ44o4p3N5Anz3lLRVZF
 	3. Theory: Standford CS229: Machine Learning by Andrew Ng: https://www.youtube.com/watch?v=jGwO_UgTS7I&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU
-	
     4. Practice Book: Python Data Science Handbook by Jake VanderPlas (focus on data manipulation and data visualization)
     5. Practice Book: Machine Learning with Python by Chris Albon (focus on data preprocessing and all the ML algorithms)
     6. Practice Book: Introduction to Machine Learning with Python by Andreas Muller (focus on model visualization)
     7. Practice Book: Feature Engineering for Machine Learning by Alice Zheng (focus on featurization)
+	8. WikiStat Practice: https://github.com/wikistat	
+		  1. Intro Python: https://github.com/wikistat/Intro-Python
+		  2. Exploration: https://github.com/wikistat/Exploration
+		  3. Apprentissage: https://github.com/wikistat/Apprentissage
+		  4. Deep Learning: https://github.com/wikistat/High-Dimensional-Deep-Learning
+		  5. AI Frameworks: https://github.com/wikistat/AI-Frameworks
+		  6. Ethical AI: https://github.com/wikistat/Fair-ML-4-Ethical-AI
    
     Checklist:
     - Data Preprocessing: 
