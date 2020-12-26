@@ -134,6 +134,7 @@ Ressources and Inspiration:
 1. Basics of R
     1. Practice Book: R Programming for Data Science by Roger Peng: https://bookdown.org/rdpeng/rprogdatascience/
     2. Practice Book: R for Data Science by Hadley Wickham: https://r4ds.had.co.nz/
+	3. Exercices Book: Introduction to R by Sarah Bonnin: https://biocorecrg.github.io/CRG_RIntroduction/
     
     Checklist:
     - import data
