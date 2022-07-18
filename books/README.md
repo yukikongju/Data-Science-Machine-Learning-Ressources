@@ -7,4 +7,4 @@ Here is some of the books I have read and the code that accompanies the book
     - [ ] Volume I: 
     - [ ] Volume II: 
     - [ ] Volume III: 
-
+- [ ] Applied Text Analysis with Python by Benjamin Bengfort 
