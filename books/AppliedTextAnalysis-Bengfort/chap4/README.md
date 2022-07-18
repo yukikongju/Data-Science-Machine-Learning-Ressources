@@ -2,14 +2,14 @@
 
 **Text Normalization**
 
-- [ ] Stemmer
+- [X] Stemmer
 - [ ] Lemmatization
 
 
 **Text Vectorization**
 
-- [ ] Frequency distribution
-- [ ] One Hot Encoder
+- [X] Frequency distribution
+- [X] One Hot Encoder
 - [ ] TF-IDF
 - [ ] Distributed Representation
 
