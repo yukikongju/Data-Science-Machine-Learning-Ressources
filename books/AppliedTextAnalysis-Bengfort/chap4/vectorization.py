@@ -190,6 +190,17 @@ class FrequencyVectorizer(TextVectorizer):
         return counter
         
 
+def TFIDFVectorizer():
+
+    def __init__(self, corpus):
+        self.corpus = corpus
+
+    def vectorize_corpus(self):
+        vectorizer = TfidfVectorizer()
+        vectors = vectorizer.fit_transform(self.corpus).toarray()
+        return vectors
+        
+
 def main():
     stemmer = SnowballStemmer('english')
     corpus = [
