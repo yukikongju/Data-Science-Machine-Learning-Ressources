@@ -5,6 +5,7 @@ Here is some of the books I have read and the code that accompanies the book
 
 **Deep Learning**
 - [ ] Deep Learning with PyTorch by Eli Stevens
+- [ ] Deep Learning Cookbook by Douwe Osinga
 
 
 **Computer Vision**
