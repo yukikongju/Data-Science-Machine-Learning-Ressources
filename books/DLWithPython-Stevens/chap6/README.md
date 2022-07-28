@@ -4,7 +4,7 @@
 
 - [X] Neural network: coding a neural network with our own model and loss function
 - [ ] Activation Function: plotting the activation function
-- [ ] NN Module: using pytorch nn module class
+- [X] NN Module: using pytorch nn module class
 
 The activation function must be: 
     1. be differentiable
