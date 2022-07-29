@@ -4,7 +4,7 @@ from torch.autograd import Variable
 
 from torch import nn, optim
 from torchvision import datasets
-from random import randint
+from random import randint, randrange
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OneHotEncoder
 from torchvision import transforms
@@ -16,7 +16,7 @@ num_img = 100
 label_classes = ['doggo', 'not']
 label_dict = {'doggo': 0, 'not':1}
 imgs = torch.rand((num_img, 3, 800, 800))
-labels = [ label_classes[randint(0, 1)] for _ in range(num_img) ]
+labels = [ randrange(0, len(label_classes)) for _ in range(num_img) ]
 
 ### Step 2: perform preprocessing 
 
@@ -57,7 +57,7 @@ def training(n_epochs, model, optimizer, loss_fn, imgs, labels):
         for img, label in zip(imgs, labels):
             # REMARK: img.shape: [3, 32, 32]   ; label = 'doggo'
             label_pred = model(img.reshape(1, -1))
-            loss = loss_fn(label_pred, torch.tensor([label_dict.get(label)]))
+            loss = loss_fn(label_pred, torch.tensor([label]))
 
             optimizer.zero_grad()
             loss.backward()
