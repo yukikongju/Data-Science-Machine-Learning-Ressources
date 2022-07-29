@@ -1,7 +1,5 @@
 import torch
 
-from torch.autograd import Variable
-
 from torch import nn, optim
 from torchvision import datasets
 from random import randint, randrange
@@ -73,6 +71,22 @@ def flatten(t):
     
 training(n_epochs, model, optimizer, loss_fn, x_train, y_train)
 
-# TODO: Step 5: test the model
+# Step 5: test the model
+
+def testing(model, x_test, y_test):
+    correct, total = 0, len(x_test)
+
+    with torch.no_grad():
+        for img, label in zip(x_test, y_test):
+            t_p = model(img.reshape(1, -1))
+            _, label_pred = torch.max(t_p, dim=1)
+            correct += int(label_pred == label)
+
+    print(f"Total: {total}, Correct: {correct}")
+    print(f"Accuracy {correct/total}")
+
+testing(model, x_test, y_test)
+    
+    
 
 
