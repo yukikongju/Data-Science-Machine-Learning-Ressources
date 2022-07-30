@@ -1,5 +1,7 @@
 # Chap 8 - Using Convolutions to Generalize
 
+[Code](https://github.com/deep-learning-with-pytorch/dlwpt-code/tree/master/p1ch8)
+
 - [O] Convolutional Neural Network (CNN)
     - [X] With Conv2D only
     - [X] With MaxPool2D

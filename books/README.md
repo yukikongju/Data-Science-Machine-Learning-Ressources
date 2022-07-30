@@ -28,23 +28,23 @@ Here is some of the books I have read and the code that accompanies the book
 
 
 **Deep Learning**
-- [ ] Deep Learning with PyTorch by Eli Stevens
+- [ ] Deep Learning with PyTorch by Eli Stevens [on going]
 - [ ] Deep Learning Cookbook by Douwe Osinga
 - [ ] Programming PyTorch for Deep Learning by Ian Pointer
 
 
 **Computer Vision**
 - [ ] Deep Learning for Computer Vision by Adrian Rosebrock
-    - [ ] Volume I: 
+    - [ ] Volume I:  [on going]
     - [ ] Volume II: 
     - [ ] Volume III: 
 
 **Natural Language Processing**
-- [ ] Applied Text Analysis with Python by Benjamin Bengfort 
-- [ ] Applied Natural Language Processing in the Enterprise by Ankur Patel
+- [ ] Applied Text Analysis with Python by Benjamin Bengfort [on going]
+- [ ] Applied Natural Language Processing in the Enterprise by Ankur Patel 
+- [ ] Natural Language Processing in Action by Hobson Lane
 - [ ] Natural Language Processing with Transformers by Lewis Tunstall
 - [ ] Practical Natural Language Processing by Sowmya Vajjala
-
 
 
 **Music**
@@ -88,6 +88,7 @@ Here is some of the books I have read and the code that accompanies the book
 - [ ] Refractoring at Scale by Maude Lemaire
 
 **Ditributed Systems**
+- [X] Understanding Distributed Systems by Roberto Vitillo
 - [ ] Chaos Engineering by Casey Rothensal (read)
 
 
