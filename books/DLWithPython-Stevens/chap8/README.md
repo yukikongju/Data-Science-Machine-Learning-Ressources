@@ -1,14 +1,15 @@
 # Chap 8 - Using Convolutions to Generalize
 
-- [o] Convolutional Neural Network (CNN)
+- [O] Convolutional Neural Network (CNN)
     - [X] With Conv2D only
     - [X] With MaxPool2D
     - [X] With AdaptiveMaxPool2d
-    - [ ] With Dropout2D
-    - [ ] With BatchNorm2D
-- [ ] Using regularization/weight decay
-    - [ ] computing weight decay inside training loop
-    - [ ] initialize weight_decay inside optimizer
+    - [X] With Dropout2D
+    - [X] With BatchNorm2D
+    - [ ] With Blocking
+- [X] Using regularization/weight decay
+    - [X] computing weight decay inside training loop
+    - [X] initialize weight_decay inside optimizer
 - [ ] Comparing our models
 - [ ] Saving our model
 
