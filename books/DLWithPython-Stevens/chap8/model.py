@@ -118,13 +118,29 @@ class BatchNormNet(nn.Module):
 
     def forward(self, x):
         x = self.norm1(self.conv1(x))
-        x = self.pool(x)
+        x = self.pool(torch.tanh(x))
         x = self.norm2(self.conv2(x))
-        x = self.pool(x)
+        x = self.pool(torch.tanh(x))
         x = x.reshape(x.shape[0], -1)
         x = self.fct1(x)
         return x
 
+
+class ResBlock(nn.Module): # TODO
+
+    def __init__(self, in_channels, out_channels, n_channels):
+        super(ResBlock, self).__init__()
+
+    def forward(self, x):
+        pass
+
+class ResNetDeep(nn.Module): # TODO
+
+    def __init__(self, in_channels, out_channels, n_channels):
+        super(ResNetDeep, self).__init__()
+
+    def forward(self, x):
+        pass
 
 def test_cnn():
     # test CNN with colored img 32x32

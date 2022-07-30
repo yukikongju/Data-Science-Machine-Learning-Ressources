@@ -1,5 +1,6 @@
 # Deep Learning with PyTorch by Eli Stevens
 
+[Eli Stevens Code](https://github.com/deep-learning-with-pytorch/dlwpt-code)
 
 
 ## What to Expect
@@ -9,9 +10,9 @@
     - [X] loss function
     - [X] backpropagation
     - [X] optimizer
-- [o] How to write custom DL models using nn.Module
+- [X] How to write custom DL models using nn.Module
     - [X] Sequential model
-    - [ ] CNN
+    - [X] CNN
 - [X] How to preprocess images using torchvision.transformers
 - [X] Train and test models
 - [ ] Using data augmentation and segmentation to improve  performance on
@@ -30,7 +31,7 @@
 - [X] Chap 5 - The Mechanics of Learning
 - [X] Chap 6 - Using a Neural Network to fit the data
 - [X] Chap 7 - Telling birds form airplanes: learning from images
-- [ ] Chap 8 - Using convolutions to generalize
+- [X] Chap 8 - Using convolutions to generalize
 
 **Part 2: Learning from Images in the Real World**
 

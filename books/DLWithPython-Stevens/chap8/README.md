@@ -10,7 +10,8 @@
 - [X] Using regularization/weight decay
     - [X] computing weight decay inside training loop
     - [X] initialize weight_decay inside optimizer
-- [ ] Comparing our models
+- [X] Comparing our models
+- [ ] Plotting history and accuracy
 - [ ] Saving our model
 
 
