@@ -3,7 +3,7 @@
 - [X] Transforms: using torchvision transforms to modify the picture
     - [X] view image generated from random tensor
 - [ ] DataLoader:
-- [ ] Train and Test model
+- [X] Train and Test model
 
 
 **Notes**

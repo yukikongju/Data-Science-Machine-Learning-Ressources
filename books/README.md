@@ -2,7 +2,23 @@
 
 Here is some of the books I have read and the code that accompanies the book
 
+## Data Science
+
 **Data Science**
+
+
+
+
+**Data Analytics**
+
+
+
+
+**Sports Analytics**
+
+
+
+## Machine Learning, Deep Learning and their applications
 
 
 
@@ -14,6 +30,7 @@ Here is some of the books I have read and the code that accompanies the book
 **Deep Learning**
 - [ ] Deep Learning with PyTorch by Eli Stevens
 - [ ] Deep Learning Cookbook by Douwe Osinga
+- [ ] Programming PyTorch for Deep Learning by Ian Pointer
 
 
 **Computer Vision**
@@ -25,16 +42,33 @@ Here is some of the books I have read and the code that accompanies the book
 **Natural Language Processing**
 - [ ] Applied Text Analysis with Python by Benjamin Bengfort 
 - [ ] Applied Natural Language Processing in the Enterprise by Ankur Patel
+- [ ] Natural Language Processing with Transformers by Lewis Tunstall
+- [ ] Practical Natural Language Processing by Sowmya Vajjala
+
+
 
 **Music**
 
 
+**Life Sciences**
+- [ ] Deep Learning for the Life Science by Bharath Ramsundar
+
+**Computer Security**
+
+
+
 **Reinforcement Learning**
+- [ ] Reinforcement Learning by Phil Winder (read)
+- [ ] Deep Reinforcement Learning by Alexander Zai
+
+**Genetic Algorithms**
 
 
 
 **Time Series**
 - [ ] Practical Time Series Analysis by Aileen Nielsen (read)
+
+## Data Engineering, DevOps, MLOps: working with data
 
 
 **Data Engineering**
@@ -46,7 +80,7 @@ Here is some of the books I have read and the code that accompanies the book
 - [ ] Modern Data Protection by Curtis Preston (read)
 
 **MLOps**
-- [ ] Introducing MLOps by Mark Treveil
+- [ ] Introducing MLOps by Mark Treveil (read)
 - [ ] Practical MLOps by Noah Gift
 
 
@@ -57,7 +91,16 @@ Here is some of the books I have read and the code that accompanies the book
 - [ ] Chaos Engineering by Casey Rothensal (read)
 
 
-**Sparks**
+**Docker and Kubernetes**
+- [ ] Docker Up and Running by Karl Matthias
+- [ ] Kubernetes Up and Running by Brendan Burns
+
+
+**Spark**
+- [ ] Learn Spark by Jules Damji
+- [ ] High Performance Spark by Holden Karau
+- [ ] Spark: The Definitive Guide by Bills Chambers
+
 
 
 **Kafka**

@@ -59,6 +59,13 @@ class CSVLoader(object):
         else: 
             return ''
 
+    def get_target_classes(self):
+        """ 
+        Function that return list of target classes
+
+        """
+        pass
+
 
     def get_data(self):
         """ 
