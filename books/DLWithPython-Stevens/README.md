@@ -48,7 +48,7 @@
 
 ## Ressources
 
-- [Aladdin Persson ML Code](https://github.com/aladdinpersson/Machine-Learning-Collection)
+- [Aladdin Persson ML Code Repo](https://github.com/aladdinpersson/Machine-Learning-Collection)
 
 
 

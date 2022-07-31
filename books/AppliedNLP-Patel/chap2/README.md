@@ -5,10 +5,9 @@
 
 - [ ] Transfer Learning with `fastai`
     - [ ] with ULMFiT
-- [ ] Word inference: predicting next words with pretrained model tokenizer
-    - [ ] GPT2Tokenizer
-    - [ ] BERT
-    - [ ] REALM
+- [X] Word inference: predicting next words with pretrained model tokenizer
+    - [X] GPT2Tokenizer, GPT2MHeadModel
+    - [X] BertTokenizer, BertLMHeadModel
 
 
 - [ ] GPT2ForTokenClassification
