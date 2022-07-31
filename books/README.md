@@ -34,6 +34,7 @@ Here is some of the books I have read and the code that accompanies the book
 
 
 **Computer Vision**
+- [ ] Practical ML for Computer Vision by Valliappa Lakshmanan
 - [ ] Deep Learning for Computer Vision by Adrian Rosebrock
     - [ ] Volume I:  [on going]
     - [ ] Volume II: 
@@ -53,6 +54,12 @@ Here is some of the books I have read and the code that accompanies the book
 **Life Sciences**
 - [ ] Deep Learning for the Life Science by Bharath Ramsundar
 
+
+**Finance**
+- [ ] Practical Time Series Analysis by Aileen Nielsen (read)
+- [ ] ML and DS for Finance by Hariom Tatsat
+- [ ] ML for Financial risk management by Abdullah Karasan
+
 **Computer Security**
 
 
@@ -65,13 +72,11 @@ Here is some of the books I have read and the code that accompanies the book
 
 
 
-**Time Series**
-- [ ] Practical Time Series Analysis by Aileen Nielsen (read)
 
 ## Data Engineering, DevOps, MLOps: working with data
 
 
-**Data Engineering**
+**Data Engineering Principles**
 - [ ] Data Gouvernance: The Definitive Guide by Evren Eryurek (read)
 - [ ] Practical Fairness by Aileen Nielsen (read)
 - [ ] Cloud FinOps by JR Storment (read)
@@ -84,11 +89,17 @@ Here is some of the books I have read and the code that accompanies the book
 - [ ] Practical MLOps by Noah Gift
 
 
+**Testing**
+- [ ] Test-Driven Development with Python by Ahrry Percival
+
+**Databases: relational and non-relational**
+
+
 **Software Engineering**
 - [ ] Refractoring at Scale by Maude Lemaire
 
 **Ditributed Systems**
-- [X] Understanding Distributed Systems by Roberto Vitillo
+- [X] Understanding Distributed Systems by Roberto Vitillo (read)
 - [ ] Chaos Engineering by Casey Rothensal (read)
 
 
@@ -96,15 +107,19 @@ Here is some of the books I have read and the code that accompanies the book
 - [ ] Docker Up and Running by Karl Matthias
 - [ ] Kubernetes Up and Running by Brendan Burns
 
+**Hadoop**
+
 
 **Spark**
 - [ ] Learn Spark by Jules Damji
 - [ ] High Performance Spark by Holden Karau
 - [ ] Spark: The Definitive Guide by Bills Chambers
 
-
-
 **Kafka**
+- [ ] Kafka: The Definitive Guide by Neha Narkhede
 
+
+**System Networking**
+- [ ] Linux Cookbook by Carla Schroder
 
 
