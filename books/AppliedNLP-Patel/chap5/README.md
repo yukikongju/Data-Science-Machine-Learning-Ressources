@@ -4,8 +4,10 @@
 
 - [X] Using `nn.Embedding` for words vectorization
 - [X] Using `nn.Embedding` inside `nn.Model`
-- [X] Training
-- [ ] Validation
+- [o] Training
+    - [X] Using custom training function
+    - [ ] Using `tqdm` to train model
+- [ ] Testing
 - [ ] Explore pretrained embedding
     - [ ] Word2Vec
     - [ ] GloVe
