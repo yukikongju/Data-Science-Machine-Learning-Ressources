@@ -3,9 +3,9 @@
 [Code](https://github.com/nlpbook/nlpbook/blob/main/ch06.ipynb)
 
 
-- [.] Sequence Modeling using
+- [o] Sequence Modeling using
     - [X] Dummy RNN (no embedding)
-    - [ ] Reccurent Neural Neworks (RNNs)
+    - [X] Reccurent Neural Neworks (RNNs)
     - [ ] Bidirectionals RNNs
     - [ ] Long-Short Term Memory (LSTMs)
     - [ ] Gated Recurrent Units (GRUs)
