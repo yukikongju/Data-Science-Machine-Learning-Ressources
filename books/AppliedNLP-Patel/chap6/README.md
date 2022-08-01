@@ -6,6 +6,7 @@
 - [o] Sequence Modeling using
     - [X] Dummy RNN (no embedding)
     - [X] Reccurent Neural Neworks (RNNs)
+    - [X] RNN Embedding flatten (?)
     - [ ] Bidirectionals RNNs
     - [ ] Long-Short Term Memory (LSTMs)
     - [ ] Gated Recurrent Units (GRUs)
@@ -13,6 +14,14 @@
     - [ ] AWD-LSTMs
     - [ ] QRNNs
     - [ ] SHA-RNNs
+
+**To Research**
+- [ ] Why is there a difference between RNNEmbeding and RNNEmbeddingFlatten?
+
+
+**Notes**
+
+
 
 ## Ressources
 
