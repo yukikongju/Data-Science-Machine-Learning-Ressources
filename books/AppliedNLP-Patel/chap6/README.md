@@ -17,6 +17,7 @@
     - [ ] AWD-LSTMs
     - [ ] QRNNs
     - [ ] SHA-RNNs
+- [ ] Training
 
 
 **To Research**
@@ -24,13 +25,15 @@
 - [ ] Should we use `reshape()` or `view()` to reshape? what dimension 
       should middle layer have?
 - [ ] Why do we want to make RNN/LSTM bidirectional?
+- [ ] In LSTM, why do we want `x, _ = self.lstm(x)[1]` instead of `x, _ = self.lstm(x)`
 
 
 **Notes**
 
-- The input size for RNN and LSTM are: 
+- The input size for RNN, LSTM and GRU are: 
     * `nn.RNN()` : `[1 x context_size x embed_dim]`
     * `nn.LSTM()` :
+    * `nn.GRU()` :
 - The output size of the last `nn.Linear()` layer should depend on the task 
   we want to accomplish:
     - predict next word: the last layer need to output the probability for 

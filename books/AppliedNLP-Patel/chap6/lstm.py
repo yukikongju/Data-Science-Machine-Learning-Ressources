@@ -12,10 +12,9 @@ class SimpleLSTM(nn.Module):
         self.fct1 = nn.Linear(embedding_dim, 12)
         self.fct2 = nn.Linear(12, context_size)
 
-
     def forward(self, x):
         x = self.embed(x).unsqueeze(0)
-        x, _ = self.lstm(x)
+        x, _ = self.lstm(x)[1]
         x = self.fct1(x)
         x = self.fct2(x)
         return x
@@ -33,7 +32,8 @@ class BidirectionalLSTM(nn.Module):
 
     def forward(self, x):
         x = self.embed(x).unsqueeze(0)
-        x, _ = self.lstm(x)
+        x, _ = self.lstm(x)[1]
+        x = x.view((1,-1))
         x = self.fct1(x)
         x = self.fct2(x)
         return x
