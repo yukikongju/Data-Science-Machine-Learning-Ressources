@@ -104,7 +104,8 @@ def test_dummy_rnn_embedding():
     vocab_size, embedding_dim, context_dim = 50, 10, 2
     embed = nn.Embedding(vocab_size, embedding_dim)
     t = torch.tensor([4, 18]) # size: 1 x context_dim
-    t1 = embed(t).unsqueeze(0)
+    t1 = embed(t).unsqueeze(0) # size: [1 x context_dim x embedding_dim]
+    print(t1.shape)
     rnn = nn.RNN(embedding_dim, embedding_dim)
     print(rnn(t1))
 
@@ -129,8 +130,8 @@ def test_rnn():
 if __name__ == "__main__":
     #  test_rnn()
     #  test_dummy_rnn()
-    #  test_dummy_rnn_embedding()
+    test_dummy_rnn_embedding()
     #  test_rnn_embedding()
-    test_nn_embedding_flatten()
-    test_bidirectional_rnn()
+    #  test_nn_embedding_flatten()
+    #  test_bidirectional_rnn()
 

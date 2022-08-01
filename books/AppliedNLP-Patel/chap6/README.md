@@ -5,11 +5,13 @@
 ## Contents
 
 - [o] Sequence Modeling using
-    - [X] Dummy RNN (no embedding)
     - [X] Reccurent Neural Neworks (RNNs)
-    - [X] RNN Embedding flatten (?)
-    - [X] Bidirectionals RNNs
-    - [ ] Long-Short Term Memory (LSTMs)
+	- [X] Dummy RNN (no embedding)
+	- [X] RNN Embedding flatten (?)
+	- [X] Bidirectionals RNNs
+    - [X] Long-Short Term Memory (LSTMs)
+	- [X] Simple LSTM
+	- [X] Bidirectional LSTM
     - [ ] Gated Recurrent Units (GRUs)
 - [ ] More Models
     - [ ] AWD-LSTMs
@@ -21,10 +23,14 @@
 - [ ] Why is there a difference between RNNEmbeding and RNNEmbeddingFlatten?
 - [ ] Should we use `reshape()` or `view()` to reshape? what dimension 
       should middle layer have?
+- [ ] Why do we want to make RNN/LSTM bidirectional?
 
 
 **Notes**
 
+- The input size for RNN and LSTM are: 
+    * `nn.RNN()` : `[1 x context_size x embed_dim]`
+    * `nn.LSTM()` :
 - The output size of the last `nn.Linear()` layer should depend on the task 
   we want to accomplish:
     - predict next word: the last layer need to output the probability for 
