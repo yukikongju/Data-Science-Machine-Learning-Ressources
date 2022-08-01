@@ -14,7 +14,7 @@
 **Part 2: The Cogs in the Machine**
 - [ ] Chap 4: Tokenization
 - [X] Chap 5: Embeddings: How Machines "Understand" Words 
-- [ ] Chap 6: RNN and other sequence models
+- [X] Chap 6: RNN and other sequence models
 - [ ] Chap 7: Transformers
 - [ ] Chap 8: BERTology: Putting it all together
 
