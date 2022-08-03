@@ -40,7 +40,6 @@ examples in ```examples/```
 
 ## More
 
-- [Hacker Roadmap](https://github.com/sundowndev/hacker-roadmap)
 - [Microsoft's IoT for Beginners](https://github.com/microsoft/IoT-For-Beginners)
 - [Docker Curriculum](https://github.com/prakhar1989/docker-curriculum)
 
