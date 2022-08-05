@@ -17,3 +17,5 @@
 
 ## Ressources
 
+- [ ] [Under/Over sampling methods with imlearn](https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SMOTE.html)
+
