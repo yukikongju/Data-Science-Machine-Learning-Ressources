@@ -30,4 +30,5 @@
 ## Ressources
 
 - [PyTorch Sentiment Analysis Repo by Ben Trevett](https://github.com/bentrevett/pytorch-sentiment-analysis)
+- [Sentiment Analysis with BERT and PyTorch](https://curiousily.com/posts/sentiment-analysis-with-bert-and-hugging-face-using-pytorch-and-python/)
 

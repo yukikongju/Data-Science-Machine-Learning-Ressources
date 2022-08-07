@@ -8,10 +8,15 @@
     - [X] Using custom training function
     - [ ] Using `tqdm` to train model
 - [ ] Testing
-- [ ] Explore pretrained embedding
-    - [ ] Word2Vec
-    - [ ] GloVe
+- [.] Explore pretrained embedding with `gensim.models`
+    - [ ] Models: Word2Vec, FastText, Doc2Vec, GloVe
+    - [X] With words trained with
+    - [ ] With words that have not been trained with
 - [ ] Build the vocabulary using `torchtext` TEXT
+- [ ] Build Word Embedding using co-occurence matrix decomposition
+    - [ ] Decomp as two matrices: 
+	- [ ] Embedding is first/second matrices
+	- [ ] Embedding is the log/mean of both matrices
 
 
 **Notes**
@@ -30,4 +35,8 @@
 
 - [X] [Pytorch Embeddings by Santerre AI](https://www.youtube.com/watch?v=mCvW_qNm7rY&t=763s)
 - [X] [Embedding Progression by John Santerre](https://github.com/johnsanterre/Teaching/tree/main/embedding_progression)
+- [X] [Intuition behind word embedding with co-occurence matrix decomposition by macheads101](https://www.youtube.com/watch?v=5PL0TmQhItY&t=578s)
+
+**Gensim Models Documentation**
+
 

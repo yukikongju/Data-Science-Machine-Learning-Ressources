@@ -34,7 +34,8 @@ def create_pipeline(model, reduction=False):
 def main():
     # load data
     stemmer = SnowballStemmer('english')
-    file_path = 'books/AppliedTextAnalysis-Bengfort/chap5/data/SMS_train.csv'
+    #  file_path = 'data/'
+    #  file_path = 'books/AppliedTextAnalysis-Bengfort/chap5/data/SMS_train.csv'
     loader = CSVLoader(file_path, stemmer, 'Message_body', 'Label')
     X, y = loader.get_data()
 
