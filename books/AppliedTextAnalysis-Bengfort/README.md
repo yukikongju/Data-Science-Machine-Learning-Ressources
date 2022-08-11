@@ -16,3 +16,10 @@
 - [ ] Chap 10 - Chatbots
 - [ ] Chap 11 - Scaling Text Analytics with Multiprocessing and Spark
 - [ ] Chap 12 - Deep Learning an Beyond
+
+
+## Ressources
+
+- [Text Mining in R by Julia Siege](https://www.tidytextmining.com)
+
+

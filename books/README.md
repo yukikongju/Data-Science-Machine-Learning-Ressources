@@ -42,10 +42,11 @@ Here is some of the books I have read and the code that accompanies the book
 
 **Natural Language Processing**
 - [ ] Applied Text Analysis with Python by Benjamin Bengfort [on going]
-- [ ] Applied Natural Language Processing in the Enterprise by Ankur Patel 
-- [ ] Natural Language Processing in Action by Hobson Lane
+- [ ] Applied Natural Language Processing in the Enterprise by Ankur Patel [on going]
+- [ ] Natural Language Processing in Action by Hobson Lane [to read]
 - [ ] Natural Language Processing with Transformers by Lewis Tunstall
 - [ ] Practical Natural Language Processing by Sowmya Vajjala
+- [ ] Real-World Natural Language Processing by Masato Hagiwara
 
 
 **Music**

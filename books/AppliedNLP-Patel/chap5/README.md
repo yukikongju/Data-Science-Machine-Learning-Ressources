@@ -14,9 +14,11 @@
     - [ ] With words that have not been trained with
 - [ ] Build the vocabulary using `torchtext` TEXT
 - [ ] Build Word Embedding using co-occurence matrix decomposition
+    - [ ] Singular Value Decompostion, QR Decomposition, Choleskey, LU
     - [ ] Decomp as two matrices: 
 	- [ ] Embedding is first/second matrices
 	- [ ] Embedding is the log/mean of both matrices
+- [ ] Build Embedding using TF-IDF rows
 
 
 **Notes**
@@ -27,9 +29,12 @@
 
 ## Ressources
 
+**Word Embedding Classifiers**
+
 - [ ] [Illustrated Word2Vec](https://jalammar.github.io/illustrated-word2vec/)
 - [ ] [torch.nn.Embedding Explained by midlyoverfitter](https://www.youtube.com/watch?v=euwN5DHfLEo)
 - [ ] [Embedding Code Examples](https://www.programcreek.com/python/example/107677/torch.nn.Embedding)
+- [X] [Word2Vec for text classification by Ethen181](https://ethen8181.github.io/machine-learning/keras/text_classification/word2vec_text_classification.html)
 
 **Understanding what Embedding is**
 
@@ -38,5 +43,10 @@
 - [X] [Intuition behind word embedding with co-occurence matrix decomposition by macheads101](https://www.youtube.com/watch?v=5PL0TmQhItY&t=578s)
 
 **Gensim Models Documentation**
+
+
+**Co-matrix decomposition**
+
+- [ ] [Matrix Decompositions in Python](https://people.duke.edu/~ccc14/sta-663-2016/08_LinearAlgebraExamples.html)
 
 
