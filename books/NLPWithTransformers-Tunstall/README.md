@@ -11,7 +11,7 @@
 
 - [X] Chap 1 - Hello Transformers
 - [ ] Chap 2 - Text Classification
-- [ ] Chap 3 - 
+- [ ] Chap 3 - Transformer Anatomy
 - [ ] Chap 4 - 
 - [ ] Chap 5 - 
 - [ ] Chap 6 - 
