@@ -59,7 +59,8 @@ Here is some of the books I have read and the code that accompanies the book
 **Finance**
 - [ ] Practical Time Series Analysis by Aileen Nielsen (read)
 - [ ] ML and DS for Finance by Hariom Tatsat
-- [ ] ML for Financial risk management by Abdullah Karasan
+- [ ] ML for Financial Risk Management by Abdullah Karasan
+- [ ] AI in Finance by Yves Hilpich
 
 **Computer Security**
 
@@ -88,6 +89,8 @@ Here is some of the books I have read and the code that accompanies the book
 **MLOps**
 - [ ] Introducing MLOps by Mark Treveil (read)
 - [ ] Practical MLOps by Noah Gift
+- [ ] The Self-Service Data Roadmap by Sandeep Uttamchandani (reading)
+- [ ] Machine Learning Engineering in Action by Ben Wilson (reading)
 
 
 **Testing**
@@ -123,4 +126,8 @@ Here is some of the books I have read and the code that accompanies the book
 **System Networking**
 - [ ] Linux Cookbook by Carla Schroder
 
+
+## Ressources
+
+- [ML Engineering in Action by Ben Wilson](https://github.com/BenWilson2/ML-Engineering)
 

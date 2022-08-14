@@ -3,7 +3,9 @@
 
 ## Contents
 
-- [ ] Creating Topic vectors with TF-IDF and hand chosen weights
+- [o] Topic Vectorizer with matrix mult
+    - [X] TF-IDF => sentences vect = TF-IDF x Topic Mat
+    - [ ] NGrams => ??? (not in book)
 - [ ] Algorithms to determine topic vectors
     - [ ] Latent Semantic Analysis (LSA)
     - [ ] Latent Dirichlet Analysis (LDA)
