@@ -6,12 +6,12 @@
 - [o] Topic Vectorizer with matrix mult
     - [X] TF-IDF => sentences vect = TF-IDF x Topic Mat
     - [ ] NGrams => ??? (not in book)
-- [ ] Semantic Analysis with Dimension Reduction Algorithms
+- [o] Semantic Analysis with Dimension Reduction Algorithms
     - [ ] Latent Semantic Analysis (LSA)
     - [ ] Latent Dirichlet Analysis (LDA)
-    - [ ] Singular Value Decomposition (SVD)
-    - [ ] Truncated SVD
-    - [ ] Principal Component Analysis (PCA)
+    - [X] Singular Value Decomposition (SVD)
+    - [X] Truncated SVD
+    - [X] Principal Component Analysis (PCA)
     - [ ] LDiA
 - [ ] LSA and SVD Enhancements: Improving Semantic Analysis with
     - [ ] Quadratic Discriminant Analysis (QDA)
