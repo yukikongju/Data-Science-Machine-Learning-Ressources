@@ -153,3 +153,6 @@ if __name__ == "__main__":
     vectorizer = TFIDFVectorizer()
     print(vectorizer.fit_transform(sentences))
 
+    # TODO: to get the topic vector: multiply TF-IDF mat by topic matrix of 
+    # size len(vocab) x num topic
+
