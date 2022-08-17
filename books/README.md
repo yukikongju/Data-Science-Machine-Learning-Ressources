@@ -41,10 +41,11 @@ Here is some of the books I have read and the code that accompanies the book
     - [ ] Volume III: 
 
 **Natural Language Processing**
-- [ ] Applied Text Analysis with Python by Benjamin Bengfort [on going]
+- [X] Applied Text Analysis with Python by Benjamin Bengfort [on going]
 - [ ] Applied Natural Language Processing in the Enterprise by Ankur Patel [on going]
 - [ ] Natural Language Processing in Action by Hobson Lane [to read]
 - [ ] Natural Language Processing with Transformers by Lewis Tunstall
+- [ ] Natural Language Processing with Python by Steven Bird
 - [ ] Practical Natural Language Processing by Sowmya Vajjala
 - [ ] Real-World Natural Language Processing by Masato Hagiwara
 
@@ -87,10 +88,10 @@ Here is some of the books I have read and the code that accompanies the book
 - [ ] Modern Data Protection by Curtis Preston (read)
 
 **MLOps**
-- [ ] Introducing MLOps by Mark Treveil (read)
+- [ ] ~~Introducing MLOps by Mark Treveil (read)~~
 - [ ] Practical MLOps by Noah Gift
 - [ ] The Self-Service Data Roadmap by Sandeep Uttamchandani (reading)
-- [ ] Machine Learning Engineering in Action by Ben Wilson (reading)
+- [ ] Machine Learning Engineering in Action by Ben Wilson (must read)
 
 
 **Testing**
@@ -102,7 +103,7 @@ Here is some of the books I have read and the code that accompanies the book
 **Software Engineering**
 - [ ] Refractoring at Scale by Maude Lemaire
 
-**Ditributed Systems**
+**Distributed Systems**
 - [X] Understanding Distributed Systems by Roberto Vitillo (read)
 - [ ] Chaos Engineering by Casey Rothensal (read)
 

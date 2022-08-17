@@ -49,6 +49,7 @@
 ## Ressources
 
 - [Aladdin Persson ML Code Repo](https://github.com/aladdinpersson/Machine-Learning-Collection)
+- [Pytorch Tutorials Official Repo](https://github.com/pytorch/tutorials)
 
 
 

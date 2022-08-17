@@ -18,4 +18,4 @@
 ## Ressources
 
 - [ ] [Under/Over sampling methods with imlearn](https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SMOTE.html)
-
+- [ ] [Data Augmentation in NLP](https://maelfabien.github.io/machinelearning/NLP_8/#synonym-replacement-sr)

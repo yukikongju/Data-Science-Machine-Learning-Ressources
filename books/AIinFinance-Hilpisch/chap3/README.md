@@ -3,6 +3,7 @@
 ## Contents
 
 - [ ] Basic Definitions
+    - [ ] How to find arbitrage-free price of a call option (p. 65)
 - [ ] Expected Utility Theory
 - [ ] Mean-Variance Portfolio Theory (MVP)
 - [ ] Capital Asset Pricing Model (CAPM)
@@ -10,7 +11,11 @@
 
 From chapter 1:
 
-- [ ] Finding OLS parameters
+- [X] Finding OLS parameters
+
+
+**Notes**
+
 
 
 ## Ressources
