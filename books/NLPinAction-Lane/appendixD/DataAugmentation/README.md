@@ -6,8 +6,8 @@
     - [X] Random Deletion (RD)
 	- [X] Word Deletion
 	- [X] Character Deletion
-    - [ ] Random Swap (RS)
-	- [ ] Word Swap
+    - [o] Random Swap (RS)
+	- [X] Word Swap
 	- [ ] Character Swap
     - [ ] Random Insertion (RI)
 	- [ ] Word Insertion
