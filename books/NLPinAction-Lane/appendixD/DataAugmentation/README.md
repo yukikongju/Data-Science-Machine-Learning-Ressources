@@ -3,9 +3,9 @@
 - [o] Data Augmentation with NLP
     - [X] Synonym Replacement (SR)
 	- [X] NLTK WordNet
-    - [o] Random Deletion (RD)
+    - [X] Random Deletion (RD)
 	- [X] Word Deletion
-	- [ ] Character Deletion
+	- [X] Character Deletion
     - [ ] Random Swap (RS)
 	- [ ] Word Swap
 	- [ ] Character Swap
