@@ -28,8 +28,8 @@ class RandomWordSwap(BaseEstimator, TransformerMixin):
         duplicate_labels = [ label for i in range(self.num_duplicates) 
                 for label in labels]
 
-        new_docs = []
         # 2. perform word swap
+        new_docs = []
         for sentence, label in zip(duplicate_docs, duplicate_labels):
             new_sentence = self._swap_words_in_sentence(sentence)
             new_docs.append([new_sentence, label])
@@ -67,5 +67,27 @@ class RandomCharacterSwap(BaseEstimator, TransformerMixin):
         return self
 
     def transform(self, documents, labels):
-        pass
+        # 1. duplicate documents
+        documents, labels = list(documents), list(labels)
+        duplicate_docs = [ sentence for i in range(self.num_duplicates) 
+                for sentence in documents]
+        duplicate_labels = [ label for i in range(self.num_duplicates) 
+                for label in labels]
+
+        # 2. perform character swap
+        new_docs = []
+        for sentence, label in zip(duplicate_docs, duplicate_labels):
+            new_sentence = self._swap_characters_in_sentence(sentence)
+            new_docs.append([new_sentence, label])
+
+        return new_docs
+
+    def _swap_characters_in_sentence(self, sentence):
+        chars = [c for c in sentence]
+        for _ in range(self.num_swaps):
+            index = random.randrange(len(chars) - 1)
+            chars[index], chars[index+1] = chars[index+1], chars[index]
+        return "".join(chars)
+
+        
 

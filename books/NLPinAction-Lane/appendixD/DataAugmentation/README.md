@@ -1,14 +1,14 @@
 # Data Augmentation
 
-- [o] Data Augmentation with NLP
+- [O] Data Augmentation with NLP
     - [X] Synonym Replacement (SR)
 	- [X] NLTK WordNet
     - [X] Random Deletion (RD)
 	- [X] Word Deletion
 	- [X] Character Deletion
-    - [o] Random Swap (RS)
+    - [X] Random Swap (RS)
 	- [X] Word Swap
-	- [ ] Character Swap
+	- [X] Character Swap
     - [ ] Random Insertion (RI)
 	- [ ] Word Insertion
 	- [ ] Character Insertion
