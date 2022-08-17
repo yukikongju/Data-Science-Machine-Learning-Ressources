@@ -40,7 +40,7 @@ class SynonymReplacement(BaseEstimator, TransformerMixin):
         new_documents = []
         synonyms_dict = {}
         for sentence, label in zip(documents, labels): 
-            new_documents.append([sentence, label])
+            #  new_documents.append([sentence, label]) # include old sentence
             # add new sentences with synonym replacement
             words = sentence.split(' ')
             for i, word in enumerate(words):
