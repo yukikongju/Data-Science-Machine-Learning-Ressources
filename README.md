@@ -42,4 +42,6 @@ examples in ```examples/```
 
 - [Microsoft's IoT for Beginners](https://github.com/microsoft/IoT-For-Beginners)
 - [Docker Curriculum](https://github.com/prakhar1989/docker-curriculum)
+- [Neuronal Dynamics by Gerstner](https://neuronaldynamics.epfl.ch/index.html)
+- [Google's Machine Learning Course](https://developers.google.com/machine-learning)
 

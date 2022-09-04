@@ -5,11 +5,13 @@
 import pandas as pd
 
 from itertools import chain
+
 from sklearn.base import BaseEstimator, TransformerMixin
 from nltk.corpus import wordnet
+from textattack.augmentation import WordNetAugmenter, EmbeddingAugmenter
 
 
-class SynonymReplacement(BaseEstimator, TransformerMixin):
+class CustomSynonymReplacement(BaseEstimator, TransformerMixin):
 
     """ 
     We want to perform synonym replacement with words that are meaningful. To 
@@ -139,10 +141,22 @@ class SynonymReplacement(BaseEstimator, TransformerMixin):
 
         return top_synonyms
 
+class WordNetSynonymAugmenter(BaseEstimator, TransformerMixin):
+
+    """ Synonym replacement using textattack WordNetAugmenter """
+
+    def __init__(self):
+        pass
+
+    def fit(self, X, y):
+        return self
+
+    def transform(self, documents, labels):
+        pass
         
         
 def main():
-    data_augmenter = SynonymReplacement()
+    data_augmenter = CustomSynonymReplacement()
     synonyms = data_augmenter._get_synonyms("eating")
     print(synonyms)
     #  print(data_augmenter.transform(df['word'], df['label']))
@@ -151,5 +165,3 @@ if __name__ == "__main__":
     main()
 
         
-
-

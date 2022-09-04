@@ -35,4 +35,6 @@
 - [ ] Appendix D: Machine Learning tools and techniques
 - [ ] Appendix E: Setting up AWS GPU
 
+## Ressources
 
+- [ ] [TextAttack Library](https://github.com/QData/TextAttack)
