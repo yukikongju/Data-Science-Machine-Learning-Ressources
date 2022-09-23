@@ -68,8 +68,9 @@ Here is some of the books I have read and the code that accompanies the book
 
 
 **Reinforcement Learning**
-- [ ] Reinforcement Learning by Phil Winder (read)
+- [ ] ~~Reinforcement Learning by Phil Winder (read)~~
 - [ ] Deep Reinforcement Learning by Alexander Zai
+- [ ] Foundations of Deep Reinforcement Learning by Laura Graser
 
 **Genetic Algorithms**
 

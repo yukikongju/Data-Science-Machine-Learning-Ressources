@@ -32,11 +32,14 @@ examples in ```examples/```
 
 ## Skills assessment
 
+- [Ethen8181's Machine Learning Repo](https://github.com/ethen8181/machine-learning)
 
 ## Ressources
 
 - [ML University](https://github.com/d0r1h/ML-University)
 - [Data Science Roadmap](https://github.com/Moataz-Elmesmary/Data-Science-Roadmap)
+- [Data Science Libraries in Python](https://github.com/r0f1/datascience)
+- [Data Science Cheat Sheet](https://github.com/FavioVazquez/ds-cheatsheets)
 
 ## More
 
@@ -44,4 +47,5 @@ examples in ```examples/```
 - [Docker Curriculum](https://github.com/prakhar1989/docker-curriculum)
 - [Neuronal Dynamics by Gerstner](https://neuronaldynamics.epfl.ch/index.html)
 - [Google's Machine Learning Course](https://developers.google.com/machine-learning)
+- [Awesome Machine Learning Repo](https://github.com/josephmisiti/awesome-machine-learning)
 
