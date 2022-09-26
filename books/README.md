@@ -31,6 +31,8 @@ Here is some of the books I have read and the code that accompanies the book
 - [ ] Deep Learning with PyTorch by Eli Stevens [on going]
 - [ ] Deep Learning Cookbook by Douwe Osinga
 - [ ] Programming PyTorch for Deep Learning by Ian Pointer
+- [ ] Inside Deep Learning by Edward Raff [to read]
+- [ ] Neural Network from Scratch by Harrison Kinsley
 
 
 **Computer Vision**
@@ -69,6 +71,7 @@ Here is some of the books I have read and the code that accompanies the book
 
 **Reinforcement Learning**
 - [ ] ~~Reinforcement Learning by Phil Winder (read)~~
+- [ ] Grokking Deep Learning by Miguel Morales [on going]
 - [ ] Deep Reinforcement Learning by Alexander Zai
 - [ ] Foundations of Deep Reinforcement Learning by Laura Graser
 
@@ -132,4 +135,5 @@ Here is some of the books I have read and the code that accompanies the book
 ## Ressources
 
 - [ML Engineering in Action by Ben Wilson](https://github.com/BenWilson2/ML-Engineering)
+- [UVA Deep Learning Course](https://uvadlc.github.io/)
 

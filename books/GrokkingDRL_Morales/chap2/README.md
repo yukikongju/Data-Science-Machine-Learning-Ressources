@@ -2,11 +2,13 @@
 
 **Contents**
 
-- [ ] 
+- [ ] Bellman Equation for: 
+    - [ ] State-Value function
+    - [ ] Action-Value Function
 
 **Code**
 
-- [ ] Using `gym` to get transition function for discrete MDPs
+- [X] Using `gym` to get transition function for discrete MDPs
 
 ## Ressources
 
