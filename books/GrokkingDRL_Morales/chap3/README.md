@@ -1,5 +1,10 @@
 # Chap 3 - Balancing Immediate and Long-Term Goals
 
+
+Premisse: There are two commons techniques to improve deterministic 
+policy: (1) policy iteration and (2) value iteration
+
+
 **Contents**
 
 - [X] Evaluation Functions
@@ -9,7 +14,7 @@
     - [X] Bellman Optimality Equation
 - [X] Policy Evaluation
 - [X] Policy Improvement
-    - [X] Policy-Evaluation
+    - [X] Policy-Iteration
     - [X] Value-Iteration
 
 
