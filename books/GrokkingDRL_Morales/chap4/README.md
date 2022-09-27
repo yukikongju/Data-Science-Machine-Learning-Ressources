@@ -5,13 +5,13 @@ explotation-exploration problem
 
 **Contents**
 
-- [o] Basic Exploration-Exploitation Techniques:
+- [O] Basic Exploration-Exploitation Techniques:
     - [X] Pure Exploitation
     - [X] Pure Exploration
     - [X] Epsilon-Greedy
-    - [ ] Decaying Epsilon-Greedy:
-	- [ ] Linear Decay
-	- [ ] Exponential Decay
+    - [X] Decaying Epsilon-Greedy:
+	- [X] Linear Decay
+	- [X] Exponential Decay
     - [ ] Optimistic
 - [ ] Advanced Exploration-Exploitation Techniques
     - [ ] 
