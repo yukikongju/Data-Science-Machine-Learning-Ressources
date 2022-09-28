@@ -14,6 +14,7 @@ explotation-exploration problem
 	- [X] Exponential Decay
     - [ ] Optimistic
 - [ ] Advanced Exploration-Exploitation Techniques
-    - [ ] 
-
+    - [ ] Softmax
+    - [ ] Upper-Confidence Bound
+    - [ ] Thompson Sampling (gaussian estimate)
 
