@@ -37,6 +37,7 @@ Here is some of the books I have read and the code that accompanies the book
 
 **Computer Vision**
 - [ ] Practical ML for Computer Vision by Valliappa Lakshmanan
+- [ ] Deep Learning for Vision Systems by Mohamed Elgendy
 - [ ] Deep Learning for Computer Vision by Adrian Rosebrock
     - [ ] Volume I:  [on going]
     - [ ] Volume II: 
