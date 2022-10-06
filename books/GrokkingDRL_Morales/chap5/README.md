@@ -7,7 +7,7 @@
 
 - [X] Monte Carlo
 - [X] Temporal Difference
-- [ ] N-steps TD
+- [.] N-steps TD
 - [ ] TP(lambda)
 
 
