@@ -4,9 +4,9 @@
 
 ## Contents
 
-- [ ] Monte Carlo Control
-- [ ] SARSA
-- [ ] Q-Learning
+- [X] Monte Carlo Control
+- [X] SARSA
+- [X] Q-Learning
 - [ ] Double Q-learning
 
 ## Ressources
