@@ -1,8 +1,11 @@
-# formula: Y = W^T * X + B
+# formula: Y = XB
 # calculating the parameters:    B = (X'X)^-1 * X' * y; B = [b a1 a2 ...]
 # link: https://www.stat.purdue.edu/~boli/stat512/lectures/topic3.pdf
 # Idea: when training the linear regression, we are trying to find the weights 
 #   (slope) and the bias which minimizes the sum of squared residuals. 
+
+# gradient descent: https://github.com/matheusgomes28/gradient-descent-notebook/blob/main/GradientDescent.ipynb
+
 
 # We will be comparing the results of linear regression 3 ways: 
 # (1) using Matrix parameters estimation 
@@ -14,7 +17,14 @@ import numpy as np
 import pandas as pd
 
 from scipy.linalg import inv
+
 from sklearn.linear_model import LinearRegression
+from sklearn.datasets import make_regression
+
+
+def mse(y_true, y_pred):
+    return np.mean(np.sum((y_true - y_pred)**2))
+    
 
 class LinearRegressionMatrix():
 
@@ -41,22 +51,43 @@ class LinearRegressionMatrix():
         predictions = X @ self.parameters
         return predictions
     
-    def _get_squared_errors(self): # e = y - f(x)
-        pass
+
+class LinearRegressionIterative(): 
+
+    def __init__(self, lr=1e-3, num_iters=100000):
+        self.lr = lr
+        self.num_iters = num_iters
+        self.weights = None
+        self.bias = None
+
+    def fit(self, X, y):
+        # initialization
+        num_samples, num_features = X.shape
+        self.weights = np.zeros(num_features)
+        self.bias = 0
+
+        # update the weights iteratively
+        for _ in range(self.num_iters):
+            # 1. get predictions using current parameters
+            y_pred = np.dot(X, self.weights) + self.bias
+
+            # 2. calculate gradients
+            d_weights = (-2/num_samples) * np.dot(X.T, (y - y_pred))
+            d_bias = (-2/num_samples) * np.sum(y - y_pred)
+
+            # 3. update the parameters
+            self.weights = self.weights - self.lr * d_weights
+            self.bias = self.bias - self.lr * d_bias
 
         
+    def predict(self, X):
+        # predictions
+        predictions = np.dot(X, self.weights) + self.bias
 
-class LinearRegressionIterative():
+        return predictions
 
-    def __init__(self):
-        pass
 
-    def fit(self):
-        pass
-        
-    def predict(self):
-        pass
-
+#  ------------------------------------------------------------------------
 
 def load_boston():
     data_url = "http://lib.stat.cmu.edu/datasets/boston"
@@ -66,7 +97,6 @@ def load_boston():
     return features, targets
 
 #  ------------------------------------------------------------------------
-
 
 def test_sklearn_linear_reg(features, targets):
     model = LinearRegression()
@@ -80,28 +110,34 @@ def test_matrix_linear_reg_custom(features, targets):
     predictions = model.predict(features)
     return predictions
 
-def test_matrix_linear_reg():
-    Y = np.array([124, 95, 71, 45, 18])
-    X = np.array([[49], [69], [89], [99], [109]])
-    model = LinearRegressionMatrix()
-    model.fit(X, Y)
-    predictions = model.predict(X)
-    print(predictions)
     
+def test_gradient_descent_linear_reg(features, targets):
+    model = LinearRegressionIterative()
+    model.fit(features, targets)
+    predictions = model.predict(features)
+    return predictions
 
 #  ------------------------------------------------------------------------
 
 
-
-
 def main():
-    features, targets = load_boston()[:15]
+    #  features, targets = load_boston()[:15]
+    features, targets = make_regression(n_samples=10, n_features=3)
 
     # get predictions with each methods
     sklearn_predictions = test_sklearn_linear_reg(features, targets)
-    print(sklearn_predictions)
     matrix_predictions = test_matrix_linear_reg_custom(features, targets)
+    gradient_predictions = test_gradient_descent_linear_reg(features, targets)
+
+    # compare results
+    print(sklearn_predictions)
     print(matrix_predictions)
+    print(gradient_predictions)
+
+    # compare errors
+    print(f"Erreurs sklearn: {mse(targets, sklearn_predictions)}")
+    print(f"Erreurs matrix: {mse(targets, matrix_predictions)}")
+    print(f"Erreurs gradient: {mse(targets, gradient_predictions)}")
     
     
 
