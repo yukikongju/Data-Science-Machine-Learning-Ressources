@@ -1,6 +1,12 @@
 
 # Question: do we find PCA iteratively or do we select the top 
 
+# Idea: we want to find V, the transformation matrix we use to transform the 
+#   data into a lower subspace. we construct V by taking eighten vectors sorted 
+#   by their eighten value in decreasing order. The eigthen values and 
+#   vectors are calculated using the covariance matrix
+
+
 import numpy as np
 
 from sklearn.datasets import load_iris
@@ -36,13 +42,13 @@ class PCA():
         cov_mat = self._get_covariance_matrix(X)
 
         # 3. calculate eighten values and vectors + sort by highest eigthen value
-        eig_values, eig_vectors = eigh(cov_mat)
+        eig_values, eig_vectors = eigh(cov_mat)     # solve det(A-lambdaI) = 0
         idx_order = np.argsort(eig_values)[::-1]
         eig_values = eig_values[idx_order]
         eig_vectors = eig_vectors[idx_order]
         V = np.transpose(eig_vectors)
 
-        # 4. transformed data: PCs
+        # 4. transformed data: PCs => X' = XV
         PCs = np.matmul(X, V)
 
         # 5. calculate percentage of variance captured by each PC
