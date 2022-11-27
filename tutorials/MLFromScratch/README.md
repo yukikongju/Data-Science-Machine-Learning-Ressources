@@ -7,7 +7,7 @@
 	+ [Theory Matrix](https://www.youtube.com/watch?v=Qa_FI92_qo8)
 	+ [Theory Gradient Descent](https://towardsdatascience.com/linear-regression-using-gradient-descent-97a6c8700931)
 	+ [Practical Iterative](https://www.youtube.com/watch?v=ltXSoduiVwY)
-- [ ] Logistic Regression
+- [.] Logistic Regression
 	+ [Theory](https://www.youtube.com/watch?v=83hHT1BQFxk&list=PLLTSM0eKjC2fZqeVFWBBBr8KSqnBIPMQD&index=22)
 - [ ] Naive Bayes
 - [ ] Perceptron
