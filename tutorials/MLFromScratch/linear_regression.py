@@ -1,5 +1,5 @@
 # formula: Y = XB
-# calculating the parameters:    B = (X'X)^-1 * X' * y; B = [b a1 a2 ...]
+# calculating the parameters:    B = (X'X)^-1 * X'y * y; B = [b a1 a2 ...]
 # link: https://www.stat.purdue.edu/~boli/stat512/lectures/topic3.pdf
 # Idea: when training the linear regression, we are trying to find the weights 
 #   (slope) and the bias which minimizes the sum of squared residuals. 
@@ -15,6 +15,7 @@
 
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
 
 from scipy.linalg import inv
 
@@ -22,7 +23,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.datasets import make_regression
 
 
-def mse(y_true, y_pred):
+def mse(y_true, y_pred): 
     return np.mean(np.sum((y_true - y_pred)**2))
     
 
@@ -122,7 +123,11 @@ def test_gradient_descent_linear_reg(features, targets):
 
 def main():
     #  features, targets = load_boston()[:15]
-    features, targets = make_regression(n_samples=10, n_features=3)
+    features, targets = make_regression(n_samples=10, n_features=1, bias=100, noise=100)
+    print(features)
+    print(targets)
+    plt.scatter(features, targets)
+    plt.show()
 
     # get predictions with each methods
     sklearn_predictions = test_sklearn_linear_reg(features, targets)
