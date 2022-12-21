@@ -31,6 +31,7 @@
 
 ## Concepts de languages, compilers, os
 
+- [ ] [Haskell for Imperative Programmers - Philipp Hagenlocher](https://www.youtube.com/playlist?list=PLe7Ei6viL6jGp1Rfu0dil1JH1SHk9bgDV)
 - [ ] [15-150 - Functional Programming (spring 2020)](https://www.cs.cmu.edu/~me/courses/15-150-Spring2020/)
 - [ ] [15-150 - Functional Programming (Fall 2022)](http://www.cs.cmu.edu/~15150/lect.html)
 - [ ] [15-312 - Foundations of Programming Languages](https://www.cs.cmu.edu/~crary/312/index.html)
@@ -38,6 +39,10 @@
 
 ## Robotics
 
-- [16-8111 - Maths Fundamentals for Robotics](http://www.cs.cmu.edu/~me/courses/811/mathfund.html)
+- [ ] [16-8111 - Maths Fundamentals for Robotics](http://www.cs.cmu.edu/~me/courses/811/mathfund.html)
 
+
+## COmputer Graphics
+
+- [ ] [CSC 317- Computer Graphics - Alex Jacobson](https://github.com/alecjacobson/computer-graphics-csc317#lectureschedule)
 
