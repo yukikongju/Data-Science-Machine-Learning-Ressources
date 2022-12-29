@@ -1,0 +1,266 @@
+---
+title: "HW4"
+output: html_notebook
+---
+
+```{r setup, include=FALSE}
+library(ggplot2)
+library(MASS)
+```
+
+
+## Question 2 - Diagnostics and Transformations
+
+```{r }
+getwd()
+setwd('~/Documents/OneDrive/Bac-Maths-Info/Winter2022/ModernRegression_36-401/')
+data <- read.csv("~/Documents/OneDrive/Bac-Maths-Info/Winter2022/ModernRegression_36-401/datasets/auto-mpg.csv")
+summary(data[, 2:3])
+```
+
+### a) Would a linear regression model be a good fit? Make a residual plot of ei vs the fitted values
+
+```{r}
+model <- lm(mpg~weight, data = data)
+plot(fitted(model), residuals(model), xlab = "fitted values", ylab = "residuals")
+abline(h=0, col='red', pch=2)
+loess_fit <- loess(mpg~weight, data = data)
+# lines(fitted(model), predict(loess_fit), col='blue')
+loess_fit
+```
+
+```{r}
+ggplot(model, aes(x = .fitted, y = .resid)) + geom_point() + geom_smooth() 
+```
+The plot seems to indicate that the linear assumption is violated (the residuals are not symmetric around zero)
+
+### b) Apply the log transformation on weight and produce the new residual plot. What does the plot suggest about the linearity? What assumptions are violated?
+
+```{r}
+log_model <- lm(mpg~log(weight), data = data)
+ggplot(log_model, aes(x=.fitted, y=.resid)) + geom_point() + geom_smooth()
+
+```
+The residuals seems to be a bit more symmetric around zero, which suggests that the linearity assumption may not be violated after all. However, the homodescedaticity assumption is violated: the variance is not constant.
+
+### c) Create a qqplot of the residuals in b) Do the residuals appear to be normally distributed
+
+```{r}
+qqplot(fitted(log_model), residuals(log_model))
+```
+The residuals don't appear to be normally distributed since the qqplot does not resemble of a straight line, particularly around the end of the regression line, where the tail seems to fat, which suggest that the residuals are heavy tailed.
+
+## Question 3 - Answer with respect to the final model you chose in the previous question
+
+From question 2, we know that the normal model doesn't respect linear regression assumptions and that 
+applying the log on the mpg seems to make the residuals a little bit more normal. 
+We will check if the log transformation is appropriate using the box-cox
+
+```{r}
+boxcox(lm(weight~log(mpg), data = data))
+# boxcox(lm(weight~mpg, data = data))
+```
+
+Since $\lambda$ is around 0, we know that we can transform our data with the log 
+function and the linear regression assumptions will be met
+
+
+### a) Interpret the estimated intercept and slope.
+
+```{r }
+model3 <- lm(log(mpg)~log(weight), data = data)
+coefficients(model3)
+```
+The slope suggest that the mpg decrease by beta1 (-1.0583) for every weight increment.
+
+### b) Is there a linear association between mpg and weight after the chosen transformation using alpha=0.05. State the alternative hypothesis, decision rule and conclusion. What is the p-value of the test?
+
+We will try to make the model a bit more linear by applying the log on both x and y variables.
+
+H0: beta1 = 0 (there is no association between log(weight) and log(mpg)); H1: beta1 != 0 (there is an association ...)
+
+Since we have a bilateral test, we compute the p-value this way: P(|t|>t_{n-2}(0.025)), 
+where t= (beta1 - mu)/std(beta1)
+
+```{r}
+
+# 1. calculate test statistic t
+
+n <- nrow(data)
+beta1 <- summary(model3)$coefficients[2,1]
+std_beta1 <- summary(model3)$coefficients[2,2]
+t <-  abs((beta1 - 0)/ std_beta1)
+
+# 2. compute pvalue
+2*pt(t, df=n-2, lower.tail = FALSE)
+
+# alternatively, we can use summary(model3)$coefficients[2,3]
+
+```
+Since pvalue = 1.75e-126 < alpha=0.05, we reject H0 and we say that there is a 
+negative correlation between mpg and weight
+
+### c) Find a 90% confidence interval for beta1. How do you interpret it?
+
+We construct the confidence interval this way: beta1 +- t_{n-2}(0.05) std(beta1)
+
+```{r}
+
+#
+left <- beta1 - qt(0.05, df = n-2, lower.tail = FALSE) * std_beta1
+right <- beta1 + qt(0.05, df = n-2, lower.tail = FALSE) * std_beta1
+
+# alternative: using confint function
+confint(model3, level = 0.9, parm = "log(weight)")
+```
+
+The 90% confidence interval for beta1 is [-1.1069, -1.0096]. We can interpret 
+it as follows: if we reject beta1 whenever it is outside the confidence 
+interval, we would be right about 90% of the time.
+
+## Question 4 - Data Analysis Practice
+
+We first load the data
+
+```{r}
+data <- read.csv("~/Documents/OneDrive/Bac-Maths-Info/Winter2022/ModernRegression_36-401/datasets/abalone.csv")
+```
+
+a) Introduce the research problem and describe the research hypothesis.
+
+We would like to predict abalones age using their height measurements 
+using a simple linear regression with normal error assumption. The number 
+of rings correspond to the abalone's age.
+
+Our hypothesis:
+- H0: There is no association between abalones height and age (beta1 = 0)
+- H1: The is a positive association between abalones height and age (beta1> 0)
+
+Our hypothesis is unilateral
+
+FORMAL INTRODUCTION:
+
+The term `abalone` is a common name for a broad class of marine snails, ranging 
+from a few millimeter to a few inches. The age of an abalone can be determined 
+by counting the number of rings on its outer shell. However, since this 
+process requires the use of a microscope, we would like to use its height to 
+predict its age because this measurement is easier to obtain. In this analysis, 
+we will build a predictive model to predict abalone age from its height.
+
+b) Examine the two variables individually (univariate). Find summary measures of 
+each (mean, variance, range, etc). Graphically display each. Describe your graph.
+What is the unit of height
+
+Summary for the height variable:
+```{r}
+summary(data$Height)
+var(data$Height)
+range(data$Height)
+boxplot(data$Height)
+ggplot(data, aes(Height)) + geom_histogram()
+ggplot(data, aes(Height)) + geom_boxplot()
+
+```
+
+Summary for the rings variables:
+```{r}
+summary(data$Rings)
+var(data$Rings)
+range(data$Rings)
+boxplot(data$Rings)
+ggplot(data, aes(Rings)) + geom_histogram()
+ggplot(data, aes(Rings)) + geom_boxplot()
+```
+
+The height and the rings appears to be normally distributed. However, it seems that 
+the height has less variance than the rings.
+
+The height is in millimeter
+
+
+c-d) Generate a labeled scatterplot of the data. Describe interesting features/trends
+Fit a simple linear regression to the data predicting number of rings 
+using the height of the abalones. Plot it in the scatterplot and describe the 
+line's fit
+
+```{r}
+ggplot(data, aes(Height, Rings)) + geom_point(alpha=0.2) + geom_smooth(method = 'lm')
+```
+
+
+e) Verify if the model assumptions are met. If not, transform height/rings 
+and refit the model. Justify your decisions and recheck your diagnosis
+
+To verify the model assumptions (homodescaticity: constant variance on errors and 
+mean residuals is 0), we will:
+- draw qqplot
+- residual plot
+
+```{r}
+qqplot(data$Height, data$Rings)
+model4 <- lm(Rings~Height, data = data)
+plot(data$Height, residuals(model4))
+abline(h=0, col='blue')
+```
+
+It seems that the model violates the linear regression assumptions. We will 
+use a Box Cox plot to find the transformation needed so that the assumptions 
+are met
+
+```{r}
+boxcox(lm(Rings~Height, data = data))
+```
+
+There seems to be a non-linear trend and that the homoscedacity assumption 
+isn't met. However, because we want to make inference later, we will NOT 
+perform any transformation on the data.
+
+f) Interpret your final parameter estimates in context. Provides 95% 
+confidence interval for beta0 and beta1. Interpret in context of the problem
+
+There are two outliers, so we remove them
+
+```{r}
+# remove outliers: https://universeofdatascience.com/how-to-remove-outliers-from-data-in-r/
+quartiles <- quantile(data$Height, probs = c(0.25, 0.75))
+IQR <- IQR(data$Height)
+
+lower <- quartiles[1] - 1.5*IQR
+upper <- quartiles[2] + 1.5*IQR
+
+data_no_outliers <- subset(data, data$Height > lower & data$Height < upper)
+
+plot(data_no_outliers$Height, data_no_outliers$Rings)
+```
+
+
+```{r}
+# linear regression parameters estimate
+model4 <- lm(Rings~Height, data = data_no_outliers)
+summary(model)
+
+
+```
+
+
+
+g) Is there a statistically significant relationship between the height and 
+the number of rings?
+
+
+h) Find the point estimate and the 95% confidence interval for the AVERAGE
+number of rings for abalones with height at 0.128
+
+
+
+i) Find the predicted value and a 99% prediction inteval for abalone with 
+height of 0.132
+
+
+j) Conclusion. Identify key findings and discuss validity. Suggestions or 
+recommendations for researchers? How can we improve the analysis?
+
+
+
+
+

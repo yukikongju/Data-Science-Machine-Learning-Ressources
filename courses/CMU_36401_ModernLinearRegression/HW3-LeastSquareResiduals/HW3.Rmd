@@ -1,0 +1,175 @@
+---
+title: "HW3"
+author: "Emulie Chhor"
+date: "18/12/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(qgraph)
+```
+
+### a) Load the data file and verify its dimension
+
+```{r }
+# setwd("/home/yuikongju/Documents/OneDrive/Bac-Maths-Info/Winter2022/ModernRegression_36-401/")
+data <- read.csv("datasets/bea-2006.csv")
+dim(data)
+```
+This dataset has 7 columns because is a categorical values, which we don't take into account in the model.
+
+### b) calculate the summary statistic for the six numerical columns
+
+```{r }
+summary(data[,2:7])
+```
+
+### c) make univariate EDA plots for: population and GMP and describe their distributions in words using hist and boxplot
+
+We will make a histogram for population counts and a boxplot for GMP
+
+```{r }
+par(mfrow=c(1,2))
+hist(data$pop, bins=50, xlab="population size", ylab="Frequency", main="")
+text((max(data$pop)), 20, adj = 0.8, labels = "New York")
+points(max(data$pop), 0, col='red', pch=19)
+hist(log(data$pop), xlab="log(population)", main="")
+mtext("Histogram of population for 366 US Metropolitan Areas in 2006", outer=TRUE)
+```
+
+We see that the population is left skewed. By plotting the log of 
+the population instead, we get a more meaningful histogram.
+
+```{r }
+boxplot(data$pcgmp, boxwex = 0.7, ylab="Per Capita GMP", main="Boxplot of the Per Capita GMP of 366 Metropolitan cities in the US in 2006")
+text(max(data$pcgmp), cex = 0.7, labels = "Bridgeport-Stamford-Norwalk", adj = -0.075)
+points(max(data$pcgmp), col='red', pch=19)
+```
+
+Since the boxplot is not centered, we know that that the per capita distribution 
+is left skewed. The median is around 31,615$ where as the area that has the 
+highest per capita is Bridgeport-Stamford-Norwalk.
+
+### d) make a bivariate EDA plot for population and GMP and describe the relationship in words
+
+```{r }
+par(mfrow=c(1,2))
+plot(data$pop, data$pcgmp, xlab = "population", ylab = "per capita GMP", main = "")
+plot(log(data$pop), log(data$pcgmp), xlab = "log(population)", ylab = "per capita GMP", main = "")
+model <- lm(log(pcgmp)~log(pop), data = data)
+abline(model$coefficients[1], model$coefficients[2], col='blue')
+```
+Plotting the scatterplot of the per capita GMP vs the population don't give us much information, but when taking the log of both variables, it seems like they are positively correlated
+
+### e) calculate the slope and intercept of the least square regression using mean, var, cov
+
+We know that B1=Cov(X,Y)/Var(X) and that B0=mean(Y)-B1*mean(X)
+
+```{r }
+n <- nrow(data)
+beta1 <- with(data, ((n-1)/n * cov(pop, pcgmp)) / ((n-1)/n * var(pop)))
+# with(data, cov(pop, pcgmp)/var(pop))
+beta0 <- mean(data$pcgmp) - beta1 * mean(data$pop)
+list(beta0, beta1)
+```
+
+### f) What are the slope and intercept returned by the function lm? Does it agree with the results in e)? Should it?
+
+```{r }
+model <- lm(pcgmp~pop, data = data)
+model$coefficients
+```
+The slope and intercept calculated by hand and by the function lm agrees, as it should because that's what the 
+function should compute
+
+### g) Add both lines to the bivariate EDA plot. Do the assumptions hold? Are there any places where the fit seems better?
+
+Since the regression line is the same for both strategies, we will draw only the one using lm using the log scale
+
+```{r }
+with(data, plot(pop, pcgmp, xlab = "population", ylab = "per capita GMP", log = "x"))
+abline(model$coefficients[1], model$coefficients[2], col='red')
+
+```
+
+The assumptions of the linear regressions doesn't hold since the points doesn't respect homoscedacity of errors. 
+Also, it seems that the model underestimate the per capita GMP for cities with population over 5e+06. 
+
+### h) Find Pittsburg in the dataset. Give its population, per capita GMP and the model prediction. What is its residual?
+
+There are two Pittsburgh (MA and PA), we will continue with Pittsburgh, PA.
+
+```{r }
+index <- which(data$MSA=="Pittsburgh, PA")
+data[index, ]
+fitted(model)[index]
+residuals(model)[index]
+
+```
+Pittsburgh, PA population is 2,361,000 and its per capita GMP is 38,350. The per capita prediction is 36,982\$ and the residuals is 1,367.78\$
+
+### i) What is the model MSE? 
+
+```{r }
+n <- nrow(data)
+# mse <- 1/n * sum(residuals(model)^2) # why is it wrong?
+mse <- mean(residuals(model)^2)
+```
+
+The model MSE is 70,697,144
+
+### j) Is the residual for Pittsburgh large, small or typical to the MSE? (!!!)
+
+We need to square the residuals to compare with the MSE
+
+```{r }
+residuals(model)[index]^2
+```
+
+The residual for Pittsburgh is small compared to the model MSE (1,870,810 vs 70,697,144)
+
+### k) Plot the residuals against population. What should this look like if the assumptions of the linear regression model hold? Is the actual plot compatible with those assumptions?
+
+The assumptions of the linear regression hold only if:
+1) the residuals mean is 0
+2) the residuals is constant (homodescacity)
+
+```{r }
+
+with(data, plot(pop, residuals(model), log = "x", xlab="population", ylab="residuals"))
+abline(h=0, col='red', lty=2)
+
+```
+
+The assumptions don't hold since the most of residuals are negative for population under 1e+06 (the model overestimate the city per capita) where as the residuals are positive when the population is large (the model underestimate).
+
+### l) Plot the squared residuals against the population. What should this look like if the assumptions of the simple linear regression model hold? Is the plot compatible with those assumptions?
+
+```{r }
+with(data, plot(pop, residuals(model)^2, log="x", xlab="population", ylab="squared residuals", col='black', cex=0.95, pch=1))
+abline(h=0, col='red', pch=3)
+```
+If the linear regression assumptions held, the squared residuals would have constant amplitude.
+These assumptions is violated by the points at the top.
+
+
+### m) State the interpretation of the estimated slope
+
+The estimated slope can be interpreted as follows: the estimated per-capita GMP increases by 0.002416 (beta1) per person 
+
+### n) What per capita GMP does the model predict for a city with 10^5 more than Pittsburgh
+
+```{r }
+predict(model, newdata = data.frame(pop=data$pop[index] + 1e5))
+```
+The model predict that the per capita GMP will be of 37,223.84\$
+
+### o) What would the model predict Pittsburgh per capita if we added 10^5 peoples to the population (???)
+
+The model would predict an increase of beta1 * 100,000.
+
+```{r }
+model$coefficients[2]*1e5
+```
+

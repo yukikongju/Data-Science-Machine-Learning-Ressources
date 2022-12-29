@@ -7,11 +7,16 @@
 
 ## Signal Processing
 
+- [ ] [EGGN 510 - Image and Multidimensional Singal Processing](https://www.youtube.com/watch?v=rbY-JRQEDUU&list=PLyED3W677ALNv8Htn0f9Xh-AHe1aZPftv)
 - [ ] [Audio Signal Processing for ML - Valerio Velardo](https://www.youtube.com/playlist?list=PL-wATfeyAMNqIee7cH3q1bh4QJFAaeNv0)
 - [ ] [Signal Processing Course - Barry Van Veen](https://allsignalprocessing.com/course-introduction-information/)
 - [ ] [Barry Van Veen Channel](https://www.youtube.com/playlist?list=PL-wATfeyAMNqIee7cH3q1bh4QJFAaeNv0)
 - [ ] [Digital Signal Processing - Rick Radke](https://www.youtube.com/playlist?list=PLuh62Q4Sv7BUSzx5Jr8Wrxxn-U10qG1et)
 - [ ] [Signal Processing 101 - Iman](https://www.youtube.com/playlist?list=PLJ-OcUCIty7evBmHvYRv66RcuziszpSFB)
+## Computer Vision
+
+- [ ] [EGGN 512 - Computer Vision](https://www.youtube.com/watch?v=skaQfPQFSyY&list=PL4B3F8D4A5CAD8DA3)
+- [ ] [First Principle Computer Vision](https://www.youtube.com/@firstprinciplesofcomputerv3258/playlists)
 
 ## Statistics
 
@@ -28,6 +33,7 @@
 - [ ] [10-606 - Math Background for ML](https://www.youtube.com/playlist?list=PL7y-1rk2cCsAqRtWoZ95z-GMcecVG5mzA)
 - [ ] [10-606 Slides](https://www.cs.cmu.edu/~mgormley/courses/606-607-f18/schedule.html)
 - [ ] [10-725 - Optimization](http://www.cs.cmu.edu/~ggordon/10725-F12/schedule.html)
+- [ ] [Bayesian Data Analysis course Avethari](https://avehtari.github.io/BDA_course_Aalto/index.html)
 
 ## Concepts de languages, compilers, os
 
@@ -42,7 +48,7 @@
 - [ ] [16-8111 - Maths Fundamentals for Robotics](http://www.cs.cmu.edu/~me/courses/811/mathfund.html)
 
 
-## COmputer Graphics
+## Computer Graphics
 
 - [ ] [CSC 317- Computer Graphics - Alex Jacobson](https://github.com/alecjacobson/computer-graphics-csc317#lectureschedule)
 
