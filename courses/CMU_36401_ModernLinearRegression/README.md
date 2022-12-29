@@ -9,7 +9,7 @@
 - [X] HW2 - Linear regression estimators properties
 - [ ] HW3 - Linear Regression with gaussian noises/errors
 - [ ] HW4 - Using the residuals to verify linear regression assumptions (homodescadicity, residuals mean is zero); computing pvalues and confidence interval on estimated parameters
-- [ ] HW5 - 
+- [ ] HW5 - Confidence Intervals and pvalue on Multiple Linear RegressionCoefficients
 - [ ] HW6 - 
 - [ ] HW7 - 
 - [ ] HW8 - 

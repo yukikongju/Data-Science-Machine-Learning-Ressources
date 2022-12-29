@@ -1,0 +1,89 @@
+---
+title: "HW5 - "
+output: html_notebook
+---
+
+```{r include=FALSE}
+library(ggplot)
+library(MASS)
+library(knitr)
+```
+
+# Question 1 - Stack loss data
+
+```{r include=FALSE}
+# checking the dataset
+names(stackloss)
+help("stackloss")
+```
+
+a) Plot the data
+
+```{r}
+pairs(stackloss, font.labels = 3, font.axis = 5, pch = 21)
+```
+
+
+b) Fit a multiple regression model to predict stackloss from the three other variables
+
+Multiple Liner Regression Model: $\beta_0 + \beta_1 * Airflow + \beta_2 * Watertemp + \beta_3 * Acid$
+
+```{r}
+model <- lm(stack.loss ~ Air.Flow + Water.Temp + Acid.Conc. , data = stackloss)
+summary(model)
+```
+
+c) Construct 90% confidence intervals for the coefficients
+
+confidence interval formula: beta +- t_{n-2}(0.05) * std(beta)
+
+
+```{r}
+
+# using R function
+kable(confint(model, level = 0.9), digits = 2, caption = "90% Confidence Intervals for Multiple Linear Regression Coefficients")
+
+# doing it by hand (example with beta0)
+
+n <- nrow(stackloss)
+left <- summary(model)$coefficients[1,1] - qt(0.05, df = n-2, lower.tail = FALSE) * summary(model)$coefficients[1,2]
+right <- summary(model)$coefficients[1,1] + qt(0.05, df = n-2, lower.tail = FALSE) * summary(model)$coefficients[1,2]
+```
+
+
+d) Construct a 99% prediction interval for a new observation when Airflow=58, Acid=86 and Water Temp=20 (CHECK!!)
+
+
+```{r}
+
+```
+
+
+
+
+e) Test the null hypothesis H0: beta3 = 0. What is the p-value? What is the conclusion 
+if $\alpha=0.10$
+
+the p-value is given by: P(|t| > t_{n-2}(0.05))
+
+```{r}
+
+# compute test statistic t
+beta3 <- summary(model)$coefficients[4, 1]
+std_beta3 <- summary(model)$coefficients[4, 2]
+t <- abs((beta3 - 0) / std_beta3)
+
+# compute p-value
+2 * pt(t, df=n-2, lower.tail = FALSE )
+
+summary(model)
+
+```
+The p-value for beta3 is 0.3304 > 0.1, so we don't reject H0. This means that 
+the acid concentration is not significative enough to be factored in our model.
+
+
+```{r}
+anova(model)
+```
+
