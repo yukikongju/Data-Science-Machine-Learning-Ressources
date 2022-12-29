@@ -20,7 +20,7 @@
 
 ## Statistics
 
-- [ ] [36-401 - Modern Linear Regression](https://www.stat.cmu.edu/~larry/=stat401/)
+- [X] [36-401 - Modern Linear Regression](https://www.stat.cmu.edu/~larry/=stat401/)
 - [ ] ~~[36-462 - Data Mining](https://www.stat.cmu.edu/~ryantibs/datamining/)~~
 - [ ] [36-700 - Probability and Mathematical Statistics](https://www.stat.cmu.edu/~jinglei/spring19.shtml)
 - [ ] [36-702 - Statistical ML Homeworks](http://www.cs.cmu.edu/~10702/Calendar/calendar.html)
@@ -35,6 +35,27 @@
 - [ ] [10-725 - Optimization](http://www.cs.cmu.edu/~ggordon/10725-F12/schedule.html)
 - [ ] [Bayesian Data Analysis course Avethari](https://avehtari.github.io/BDA_course_Aalto/index.html)
 
+## Geospatial
+
+- [ ] [Geospatial Data Science in R](https://zia207.github.io/geospatial-r-github.io/index.html)
+- [ ] [Geospatial Exercices and Solutions - University of Twente](https://www.css.cornell.edu/faculty/dgr2/teach/index.html#nanjing-normal-university)
+- [ ] [Using the R Environment for Statistical Computing - An example with wheat yield dataset](https://www.css.cornell.edu/faculty/dgr2/_static/files/R_PDF/mhw.pdf)
+- [ ] [Analyzing land cover change with logistic regression in R](https://www.css.cornell.edu/faculty/dgr2/_static/files/R_PDF/lcc.pdf)
+- [ ] [Applied geostatistics - Regional Mapping of climate](https://www.css.cornell.edu/faculty/dgr2/_static/files/R_PDF/exRKGLS.pdf)
+- [ ] [Applied geostatistics - Spatial Simulated Anealing](https://www.css.cornell.edu/faculty/dgr2/_static/files/R_PDF/exRKGLS.pdf)
+
+## Information Theory
+
+- [ ] [MIT 6.050J - Information and Entropy]
+
+
+## Time Series
+
+
+- [ ] [Time Series Analysis in R - Exercices](https://www.css.cornell.edu/faculty/dgr2/_static/files/R_PDF/exTSA.pdf)
+- [ ] [Forecasting: Principles and Practice](https://otexts.com/fpp3/)
+
+
 ## Concepts de languages, compilers, os
 
 - [ ] [Haskell for Imperative Programmers - Philipp Hagenlocher](https://www.youtube.com/playlist?list=PLe7Ei6viL6jGp1Rfu0dil1JH1SHk9bgDV)
@@ -46,6 +67,11 @@
 ## Robotics
 
 - [ ] [16-8111 - Maths Fundamentals for Robotics](http://www.cs.cmu.edu/~me/courses/811/mathfund.html)
+## Bioinformatics
+
+- [ ] [STAT 115 - Intro to Computational Biology](https://www.youtube.com/playlist?list=PLeB-Dlq-v6taAXK6ZCGfqImrNWJzFt3p3)
+- [ ] [Harvard Intro to Computational Biology](https://liulab-dfci.github.io/bioinfo-combio/)
+
 
 
 ## Computer Graphics

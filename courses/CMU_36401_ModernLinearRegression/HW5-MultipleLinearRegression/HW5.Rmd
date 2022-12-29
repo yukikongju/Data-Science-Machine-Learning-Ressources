@@ -7,6 +7,7 @@ output: html_notebook
 library(ggplot)
 library(MASS)
 library(knitr)
+library(xtable)
 ```
 
 # Question 1 - Stack loss data
@@ -17,25 +18,26 @@ names(stackloss)
 help("stackloss")
 ```
 
-a) Plot the data
+## a) Plot the data
 
 ```{r}
 pairs(stackloss, font.labels = 3, font.axis = 5, pch = 21)
 ```
 
 
-b) Fit a multiple regression model to predict stackloss from the three other variables
+## b) Fit a multiple regression model to predict stackloss from the three other variables
 
 Multiple Liner Regression Model: $\beta_0 + \beta_1 * Airflow + \beta_2 * Watertemp + \beta_3 * Acid$
 
 ```{r}
+
 model <- lm(stack.loss ~ Air.Flow + Water.Temp + Acid.Conc. , data = stackloss)
 summary(model)
 ```
 
-c) Construct 90% confidence intervals for the coefficients
+## c) Construct 90% confidence intervals for the coefficients
 
-confidence interval formula: beta +- t_{n-2}(0.05) * std(beta)
+confidence interval formula: $beta \pm t_{n-2}(0.05) * std(beta)$
 
 
 ```{r}
@@ -48,23 +50,30 @@ kable(confint(model, level = 0.9), digits = 2, caption = "90% Confidence Interva
 n <- nrow(stackloss)
 left <- summary(model)$coefficients[1,1] - qt(0.05, df = n-2, lower.tail = FALSE) * summary(model)$coefficients[1,2]
 right <- summary(model)$coefficients[1,1] + qt(0.05, df = n-2, lower.tail = FALSE) * summary(model)$coefficients[1,2]
+
 ```
 
 
-d) Construct a 99% prediction interval for a new observation when Airflow=58, Acid=86 and Water Temp=20 (CHECK!!)
+## d) Construct a 99% prediction interval for a new observation when Airflow=58, Acid=86 and Water Temp=20 (CHECK!!)
 
 
 ```{r}
+names(stackloss)
+predict(model, newdata = data.frame(Air.Flow=58, Water.Temp=20, Acid.Conc. = 86), interval = c("none", "confidence", "prediction"), level = 0.95)
+
+predict(model, newdata = data.frame(Air.Flow=58, Water.Temp=20, Acid.Conc. = 86), interval = "prediction", level = 0.95)
+
+x <- predict(model, newdata = data.frame(Air.Flow=58, Water.Temp=20, Acid.Conc. = 86))
+
+# qt(0.025, df = n-2, lower.tail = FALSE)
 
 ```
 
 
-
-
-e) Test the null hypothesis H0: beta3 = 0. What is the p-value? What is the conclusion 
+## e) Test the null hypothesis H0: beta3 = 0. What is the p-value? What is the conclusion 
 if $\alpha=0.10$
 
-the p-value is given by: P(|t| > t_{n-2}(0.05))
+the p-value is given by: $P(|t| > t_{n-2}(0.05))$
 
 ```{r}
 
@@ -86,4 +95,62 @@ the acid concentration is not significative enough to be factored in our model.
 ```{r}
 anova(model)
 ```
+# Question 3 - 
+
+## a) Fit the multiple regression in R and summarize the results
+
+
+```{r}
+X <- matrix(c(1,1,1,1,4,3,10,7,5,4,9,10), nrow = 4)
+Y <- matrix(c(25, 20, 57, 51), ncol=1)
+model2 <- lm(Y ~ X -1) 
+model_summary <- summary(model2)$coefficients
+row.names(model_summary) <- c("Intercept", "X1", "X2")
+kable(model_summary)
+```
+
+
+## b) Construct X^TX and (X^TX)^{-1}
+
+```{r}
+
+t(X) %*% X
+solve(t(X) %*% X)
+
+# pretty print with xtable
+# print(xtable(t(X) %*% X), tabular.environment = "pmatrix", include.rownames = FALSE, include.colnames = FALSE)
+
+```
+
+
+## c) Construct $\hat{\beta}$ and confirm the result with R
+
+We know that $\hat{\beta} = (X^TX)^{-1}X^TY$
+
+```{r}
+# with formula
+solve(t(X) %*% X) %*% t(X) %*% Y
+
+```
+
+We can verify our work using `summary(model2)` and we see that the coefficients 
+values are the same
+
+## d) Construct the hat matrix H
+
+We know that $\hat{H} = (X^TX)^{-1}X^T$
+
+```{r}
+solve(t(X) %*% X) %*% t(X)
+```
+
+## e)  Compute Var($\hat{\beta}$)
+
+$Var(\hat{\beta}) = \sigma^2 (X^TX)^{-1}$
+
+```{r}
+
+```
+
+
 

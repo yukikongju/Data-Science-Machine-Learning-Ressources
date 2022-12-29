@@ -1,0 +1,171 @@
+---
+title: "HW 6 -"
+author: "Emulie Chhor"
+date: "29/12/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(MASS)
+library(xtable)
+library(knitr)
+```
+
+# Question 1 - ChickWeight Data
+
+```{r include=FALSE}
+
+names(ChickWeight)
+```
+
+## a) Plot the data
+
+```{r}
+coplot(weight ~ Time | Chick, data = ChickWeight, type='b', show.given = FALSE)
+# plot(weight~ Time, data = ChickWeight)
+```
+
+
+## b) Extract the data corresponding to the sixth chick. 
+i) Fit a linear model using time to predict weight. Check the residuals to check 
+if the model fits well. If not, plot it using polynomials.
+
+```{r}
+chick6 <- ChickWeight[ChickWeight$Chick == 6, ]
+model_chick6 <- lm(weight~Time, data = chick6)
+summary(model_chick6)
+
+# plotting the model
+plot(chick6$Time, chick6$weight, col='orange')
+abline(model_chick6, col='seagreen')
+
+ggplot(chick6, aes(x=Time, y=weight)) + 
+  geom_point() + 
+  geom_smooth(method = 'lm')
+
+# plotting the residuals
+ggplot() +
+  geom_point(aes(x=chick6$Time, y=residuals(model_chick6))) + 
+  geom_smooth(aes(x=chick6$Time, y=residuals(model_chick6))) + 
+  xlab("Time") + ylab("Residuals")
+  
+# plot(chick6$Time, residuals(model_chick6), xlab = "Time", ylab = "Residuals")
+# abline(h=0, col='gray')
+```
+
+By plotting the residual plot, we see that a simple linear model doesn't 
+fit well because the residuals seems correlated. We will try to fit a polynomial 
+
+```{r}
+# constructing polynomial model
+model_poly <- lm(weight ~ Time + I(Time ^2) + I(Time ^3) + I(Time^4), data = chick6)
+with(chick6, plot(Time, weight))
+lines(chick6$Time, fitted(model_poly))
+# summary(model_poly)
+
+# plotting the residuals
+ggplot() + 
+  geom_point(aes(x=chick6$Time, y=residuals(model_poly))) + 
+  geom_smooth(aes(x=chick6$Time, y=residuals(model_poly)))
+
+```
+
+The polynomial model is a better fit than the simple linear regression model because the residuals don't seem to be correlated
+
+
+## c) Fit a linear model to predict weight from time (ignore chick and diet) using all the data
+i) Fit a linear model using time to predict weight. Check the residuals to check 
+if the model fits well. If not, plot it using polynomials.
+
+```{r}
+# plotting linear regression
+model_all_chicks <- lm(weight~Time, data = ChickWeight)
+ggplot(ChickWeight, aes(x=Time, y=weight)) + 
+  geom_point(alpha = 0.2, col='seagreen') + 
+  geom_smooth(method = 'lm')
+
+# plotting residuals
+plot(ChickWeight$Time, residuals(model_all_chicks))
+```
+
+It seems that the simple linear regression isn't a good fit since the model violate the homodescacity hypothesis: the residuals keeps increasing and are therefore not constant.
+We will plot the data using a polynomial 
+
+```{r}
+# plot polynomial regression
+model_all_chicks_poly <- lm(weight ~ Time + I(Time^2) + I(Time ^3), data = ChickWeight)
+# model_all_chicks_poly <- lm(weight ~ Time + I(Time^2) , data = ChickWeight)
+with(ChickWeight, plot(x=Time, y=weight))
+lines(seq(0, max(ChickWeight$Time)), 
+      predict(model_all_chicks_poly, newdata = data.frame(Time = seq(0, max(ChickWeight$Time)))))
+# fitted(model_all_chicks_poly)
+# predict(model_all_chicks_poly, newdata = data.frame(Time = seq(0, max(ChickWeight$Time))))
+# summary(model_all_chicks_poly)
+
+# plot residuals
+
+```
+
+
+## d) Repeat c) but include Diet variable (treat it as categorical variable) (TODO)
+
+```{r}
+model4 <- lm(weight~Time + I(Time^2) + factor(Diet), data = ChickWeight)
+```
+
+
+# Question 2 - Income
+
+```{r}
+x0 <- rep(1, 12)
+x1 <- c(1,1,1,1,0,0,0,0,0,0,0,0)
+x2 <- c(0,0,0,0,1,1,1,1,0,0,0,0)
+x3 <- c(0,0,0,0,0,0,0,0,1,1,1,1)
+Y <- c(33, 36, 35, 35, 31, 29, 31, 29, 37, 39, 36, 36)
+X <- cbind(x0, x1, x2)
+
+```
+
+
+## a) Show that if we include all three of the covariates, the $X^TX$ is not invertible. Explain why
+
+Since $X0=X1+X2+X3$, then the columns are linearly dependant which means that $det(X^TX) = 0$. Thus, the matrix is not invertible.
+
+
+## b) Fit the model: $Y=\beta_0 + \beta_1 X_1 + \beta_2 X_2 + \epsilon$
+
+```{r}
+# model6 <- lm(Y~X-1)
+model6 <- lm(Y~X)
+tmp <- summary(model6)$coefficients
+row.names(tmp) <- c("Intercept", "France", "Italy")
+kable(tmp)
+```
+
+
+
+## c) Estimate the mean income of each of the three countries in terms of $\hat{\beta_0}, \hat{\beta_1}, \hat{\beta_2}$ (CHECK)
+
+$E[Income | France ] = \beta_0 + \beta_1$
+$E[Income | Italy ] = \beta_0 + \beta_2$
+$E[Income | USA ] = \beta_0 $
+
+
+## d) using the regression output, construct a 95 percent confidence interval for the mean income of France
+
+
+
+```{r}
+
+```
+
+
+
+
+# Question 3 - 
+
+
+
+
