@@ -13,10 +13,23 @@
 - [ ] [Barry Van Veen Channel](https://www.youtube.com/playlist?list=PL-wATfeyAMNqIee7cH3q1bh4QJFAaeNv0)
 - [ ] [Digital Signal Processing - Rick Radke](https://www.youtube.com/playlist?list=PLuh62Q4Sv7BUSzx5Jr8Wrxxn-U10qG1et)
 - [ ] [Signal Processing 101 - Iman](https://www.youtube.com/playlist?list=PLJ-OcUCIty7evBmHvYRv66RcuziszpSFB)
+
 ## Computer Vision
 
 - [ ] [EGGN 512 - Computer Vision](https://www.youtube.com/watch?v=skaQfPQFSyY&list=PL4B3F8D4A5CAD8DA3)
 - [ ] [First Principle Computer Vision](https://www.youtube.com/@firstprinciplesofcomputerv3258/playlists)
+
+## NLP
+
+- [ ] [GaTech - NLP](https://www.cc.gatech.edu/classes/AY2020/cs7650_spring/#schedule)
+- [ ] [CMU - NLP](http://demo.clab.cs.cmu.edu/NLP/)
+- [ ] [CMU - Algorithms for NLP](http://demo.clab.cs.cmu.edu/11711fa19/)
+- [ ] [UTexas - NLP](https://www.cs.utexas.edu/~gdurrett/courses/fa2019/cs388.shtml)
+- [ ] [UTexas - Structured Models for NLP](https://www.cs.utexas.edu/~gdurrett/courses/fa2017/cs395t.shtml)
+- [ ] [Berkley - NLP](https://people.ischool.berkeley.edu/~dbamman/nlp20.html)
+- [ ] [Berkley - Applied NLP](https://people.ischool.berkeley.edu/~dbamman/info256.html)
+
+
 
 ## Statistics
 
@@ -71,6 +84,8 @@
 
 - [ ] [STAT 115 - Intro to Computational Biology](https://www.youtube.com/playlist?list=PLeB-Dlq-v6taAXK6ZCGfqImrNWJzFt3p3)
 - [ ] [Harvard Intro to Computational Biology](https://liulab-dfci.github.io/bioinfo-combio/)
+- [ ] [Homeworks](https://github.com/stat115/Homework_2020)
+
 
 
 

@@ -11,6 +11,8 @@ library(ggplot2)
 library(MASS)
 library(xtable)
 library(knitr)
+library(dplyr)
+library(GGally)
 ```
 
 # Question 1 - ChickWeight Data
@@ -155,17 +157,77 @@ $E[Income | USA ] = \beta_0 $
 
 ## d) using the regression output, construct a 95 percent confidence interval for the mean income of France
 
+The 95% confidence interval for France's is given by the 
+following formula: 
+
+$(\beta_0 + \beta_1) \pm t_{n-2}(0.025) \sqrt{Var(\beta_0 + \beta_1)}$
+
+$Var(\beta_0 + \beta_1) = Var(\beta_0) + Var(\beta_1)+ 2Cov(\beta_0, \beta_1)$
+
+$Cov(\beta_0, \beta_1)=\frac{1}{n-1} \sum{(x- \bar{x})(y-\bar{y})}$
+
+```{r}
+n <- nrow(ChickWeight)
+beta0 <- summary(model6)$coefficients[1,1]
+beta1 <- summary(model6)$coefficients[2,1]
+std_beta0 <- summary(model6)$coefficients[1,2]
+std_beta1 <- summary(model6)$coefficients[2,2]
+cov_b0_b1 <- 1/(n-1) *sum((X - mean(X))*(Y- mean(Y)))
+std_b0_b1 <- sqrt(std_beta0^2 + std_beta1^2 + 2* cov_b0_b1)
+
+
+left <- (beta0 + beta1) - qt(0.025, df=n-2, lower.tail = FALSE) * std_b0_b1
+right <- (beta0 + beta1) + qt(0.025, df=n-2, lower.tail = FALSE) * std_b0_b1
+
+```
+
+The 95% confidence interval for France income is (32.61, 36.89)
+
+# Question 3 - birthwt
+
+## a) Plot the data using pairs command
+
+```{r}
+help("birthwt")
+names(birthwt)
+pairs(birthwt)
+GGally::ggpairs(birthwt)
+```
+
+## b) Fit a multiple regression model. Summarize the fitted model
 
 
 ```{r}
+names(birthwt)
+model7 <- lm(bwt~age+lwt+factor(race)+factor(smoke)+ptl+factor(ht)+factor(ui)+ftv, data = birthwt)
+tmp <- summary(model7)
+kable(tmp$coefficients)
 
 ```
 
 
+## c) Summarize your conclusions. Summarize your fitted model and interpret the coefficients
+
+Checking if linear regression hypothesis are met
+
+```{r}
+# 
+plot(fitted(model7), residuals(model7), pch=21, col='orange')
+abline(h=mean(residuals(model7)), col='seagreen')
+
+# 
+plot(birthwt$age, residuals(model7))
+
+tmp
+
+```
 
 
-# Question 3 - 
+It seems that the linear regression assumptions are met: 
+- homescedaticity: variance is constant
+- mean residuals is 0
 
+The significant factor to predict baby's weight at birth are lwt, race, smoke, ht and ui.
 
 
 
