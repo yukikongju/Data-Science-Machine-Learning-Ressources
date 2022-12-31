@@ -1,0 +1,221 @@
+---
+title: "HW8 -"
+author: "Emulie Chhor"
+date: "31/12/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library("dplyr")
+library("ggplot2")
+library("GGally")
+library("MASS")
+library("jackstraw")
+```
+
+# Question 3 - Anscombe 4 datasets
+
+Problem:
+For each of the four datasets make four plots: (i) the data and the fitted line (ii) the
+usual residuals versus x, (iii) the jacknnife (studentized) residuals versus x and (iv)
+Cook’s distance versus x.
+For each dataset, comment on what you see in the plots. For data set four, the jackknife
+residual and the Cook’s distance are undefined for one of the observations. (You will
+get an NaN from R). Explain why.
+
+Solution:
+
+For dataset 1:
+```{r}
+
+# i) data and fitted line
+model1 <- lm(y1~x1, data = anscombe)
+plot(anscombe$x1, anscombe$y1, pch=21, col='seagreen')
+abline(model1)
+
+# ii) residuals against x
+plot(anscombe$x1, residuals(model1), col='seagreen')
+abline(h=mean(residuals(model1)))
+
+# iii) jacknived studentized residuals
+jackstraw(model1, type = "studentized")
+
+# iv) cook distance
+cooks1 <- cooks.distance(model1)
+plot(anscombe$x1, cooks1)
+
+```
+
+Calculating jacknived by hand:
+
+```{r}
+
+```
+
+
+
+Calculating cook distance by hand:
+
+$\text{Cook Distance} = \frac{residuals^2}{leverage(1-leverage)}$
+
+$residuals = y - y_{pred}$
+
+$leverage = (1 + X'X)^{-1} h_{ii}$
+
+where h_{ii} is the ith diagonal of the hat matrix
+
+$hat matrix = X(X'X)^{-1}X'$
+
+```{r}
+
+
+```
+
+
+The dataset4 has undefined jacknives residual and cook's distance because of the point has a leverage of 1 (the 8th point). Therefore, when computing the cook distance, we get a division by zero, thus the NA value.
+
+```{r}
+with(anscombe, plot(x4, y4))
+anscombe$x4
+model4 <- lm(y4~x4, data = anscombe)
+leverage4 <- hatvalues(model4)
+```
+
+
+
+# Question 4 - Health
+
+
+```{r}
+# health <- read.table(url("http://stat.cmu.edu/~larry/health.txt"), header = TRUE)
+
+health <- read.table("~/Documents/OneDrive/Bac-Maths-Info/Winter2022/ModernRegression_36-401/datasets/health.txt", header = TRUE)
+
+```
+
+## (i) Do a pairs plot. Comment on any interesting patterns
+
+```{r}
+GGally::ggpairs(health)
+```
+
+
+Very high positive correlation between y and age.
+
+## (ii) Plot a linear model
+
+We will observe if the linear model is a good fit by analysing the residuals. For each variables, we will draw: 
+- scatter plot
+- standardized residual plot
+- jacknived studentized residual plot
+- cook distance plot
+
+```{r}
+model5 <- lm(y~age+tri+chol, data = health)
+summary(model5)$coefficients
+
+par(mfrow=c(2,2))
+with(health, plot(age, y, col='seagreen', main = "Scatterplot"))
+plot(health$age, residuals(model5), col='seagreen', main = "Standardized Residuals", xlab = "", ylab = "")
+abline(h=mean(residuals(model5)))
+plot(health$age, cooks.distance(model5), col='seagreen', main="Cook Distance", xlab = "", ylab = "")
+```
+
+## (iii) Add some quadratic terms to fix non-linearity
+
+When drawing the scatterplot, it  seemed that the data was non-linear, which 
+means that our model isn't a proper fit. We will introduce quadratic terms in 
+order to fix that issue.
+
+```{r}
+model6 <- lm(y~age + tri + chol + I(age^2) + I(tri^2) + I(chol^2), data = health)
+
+summary(model6)$coefficients
+
+par(mfrow=c(2,2))
+# with(health, plot(age, y, col='seagreen', main = "Scatterplot"))
+# plot(health$age, residuals(model6), col='seagreen', main = "Standardized Residuals", xlab = "", ylab = "")
+abline(h=mean(residuals(model6)))
+plot(health$age, cooks.distance(model6), col='seagreen', main="Cook Distance", xlab = "", ylab = "")
+
+```
+By plotting the cook Distance and the jacknives residual, it seems that the model 
+respect the linear regression assumptions (means residual to zero, independant residuals, 
+homodescaticity). However, there is one outlier
+
+
+
+## (v) Remove the problematic datapoint. Refit the quadratic model. Confirm that
+the residuals and influence diagnostics are improved. Summarize the fitted model.
+In particular, give 95 percent confidence intervals for all the parameters (except the
+intercept). Make sure you do a Bonferroni correction. (In other words, replace 1 − α
+with 1 − α/m where m is the number of confidence intervals you are computing.)
+
+```{r}
+# finding the outlier
+outlier_index <- which.max(cooks.distance(model6))
+
+# removing the outlier
+health_no_outliers <- health[-outlier_index,]
+
+# plotting model without outlier
+model7 <- lm(y~age + tri + chol + I(age^2) + I(tri^2) + I(chol^2), data = health_no_outliers)
+summary(model7)$coefficients
+
+
+# TODO: checking residuals to verify linear regression assumptions
+
+```
+
+
+The 95 percent confidence intervals with bonferroni correction
+
+```{r}
+bonferonni_level <- 0.95 / 6
+confint(model7, level=bonferonni_level, parm = 2:7)
+```
+
+
+# Question 5 - Secret Data
+
+```{r}
+# d = read.table("http://stat.cmu.edu/~larry/secretdata.txt")
+secret <- read.table("~/Documents/OneDrive/Bac-Maths-Info/Winter2022/ModernRegression_36-401/datasets/secretdata.txt", header = FALSE)
+```
+
+## (a) Do a pairs plot.
+
+```{r}
+GGally::ggpairs(secret)
+```
+
+There doesn't seem to be any correlation between the variable
+
+
+## (b) Fit a linear model as usual
+
+```{r}
+model8 <- lm(V1~., data = secret)
+```
+
+## (c) TODO: Plot the residuals versus each covariate.
+
+```{r}
+
+```
+
+
+## (d) Plot the fitted values versus the residuals
+
+```{r}
+plot(fitted(model8), resid(model8))
+```
+
+
+
+
+
+
+
+

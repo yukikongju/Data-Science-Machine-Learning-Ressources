@@ -10,9 +10,10 @@
 - [X] HW3 - Linear Regression with gaussian noises/errors
 - [X] HW4 - Using the residuals to verify linear regression assumptions (homodescadicity, residuals mean is zero); computing pvalues and confidence interval on estimated parameters
 - [X] HW5 - Confidence Intervals and pvalue on Multiple Linear RegressionCoefficients; Computing beta coefficients and variance using matrix formula
-- [ ] HW6 - fitting a polynomial with factor variables; multiple linear regression assumptions (what makes X^TX invertible)
-- [ ] HW7 - Building Rectangle and Ellipsoid Confidence Intervals; Comparing Models using the F test
-- [ ] HW8 - 
+- [X] HW6 - fitting a polynomial with factor variables; multiple linear regression assumptions (what makes X^TX invertible)
+- [.] HW7 - Building Rectangle and Ellipsoid Confidence Intervals; Comparing Models using the F test
+- [X] HW8 - Measuring influence of individual points using jacknive studentized 
+      residuals and Cook's Distance
 - [ ] HW9 - 
 - [ ] HW10 - 
 
@@ -50,6 +51,10 @@
 
 **HW8**
 
+- [X] How can we measure the influence of individual point in the fit? 
+      + jacknife (studentized) residuals 
+      + cook's distance
+- [ ] How to plot residuals against covariate
 
 
 **HW9**
