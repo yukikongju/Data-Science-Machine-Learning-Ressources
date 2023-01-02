@@ -35,13 +35,16 @@
 
 - [X] [36-401 - Modern Linear Regression](https://www.stat.cmu.edu/~larry/=stat401/)
 - [ ] ~~[36-462 - Data Mining](https://www.stat.cmu.edu/~ryantibs/datamining/)~~
+- [ ] [36-350 - Data Mining](https://www.stat.cmu.edu/~cshalizi/350/)
 - [ ] [36-700 - Probability and Mathematical Statistics](https://www.stat.cmu.edu/~jinglei/spring19.shtml)
 - [ ] [36-702 - Statistical ML Homeworks](http://www.cs.cmu.edu/~10702/Calendar/calendar.html)
 - [ ] [36-702 - Statistical ML](https://www.stat.cmu.edu/~ryantibs/statml/)
 - [ ] [36-705 - Intermediate Statistics](https://www.stat.cmu.edu/~larry/=stat705/)
 - [ ] [36-708 - Statistical Methods for ML](https://www.stat.cmu.edu/~larry/=sml/)
+- [ ] [36-720 - Statistical Network Models](https://www.stat.cmu.edu/~cshalizi/networks/16-1/)
 - [ ] [36-750 - Statistical Computing](https://36-750.github.io/)
 - [ ] [36-750 - Statistical Computing Fall 2018](https://www.stat.cmu.edu/~ryantibs/statcomp-F18/)
+- [ ] [36-781 - Advanced Statistical Network Models](https://www.stat.cmu.edu/~cshalizi/networks/16-2/)
 - [ ] [10-600 - Math Background for ML](https://www.youtube.com/watch?v=BpjlCKjWwrM&list=PL7y-1rk2cCsA339crwXMWUaBRuLBvPBCg&index=18)
 - [ ] [10-606 - Math Background for ML](https://www.youtube.com/playlist?list=PL7y-1rk2cCsAqRtWoZ95z-GMcecVG5mzA)
 - [ ] [10-606 Slides](https://www.cs.cmu.edu/~mgormley/courses/606-607-f18/schedule.html)
