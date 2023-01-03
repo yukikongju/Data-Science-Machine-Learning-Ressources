@@ -35,9 +35,9 @@
 
 - [ ] [CMU Stats Courses](https://www.coursicle.com/cmu/courses/STA/)
 - [X] [36-401 - Modern Linear Regression](https://www.stat.cmu.edu/~larry/=stat401/)
-- [ ] [36-402 - Undergraduate Advanced Data Analysis](https://www.stat.cmu.edu/~cshalizi/uADA/19/)
+- [.] [36-402 - Undergraduate Advanced Data Analysis](https://www.stat.cmu.edu/~cshalizi/uADA/19/)
 - [ ] ~~[36-462 - Data Mining](https://www.stat.cmu.edu/~ryantibs/datamining/)~~
-- [ ] [36-350 - Data Mining](https://www.stat.cmu.edu/~cshalizi/350/)
+- [.] [36-350 - Data Mining](https://www.stat.cmu.edu/~cshalizi/350/)
 - [ ] [36-467 - Data over Space and Time](https://www.stat.cmu.edu/~cshalizi/dst/18/)
 - [ ] [36-700 - Probability and Mathematical Statistics](https://www.stat.cmu.edu/~jinglei/spring19.shtml)
 - [ ] [36-702 - Statistical ML Homeworks](http://www.cs.cmu.edu/~10702/Calendar/calendar.html)

@@ -19,8 +19,13 @@ It focus on the following subjects:
   - Using simple linear regression and KNN on time and temperature
   - Understanding that linear regression assumptions need to be valid 
     to use model for hypothesis testing and prediction
+  - Understanding that KNN can capture non-linear data where as linear regression 
+    can't
+  - we can compare model performance by computing their mean squared error
 
-- [ ] Homework 2 - 
+- [ ] Homework 2 - But We Make It Up in Volume
+
+
 - [ ] Homework 3 - 
 - [ ] Homework 4 - 
 - [ ] Homework 5 - 
