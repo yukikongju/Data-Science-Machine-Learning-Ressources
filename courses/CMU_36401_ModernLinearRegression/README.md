@@ -67,6 +67,7 @@
 ## Ressources
 
 - [Bookdown - R](https://bookdown.org/dli/rguide/inference-on-two-independent-sample-means.html#one-sided-hypothesis-test-1)
+- [Cosma Shalizi - The Truth About Linear Regression](https://www.stat.cmu.edu/~cshalizi/TALR/)
 - [R Cookbook 2nd edition](https://rc2e.com/)
 - [How to interpret qqplot](https://stats.stackexchange.com/questions/101274/how-to-interpret-a-qq-plot)
 - [Common Box-Cox Transformation](https://sixsigmastudyguide.com/box-cox-transformation/)
