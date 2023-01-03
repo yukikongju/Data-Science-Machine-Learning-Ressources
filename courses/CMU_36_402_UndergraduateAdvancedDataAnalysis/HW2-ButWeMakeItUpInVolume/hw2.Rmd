@@ -1,0 +1,144 @@
+---
+title: "HW2 - But We Make It Up in Volume"
+author: "Emulie Chhor"
+date: "30/12/2022"
+output:
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(knitr)
+library(dplyr)
+library(ggplot2)
+library(GGally)
+library(gamair)
+library(feasts)
+library(FNN)
+```
+
+
+```{r, include=FALSE}
+uval <- read.csv("~/Documents/OneDrive/Bac-Maths-Info/Winter2022/CMU_36_402_UndergraduateAdvancedDataAnalysis/datasets/uval.csv")
+kable(names(uval))
+kable(summary(uval))
+```
+
+# Question 1 - 
+
+```{r}
+model1 <- lm(growth~underval + log(gdp), data = uval)
+kable(summary(model1)$coefficients)
+```
+
+**Q1a)**
+
+We see that the coefficient for log(gdp) is 0.00629 with p-value of 0, which
+means that the log(gdp) is statistically significant. Since we say that 
+for every increase in log(gdp), we expect the country to grow by a factor 
+of 0.00629, the coefficient doesn't support the idea of "catching-up"
+
+**Q1b)**
+
+The coefficient for underval is 0.0047 with p-value of $0.02<\alpha=0.05$, 
+which means that underval is statistically significant. We say that 
+for every increase of the index of under-valuation, we expect the 
+country to grow by 0.0047\%, which means that the data does support 
+the under-valuing idea.
+
+# Question 2 - 
+
+```{r}
+model2 <- lm(growth~underval + log(gdp) + country + factor(year), 
+             data = uval)
+
+# kable(summary(model2)$coefficients)
+```
+**Q2a)**
+
+```{r}
+kable(summary(model2)$coefficients[2:3, 1:2])
+```
+
+**Q2b)**
+
+Since we only have 10 different values for year 5 years apart, we would rather
+consider the covariate year as a discrete value. This means that we would 
+have a distinct slope for the 10 years value rather than for every yearly 
+increment.
+
+**Q2c)**
+
+```{r}
+years.coeff <- summary(model2)$coefficients[182:190, 1]
+years.values <- sort(unique(uval$year))[2:10]
+plot(years.values, years.coeff, xlab = "Years", ylab = "Coefficients")
+```
+
+**Q2d)**
+
+The second model doesn't support the idea of catching up because, again, 
+the log(gdp) coefficient is positive and statistically significant, which 
+suggest that for every log(gdp) increase, the country grows by 0.0289 \%.
+However, the model is in accord with the undervalue idea since the 
+underval coefficient is positive and is statistically significant ($pvalue<\alpha=0.05$)
+
+# Question 3 - 
+
+**Q3a)**
+
+```{r}
+summary(model1)$r.squared
+summary(model1)$adj.r.squared
+summary(model2)$r.squared
+summary(model2)$adj.r.squared
+```
+
+The R-squared value can be used to compare models, as it give the proportion 
+of variance in the response variable explained by the model. Therefore, 
+since the R-squared value (and adjusted) are both bigger in the second 
+model, we say that the second model is the better fit.
+
+**Q3b)**
+
+```{r}
+
+```
+
+
+**Q3c)**
+
+# Question 4 - 
+
+**Q4a)**
+
+
+**Q4b)**
+
+
+**Q4c)**
+
+
+**Q4d)**
+
+
+# Question 5 - 
+
+**Q5a)**
+
+
+**Q5b)**
+
+
+**Q5c)**
+
+
+**Q5d)**
+
+**Q5e)**
+
+
+
+**Q5f)**
+
+
