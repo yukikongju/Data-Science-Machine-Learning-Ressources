@@ -15,7 +15,7 @@ It focus on the following subjects:
 ## Homework
 
 - [X] Homework 1 - Chicago and Neighbors 
-- [ ] Homework 2 - But We Make It Up in Volume
+- [X] Homework 2 - But We Make It Up in Volume
 - [ ] Homework 3 - 
 - [ ] Homework 4 - 
 - [ ] Homework 5 - 

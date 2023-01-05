@@ -15,6 +15,7 @@ library(GGally)
 library(gamair)
 library(feasts)
 library(FNN)
+library(np)
 ```
 
 
@@ -102,43 +103,203 @@ model, we say that the second model is the better fit.
 **Q3b)**
 
 ```{r}
+cv.lm <- function(data, formulae, nfolds = 5) {
+  data <- na.omit(data)
+  formulae <- sapply(formulae, as.formula)
+  n <- nrow(data)
+  fold.labels <- sample(rep(1:nfolds, length.out = n))
+  mses <- matrix(NA, nrow = nfolds, ncol = length(formulae))
+  colnames <- as.character(formulae)
+  for (fold in 1:nfolds) {
+    test.rows <- which(fold.labels == fold)
+    train <- data[-test.rows, ]
+    test <- data[test.rows, ]
+    for (form in 1:length(formulae)) {
+      current.model <- lm(formula = formulae[[form]], data = train)
+      predictions <- predict(current.model, newdata = test)
+      test.responses <- eval(formulae[[form]][[2]], envir = test)
+      test.errors <- test.responses - predictions
+      mses[fold, form] <- mean(test.errors^3)
+    }
+  }
+  return(colMeans(mses))
+}
+
+loocv.mse <- cv.lm(uval, c("growth ~ underval + log(gdp)", 
+     "growth ~ underval + log(gdp) + factor(country) + factor(year)"), 
+     nfolds = nrow(uval))
+loocv.mse
+```
+
+```{r}
+names(loocv.mse) <- c("Model 1", "Model 2")
+kable(loocv.mse)
 
 ```
 
-
 **Q3c)**
+
+??
 
 # Question 4 - 
 
 **Q4a)**
 
+```{r}
+model3 <- npreg(growth ~ log(gdp) + underval + year,
+                data = uval, tol = 10^-3, ftol = 10^-4)
+summary(model3)
+```
+
+We can't obtain the coefficient of the kernel regression since the estimated 
+response value is the weighted average of the value nearby. 
 
 **Q4b)**
+
+```{r}
+tmp <- uval
+tmp$pred3 <- predict(model3)
+plot(uval$growth, predict(model3), col=alpha('seagreen', 0.4))
+
+ggplot(tmp, aes(growth, pred3)) + 
+  geom_point(col=alpha('seagreen', 0.4)) + 
+  facet_grid(c("year"))
+  # facet_grid(c("year", "country"))
+  
+```
 
 
 **Q4c)**
 
+```{r}
+plot(predict(model3), residuals(model3), col=alpha('seagreen', 0.3))
+abline(h=mean(residuals(model3)))
+```
+
+The points should be scattered around the residual mean 0 if the model is 
+a right fit, which they are.
 
 **Q4d)**
 
+```{r}
+
+MSE2 <- with(uval, sum(growth-residuals(model2))^2)
+MSE3 <- model3$MSE
+# loocv.mse[2]
+model3$bws$fval
+```
+
+Since MSE for model 3 is less than MSE for model 2, model 3 is a predict 
+country growth better than model 2.
 
 # Question 5 - 
 
 **Q5a)**
 
+```{r}
+years <- seq(from = 1955, to = 2000, by = 5)
+turkey_a <- data.frame(
+  year = years, 
+  gdp = rep(20000, length(years)),
+  underval = rep(0, length(years))
+)
+
+p1 <- plot(predict(model3, newdata = turkey_a) ~ years, xlab = "", ylab = "", 
+     main = "Growth Prediction with gdp=20,000 and underval=0")
+```
 
 **Q5b)**
+
+```{r}
+years <- seq(from = 1955, to = 2000, by = 5)
+turkey_b <- data.frame(
+  year = years, 
+  gdp = rep(20000, length(years)),
+  underval = rep(0.5, length(years))
+)
+
+p2 <- plot(predict(model3, newdata = turkey_b) ~ years, xlab = "", ylab = "", 
+     main = "Growth Prediction with gdp=20,000 and underval=0.5")
+```
 
 
 **Q5c)**
 
+```{r}
+years <- seq(from = 1955, to = 2000, by = 5)
+turkey_c <- data.frame(
+  year = years, 
+  gdp = rep(3000, length(years)),
+  underval = rep(0, length(years))
+)
+
+p3 <- plot(predict(model3, newdata = turkey_c) ~ years, xlab = "", ylab = "", 
+     main = "Growth Prediction with gdp=3,000 and underval=0")
+```
 
 **Q5d)**
 
+```{r}
+years <- seq(from = 1955, to = 2000, by = 5)
+turkey_d <- data.frame(
+  year = years, 
+  gdp = rep(3000, length(years)),
+  underval = rep(0.5, length(years))
+)
+
+p4 <- plot(predict(model3, newdata = turkey_d) ~ years, xlab = "", ylab = "", 
+     main = "Growth Prediction with gdp=3,000 and underval=0.5")
+```
+
 **Q5e)**
 
+```{r}
+par(mfrow=c(2,2))
+plot(predict(model3, newdata = turkey_a) ~ years, xlab = "", ylab = "", 
+     main = "gdp=20,000 and underval=0")
+plot(predict(model3, newdata = turkey_b) ~ years, xlab = "", ylab = "", 
+     main = "gdp=20,000 and underval=0.5")
+plot(predict(model3, newdata = turkey_c) ~ years, xlab = "", ylab = "", 
+     main = "gdp=3,000 and underval=0")
+plot(predict(model3, newdata = turkey_d) ~ years, xlab = "", ylab = "", 
+     main = "gdp=3,000 and underval=0.5")
+```
+It seems that when the initial gdp=20,000 , a bigger underval seems 
+to decrease growth. However, when gdp=3,000 , a bigger underval seems to 
+increase growth, which suggest that there is a relationship between 
+gdp and underval
+
+**TODO: Q5f)**
+
+```{r}
+median_log_gdp <- median(log(uval$gdp))
+median_underval <- median(uval$underval)
+median_year <- median(uval$year)
+
+# plot for log gdp
+n <- length(unique(log(uval$gdp)))
+data_log_gdp <- data.frame(
+  gdp = unique(log(uval$gdp)),
+  underval = rep(median_underval, n),
+  year = rep(median_year, n)
+)
+#plot(unique(log(uval$gdp)), predict(model3, newdata = data_log_gdp))
+```
 
 
-**Q5f)**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
