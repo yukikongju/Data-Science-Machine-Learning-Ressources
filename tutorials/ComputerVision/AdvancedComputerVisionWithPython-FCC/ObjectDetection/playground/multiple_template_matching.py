@@ -1,3 +1,6 @@
+# Problem: We want to find all instance of an object inside an image given 
+# a template image and an image
+
 import cv2 as cv
 import os
 import numpy as np
@@ -18,7 +21,7 @@ methods = ['cv.TM_CCOEFF', 'cv.TM_CCOEFF_NORMED', 'cv.TM_CCORR',
 result = cv.matchTemplate(target, template, cv.TM_SQDIFF_NORMED)
 
 # 3. find locations above threshold
-threshold = 0.09
+threshold = 0.105
 locations = np.where(result <= threshold)
 locations = list(zip(*locations[::-1]))
 #  print(locations)

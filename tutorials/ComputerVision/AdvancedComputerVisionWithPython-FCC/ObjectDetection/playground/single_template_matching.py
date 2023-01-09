@@ -1,3 +1,8 @@
+# Problem: we want to find one instance of an object in an image. To do so, 
+# we are given a template image (the object we want to find) and an image 
+# (the picture in which we need to find the object in). 
+
+
 import numpy as np
 import cv2 as cv
 import os
