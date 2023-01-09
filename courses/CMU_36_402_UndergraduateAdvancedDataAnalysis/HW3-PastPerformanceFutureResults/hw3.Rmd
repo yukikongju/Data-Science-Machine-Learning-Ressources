@@ -1,0 +1,177 @@
+---
+title: "HW3 - Past Predictions, Future Results"
+author: "Emulie Chhor"
+date: "30/12/2022"
+output:
+pdf_document: default
+---
+
+```{r, include=FALSE}
+stocks <- read.csv("~/Documents/OneDrive/Bac-Maths-Info/Winter2022/CMU_36_402_UndergraduateAdvancedDataAnalysis/datasets/stock_history.csv")
+names(stocks)
+summary(stocks)
+```
+
+
+# Question 1 - 
+
+**Q1a)**
+
+```{r}
+stocks$MAPE <- stocks$Price / stocks$Earnings_10MA_back
+summary(stocks$MAPE)
+
+nrow(stocks[is.na(stocks$Earnings_10MA_back) == TRUE, ])
+```
+
+There are 120 NA's because there are 120 rows with NA value for Earning_10MA_back
+
+**Q1b)**
+
+```{r}
+model1 <- lm(Return_10_fwd~MAPE, data = stocks)
+summary(model1)$coefficients
+```
+
+The coefficient estimate is -0.004588536 with standard error of 0.000172717.
+
+**Q1c)**
+
+```{r}
+cv.lm <- function(data, formulae, nfolds = 5) {
+  data <- na.omit(data)
+  formulae <- sapply(formulae, as.formula)
+  n <- nrow(data)
+  fold.labels <- sample(rep(1:nfolds, length.out = n))
+  mses <- matrix(NA, nrow = nfolds, ncol = length(formulae))
+  colnames <- as.character(formulae)
+  for (fold in 1:nfolds) {
+    test.rows <- which(fold.labels == fold)
+    train <- data[-test.rows, ]
+    test <- data[test.rows, ]
+    for (form in 1:length(formulae)) {
+      current.model <- lm(formula = formulae[[form]], data = train)
+      predictions <- predict(current.model, newdata = test)
+      test.responses <- eval(formulae[[form]][[2]], envir = test)
+      test.errors <- test.responses - predictions
+      mses[fold, form] <- mean(test.errors^2)
+    }
+  }
+  return(colMeans(mses))
+}
+
+cv.lm(stocks, c("Return_10_fwd ~ MAPE"), nfolds = 5)
+```
+
+The MSE for this model under 5-fold is 0.001866959
+
+# Question 2 - 
+
+**Q2a)**
+
+
+
+**Q2b)**
+
+
+
+**Q2c)**
+
+
+
+**Q2d)**
+
+
+**Q2e)**
+
+
+# Question 3 - 
+
+
+**Q3a)**
+
+
+**Q3b)**
+
+
+
+# Question 4 - 
+
+**Q4a)**
+
+
+**Q4b)**
+
+
+
+**Q4c)**
+
+
+**Q4d)**
+
+**Q4e)**
+
+
+# Question 5 - 
+
+**Q5a)**
+
+
+**Q5b)**
+
+
+
+**Q5c)**
+
+
+**Q5d)**
+
+
+# Question 6 - 
+
+**Q6a)**
+
+
+**Q6b)**
+
+
+
+**Q6c)**
+
+
+**Q6d)**
+
+# Question 7 - 
+
+**Q7a)**
+
+
+# Question 8 - 
+
+**Q8a)**
+
+
+**Q8b)**
+
+
+
+**Q8c)**
+
+
+**Q8d)**
+
+
+# Question 9 - 
+
+**Q9a)**
+
+
+**Q9b)**
+
+
+
+**Q9c)**
+
+# Question 10 -
+
+**Q10a)**
