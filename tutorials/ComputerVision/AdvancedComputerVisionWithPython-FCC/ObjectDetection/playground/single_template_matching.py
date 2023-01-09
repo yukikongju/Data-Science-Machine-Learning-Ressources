@@ -13,7 +13,7 @@ target_path = os.path.join(image_base_path, 'pond1.png')
 template = cv.imread(template_path, cv.IMREAD_GRAYSCALE)
 target = cv.imread(target_path, cv.IMREAD_GRAYSCALE)
 
-# 2. Perform Single Template Matching
+# 2. Perform Template Matching
 methods = ['cv.TM_CCOEFF', 'cv.TM_CCOEFF_NORMED', 'cv.TM_CCORR', 
            'cv.TM_CCORR_NORMED', 'cv.TM_SQDIFF', 'cv.TM_SQDIFF_NORMED']
 result = cv.matchTemplate(target, template, cv.TM_CCORR_NORMED)
