@@ -29,6 +29,12 @@ examples in ```examples/```
 **Internet of Things**
 - [IOT Roadmap](https://github.com/mahmoodfathy/IoT-Roadmap)
 
+**Robotics**
+- [Robotics Roadmap - Sarrasor](https://sarrasor.github.io/RoboticsRoadmap/)
+- [ERC Handbook - Robotics Handbook](https://erc-bpgc.github.io/handbook/roadmap/)
+- [RISC Handbook - Robotics Handbook](https://risc-iitbbs.github.io/risc-handbook/)
+- [ROS Tutorials](http://wiki.ros.org/ROS/Tutorials)
+
 
 ## Skills assessment
 

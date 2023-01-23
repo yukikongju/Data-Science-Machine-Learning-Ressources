@@ -1,0 +1,30 @@
+---
+title: "Chapter 2 - Exercices"
+author: "Emulie Chhor"
+date: "30/12/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tsibble)
+library(tsibbledata)
+library(ggplot2)
+library(dplyr)
+library(ggfortify)
+```
+
+
+## Question 1 - Exploring dataset with time plots
+
+```{r}
+
+df <- gafa_stock %>% 
+  as_tsibble(index=Date)
+
+autoplot(gafa_stock)
+AirPassengers
+
+```
+
+

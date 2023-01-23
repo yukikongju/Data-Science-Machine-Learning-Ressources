@@ -1,0 +1,145 @@
+---
+title: "Chapter 2 - Time Series Graphics"
+author: "Emulie Chhor"
+date: "30/12/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tsibble)
+library(tsibbledata)
+library(ggplot2)
+library(dplyr)
+library(ggfortify)
+library(forecast)
+library(feasts)
+library(fabletools)
+```
+
+
+## 2.1. tsibble objects
+
+#### a) Calculate monthly percentage cost in PBS dataset using `dplyr`
+
+```{r}
+a10 <- PBS %>% 
+  filter(ATC2 == 'A10') %>% 
+  select(c(Month, Concession, Type, Cost)) %>% 
+  summarise(TotalCost = sum(Cost)) %>% 
+  mutate(Cost = TotalCost /1e6)
+```
+
+#### b) Read a csv file and convert to tsbible. Date should be in quarter.
+
+```{r}
+prison <- readr::read_csv("https://OTexts.com/fpp3/extrafiles/prison_population.csv")
+prison <- prison %>% 
+  mutate(Quarter = yearquarter(Date)) %>% 
+  select(-c("Date")) %>% 
+  as_tsibble(key = c(State, Gender, Legal, Indigenous), 
+             index = Quarter)
+```
+
+
+## 2.2. Time Plots
+
+
+#### a) Create a time plot for the number of passengers from the airport Melbourne to Syney in economy class using the 'ansett' dataset.
+
+```{r}
+mel_syd_economy <- ansett %>% 
+  filter(Airports=='MEL-SYD', Class == 'Economy') %>% 
+  mutate(Week = as.Date(Week)) %>% 
+  as.ts()
+  
+ggplot2::autoplot(mel_syd_economy, col='seagreen', alpha=0.7)
+
+```
+
+## 2.3. Time Series Patterns
+
+## 2.4. Seasonal Plots
+
+#### a) Create a seasonal plot using `gg_season()`
+
+```{r}
+a10 <- PBS %>% 
+  filter(ATC2 == "A10") %>%
+  select(Month, Concession, Type, Cost) %>%
+  summarise(TotalC = sum(Cost)) %>%
+  mutate(Cost = TotalC / 1e6)
+
+
+a10 %>% 
+  select(c("Month", "Cost")) %>% 
+  as.ts() %>% 
+  ggseasonplot()
+```
+
+
+## 2.5. Seasonal Subseries Plots
+
+##### a) create `subseries()` plot for a10
+
+```{r}
+a10 %>% 
+  select(c("Cost", "Month")) %>% 
+  as.ts() %>% 
+  ggsubseriesplot()
+
+gg_subseries(a10, Cost)
+```
+
+#### b) Extract information from `tourism` dataset using seasonal and subseries plots 
+
+```{r}
+tmp <- tourism %>% 
+  group_by(State, Purpose) %>% 
+  summarise(Trips=sum(Trips))
+
+holidays <- tourism %>% 
+  filter(Purpose == 'Holiday') %>% 
+  group_by(State) %>% 
+  summarise(Trips = sum(Trips)) %>% 
+  as.ts()
+
+autoplot(holidays)
+
+```
+We see that there is a strong seasonlity for most states, but there seems to 
+be an offset is some states, namely in Northern Territory and Queensland.
+
+```{r}
+tmp <- tourism %>% 
+  filter(Purpose == 'Holiday') %>% 
+  group_by(State) %>% 
+  summarize(Trips = sum(Trips)) 
+
+ggseasonplot(tmp, date = "Quarter", group = 'State',  value = 'Trips')
+gg_season(tmp, Trips)
+```
+
+
+#### c) Draw subseries for holidays
+
+```{r}
+holidays <- tourism %>% 
+  filter(Purpose == 'Holiday') %>% 
+  group_by(State) %>% 
+  summarise(Trips = sum(Trips))
+
+holidays %>% 
+  gg_subseries(Trips)
+```
+
+
+## 2.6. Scatterplots
+
+```{r}
+
+```
+
+
+
+
