@@ -31,3 +31,6 @@ This course is an introduction to data analysis. It touches the following subjec
 - [ ] Project 2 - 
 - [ ] Project 3 - 
 
+## Ressources
+
+- [CMU 36-309 Hseltman](https://www.stat.cmu.edu/~hseltman/309/Book/)

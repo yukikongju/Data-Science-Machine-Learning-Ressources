@@ -4,6 +4,8 @@
 
 - [ ] [Machine Learning - Florian Marquard](https://pad.gwdg.de/s/Machine_Learning_For_Physicists_2021#)
 - [ ] [Advanced Machine Learning - Florian Marquard](https://pad.gwdg.de/s/2021_AdvancedMachineLearningForScience)
+- [ ] [UvA DL Notebooks - ](https://uvadlc-notebooks.readthedocs.io/en/latest/index.html)
+- [ ] [UvA Course](https://uvadlc.github.io/)
 
 ## Signal Processing
 
@@ -13,6 +15,7 @@
 - [ ] [Barry Van Veen Channel](https://www.youtube.com/playlist?list=PL-wATfeyAMNqIee7cH3q1bh4QJFAaeNv0)
 - [ ] [Digital Signal Processing - Rick Radke](https://www.youtube.com/playlist?list=PLuh62Q4Sv7BUSzx5Jr8Wrxxn-U10qG1et)
 - [ ] [Signal Processing 101 - Iman](https://www.youtube.com/playlist?list=PLJ-OcUCIty7evBmHvYRv66RcuziszpSFB)
+- [ ] [MIT CS 330 - Deep Multi-Task and Meta Learning](https://cs330.stanford.edu/)
 
 ## Computer Vision
 
@@ -29,6 +32,10 @@
 - [ ] [Berkley - NLP](https://people.ischool.berkeley.edu/~dbamman/nlp20.html)
 - [ ] [Berkley - Applied NLP](https://people.ischool.berkeley.edu/~dbamman/info256.html)
 
+## Reinforcement Learning
+
+- [ ] [UC Berkley - Deep Reinforcement Learning](http://rail.eecs.berkeley.edu/deeprlcourse/)
+- [ ] 
 
 
 ## Statistics
@@ -54,6 +61,8 @@
 - [ ] [10-606 Slides](https://www.cs.cmu.edu/~mgormley/courses/606-607-f18/schedule.html)
 - [ ] [10-725 - Optimization](http://www.cs.cmu.edu/~ggordon/10725-F12/schedule.html)
 - [ ] [Bayesian Data Analysis course Avethari](https://avehtari.github.io/BDA_course_Aalto/index.html)
+- [ ] [Statistical Rethinking - Richard McElreath](https://civil.colorado.edu/~balajir/CVEN6833/bayes-resources/RM-StatRethink-Bayes.pdf)
+- [ ] [Statistical Rethinking Course](https://github.com/rmcelreath/stat_rethinking_2023) (TODO)
 
 ## Geospatial
 
@@ -87,6 +96,12 @@
 ## Robotics
 
 - [ ] [16-8111 - Maths Fundamentals for Robotics](http://www.cs.cmu.edu/~me/courses/811/mathfund.html)
+- [ ] [Duckie Town - Liam Paul](https://www.duckietown.org/guides/start-learning)
+- [ ] [Duckie Town - Video](https://vimeo.com/showcase/8807247)
+- [ ] [Robots Learning - Glen Berseth](https://neo-x.github.io/teaching/)
+
+
+
 ## Bioinformatics
 
 - [ ] [STAT 115 - Intro to Computational Biology](https://www.youtube.com/playlist?list=PLeB-Dlq-v6taAXK6ZCGfqImrNWJzFt3p3)

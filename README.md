@@ -30,10 +30,14 @@ examples in ```examples/```
 - [IOT Roadmap](https://github.com/mahmoodfathy/IoT-Roadmap)
 
 **Robotics**
+- [Robogrok Courses - ASU](http://www.robogrok.com/)
 - [Robotics Roadmap - Sarrasor](https://sarrasor.github.io/RoboticsRoadmap/)
 - [ERC Handbook - Robotics Handbook](https://erc-bpgc.github.io/handbook/roadmap/)
 - [RISC Handbook - Robotics Handbook](https://risc-iitbbs.github.io/risc-handbook/)
 - [ROS Tutorials](http://wiki.ros.org/ROS/Tutorials)
+- [PIR Project ASU](https://github.com/DaitTan/PIRProjects)
+- [Robotics Coursework - Mithi](https://github.com/mithi/robotics-coursework)
+- [Resourcium](https://resourcium.org/index.php/)
 
 
 ## Skills assessment

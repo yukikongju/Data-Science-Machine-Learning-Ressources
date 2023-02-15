@@ -1,5 +1,10 @@
 # Tutorials
 
+**Deep Learning**
+
+- [ ] [UvA Deep Learning - Notebooks](https://uvadlc-notebooks.readthedocs.io/en/latest/index.html)
+- [ ] [UvA Deep Learning Course](https://uvadlc.github.io/)
+
 **Computer Vision**
 
 - [o] [Advanced Computer Vision with Python - FreeCodeCamp](https://www.youtube.com/watch?v=01sAkU_NvOY&t=6984s)
