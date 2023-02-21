@@ -1,0 +1,126 @@
+---
+title: "Chapitre 3"
+author: "Emulie Chhor"
+date: "2023-02-21"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library("TTR")
+library("forecast")
+library(ggplot2)
+```
+
+# Reading data
+
+```{r}
+births <- scan("http://robjhyndman.com/tsdldata/data/nybirths.dat")
+births_ts <- ts(births, frequency = 12, start = c(1946, 1))
+plot.ts(births_ts)
+smooted_ts <- SMA(births_ts, n=5)
+
+# composing time series
+plot(decompose(births_ts))
+
+# adjusted with seasonality
+births_seasonal <- decompose((births_ts))$seasonal
+adjusted_seasonality <- births_ts - births_seasonal
+plot(adjusted_seasonality)
+```
+
+
+# 3.1. Simple Forecasting Methods
+
+
+**Apply Simple Forecasting Methods to predict future values: average, naive, seasonal naive, drift**
+
+```{r}
+# https://otexts.com/fpp2/simple-methods.html
+h=35 # forecast horizon
+meanf(births_ts, h)
+naive(births_ts, h)
+snaive(births_ts, h)
+rwf(births_ts, h, drift = TRUE)
+
+birth_forecast <- window(births_ts, start=c(1946,1), end=c(1965,1))
+autoplot(births_ts) + 
+  autolayer(meanf(births_ts, h), series = "Average", PI=FALSE) + 
+  autolayer(naive(births_ts, h), series = "Naive", PI=FALSE) + 
+  autolayer(snaive(births_ts, h), series = "Seasonal Naive", PI=FALSE) + 
+  autolayer(rwf(births_ts, h, drift = TRUE), series = "Drift", PI=FALSE)  +
+  ggtitle("Forecasting births in the US (in millions)") + 
+  xlab("Years") + ylab("Number of Births")
+
+```
+
+
+**Using Simple Exponential Smoothing**
+
+```{r}
+
+# Holt-Winters
+ts_holtswinter <- HoltWinters(births_ts, beta = FALSE, gamma = FALSE)
+ts_holtswinter$fitted
+plot(ts_holtswinter)
+
+
+```
+
+# 3.2. Transformations and Adjustments
+
+**Adjusting using: calendar, population, inflation**
+
+```{r}
+tmp <- cbind(Monthly=births_ts, Daily=births_ts / monthdays(births_ts))
+autoplot(tmp, facets = TRUE)
+autoplot(births_ts) + 
+  autolayer(births_ts - decompose(births_ts)$seasonal, series = "Adjusted Seasonality") + 
+
+```
+
+**Adjustment using Box-Cox**
+
+```{r}
+autoplot(BoxCox(births_ts, lambda = BoxCox.lambda(births_ts)))
+```
+
+
+**Forecasting using Bias and Simple Back adjustments**
+
+```{r}
+autoplot(births_ts) + 
+  autolayer(rwf(births_ts, drift = TRUE, lambda = 0, h=50, level = 80), series = "Simple Back Adjustment", PI=FALSE) + 
+  autolayer(rwf(births_ts, drift = TRUE, lambda = 0, h=50, level = 80, biasadj = TRUE), series = "Bias Adjustment", PI=FALSE) 
+```
+
+# 3.3. Residual Diagnostics
+
+**What do we check in residual**
+
+We check that the residual are: 
+1) Uncorrelated Residuals: if residuals are correlated, then there is information not captured by model
+2) Residual mean is zero: anything except 0 means there is bias in the model
+3) Constant Variance
+4) Residual are normally distributed
+
+**Example: residual Diagnostics for US births**
+
+We want to measure the residual of a model
+
+```{r}
+# residuals for naive model
+naive_model <- naive(births_ts)
+autoplot(residuals(naive_model)) 
+mean(na.omit(naive_model$residuals))
+hist(residuals(naive_model))
+ggAcf(residuals(naive_model))
+
+# check all in one
+checkresiduals(naive_model)
+
+```
+
+
+
+

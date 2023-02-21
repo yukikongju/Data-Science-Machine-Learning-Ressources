@@ -5,18 +5,17 @@ All about time series forecasting. Course can be found [here](https://otexts.com
 
 # Chapters Exercices
 
-- [X] Chapter 1 - defining forecasting problems 
-- [ ] Chapter 2 -
-- [ ] Chapter 3 -
-- [ ] Chapter 4 -
-- [ ] Chapter 5 -
-- [ ] Chapter 6 -
-- [ ] Chapter 7 -
-- [ ] Chapter 8 -
-- [ ] Chapter 9 -
-- [ ] Chapter 10 -
-- [ ] Chapter 11 -
-- [ ] Chapter 12 -
+- [X] Chapter 1 - Getting Started
+- [.] Chapter 2 - Time Series Graphics
+- [.] Chapter 3 - The Forecaster's toolbox
+- [ ] Chapter 4 - Judgmental Forecasts
+- [ ] Chapter 5 - Time Series Regression Models
+- [ ] Chapter 6 - Time Series Decomposition
+- [ ] Chapter 7 - Exponenetial Smoothing
+- [ ] Chapter 8 - ARIMA models
+- [ ] Chapter 9 - Dynamic Regression Models
+- [ ] Chapter 10 - Forecasting Hierarchical or grouped time series
+- [ ] Chapter 11 - Advanced Forecasting Methods
 - [ ] Chapter 12 -
 
 
@@ -26,3 +25,6 @@ All about time series forecasting. Course can be found [here](https://otexts.com
 - [Cornell Time Series Exercices in R](https://www.css.cornell.edu/faculty/dgr2/_static/files/R_PDF/exTSA.pdf)
 - [Solutions - Forecasting: Principles and Practice](https://robjhyndman.com/forecasting/solutions.pdf)
 - [Notes for fpp3](https://qiushiyan.github.io/fpp/)
+- [Element of Statistical Learning](https://hastie.su.domains/Papers/ESLII.pdf)
+- [Penn State - Stat 462 - Applied Regression Analysis](https://online.stat.psu.edu/stat462/node/78/)
+
