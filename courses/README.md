@@ -6,6 +6,7 @@
 - [ ] [Advanced Machine Learning - Florian Marquard](https://pad.gwdg.de/s/2021_AdvancedMachineLearningForScience)
 - [ ] [UvA DL Notebooks - ](https://uvadlc-notebooks.readthedocs.io/en/latest/index.html)
 - [ ] [UvA Course](https://uvadlc.github.io/)
+- [ ] [Graph Neural Network - Stanford CS224W](https://pytorch-geometric.readthedocs.io/en/latest/get_started/colabs.html#stanford-cs224w-tutorials)
 
 ## Signal Processing
 
@@ -41,6 +42,8 @@
 ## Statistics
 
 - [ ] [CMU Stats Courses](https://www.coursicle.com/cmu/courses/STA/)
+- [ ] [PennState - Statistics Online Course](https://online.stat.psu.edu/statprogram/) (check it out)
+- [ ] [PennState - STAT 462 - Applied Regression Analysis](https://online.stat.psu.edu/stat462/)
 - [X] [36-401 - Modern Linear Regression](https://www.stat.cmu.edu/~larry/=stat401/)
 - [.] [36-402 - Undergraduate Advanced Data Analysis](https://www.stat.cmu.edu/~cshalizi/uADA/19/)
 - [ ] ~~[36-462 - Data Mining](https://www.stat.cmu.edu/~ryantibs/datamining/)~~
@@ -63,6 +66,7 @@
 - [ ] [Bayesian Data Analysis course Avethari](https://avehtari.github.io/BDA_course_Aalto/index.html)
 - [ ] [Statistical Rethinking - Richard McElreath](https://civil.colorado.edu/~balajir/CVEN6833/bayes-resources/RM-StatRethink-Bayes.pdf)
 - [ ] [Statistical Rethinking Course](https://github.com/rmcelreath/stat_rethinking_2023) (TODO)
+- [ ] [Social Network Analysis]
 
 ## Geospatial
 
@@ -83,6 +87,12 @@
 
 - [ ] [Time Series Analysis in R - Exercices](https://www.css.cornell.edu/faculty/dgr2/_static/files/R_PDF/exTSA.pdf)
 - [ ] [Forecasting: Principles and Practice](https://otexts.com/fpp3/)
+
+
+## Qunatitative Finance
+
+- [Quantopian Lectures Series](https://www.youtube.com/watch?v=W-TlWzwM208&list=PLRFLF1OxMm_UL7WUWM31iynp0jMVf_vLW) (TODO)
+- [Quantopian Notebooks](https://github.com/quantopian/research_public)
 
 
 ## Concepts de languages, compilers, os

@@ -9,7 +9,7 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 library("TTR")
 library("forecast")
-library(ggplot2)
+library("ggplot2")
 ```
 
 # Reading data

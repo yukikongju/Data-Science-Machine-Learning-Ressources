@@ -1,0 +1,126 @@
+---
+title: "Chapitre 5"
+author: "Emulie Chhor"
+date: "Feb 27, 2023"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library("TTR")
+library("forecast")
+library("ggplot2")
+library("GGally")
+library("lmtest")
+```
+
+# Reading the data
+
+```{r}
+births <- scan("http://robjhyndman.com/tsdldata/data/nybirths.dat")
+births_ts <- ts(births, start = c(1946, 1))
+
+# generate random multiple time series
+x <- rnorm(100, 1)
+y <- rnorm(100, 50)
+z <- rnorm(100, 75)
+errors <- runif(100, 5, 10)
+w <- x + y + z + errors
+
+random_ts <- ts(data.frame(x,y,z, w), start = c(1850, 5))
+```
+
+
+# 5.1. The Linear Model
+
+**Plot**
+
+```{r}
+autoplot(random_ts) + 
+  ylab("Value") + xlab("Year") 
+
+# autoplot(births_ts)
+
+# correlation plot
+random_ts %>% 
+  GGally::ggpairs()
+```
+**Fitting a Linear Regression Line**
+
+```{r}
+# single linear regression
+single_lr <- tslm(w~x, random_ts)
+multiple_lr <- tslm(w~ x + z + w, random_ts)
+
+# checking linear regression coefficients
+summary(single_lr)
+summary(multiple_lr)
+
+# fit predicted values
+fitted_single <- fitted(single_lr)
+fitted_multiple <- fitted(multiple_lr)
+random_ts_predictions <- ts(data.frame(random_ts, fitted_single, fitted_multiple))
+
+# plot
+autoplot(random_ts_predictions[, c('w', 'fitted_single', 'fitted_multiple')])
+```
+
+# 5.2. Least Square Regression
+
+
+# 5.3. Evaluating the regression model
+
+We want to verify that:
+- mean residual is 0 (ACF)
+- no correlation between residuals
+
+```{r}
+# checking that model residuals predictions are uncorrelated
+checkresiduals(single_lr)
+
+# perform Breusch-Godfrey test to check for autocorrelation
+bgtest(w~x, data = random_ts)
+
+# we expect the residuals and predictor variables to be randomly distributed
+random_df <- as.data.frame(random_ts)
+random_df[, 'single_residuals'] <- as.numeric(residuals(single_lr))
+p1 <- ggplot(random_df, aes(single_residuals, y)) + geom_point()
+p2 <- ggplot(random_df, aes(single_residuals, x)) + geom_point()
+p3 <- ggplot(random_df, aes(single_residuals, z)) + geom_point()
+p4 <- ggplot(random_df, aes(single_residuals, w)) + geom_point()
+gridExtra::grid.arrange(p1, p2, p3, p4, nrow = 2)
+
+# fitted vs residuals
+cbind(Fitted=fitted(single_lr), Residuals=residuals(single_lr)) %>% 
+  as.data.frame() %>% 
+  ggplot(aes(Fitted, Residuals)) +
+  geom_point()
+```
+
+# 5.4. Some Useful Predictors
+
+**Using fourier series to adjust linear regression**
+
+```{r}
+```
+
+# 5.5. Selecting Predictors
+
+Strategies to NOT use: 
+- perform multiple linear regression and keep predictors with p-value above 0.05
+- drop predictor that are not correlated with predicted variable
+
+Instead, we use predictive accuracy: 
+- Adjusted R^2: 
+  * Pros: measure how well model fit historical data
+  * Cons: doesn't allow for degrees of freedom, lead to over fitting
+- Cross-validation:
+- Akaike's Information Criterion
+- Corrected Akaike's Information Criterion
+- Schwarz's Bayesian Information Criterion
+
+```{r}
+CV(single_lr)
+```
+
+# 5.6. Forecasting with Regression

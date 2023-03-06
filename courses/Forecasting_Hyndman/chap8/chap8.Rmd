@@ -1,0 +1,10 @@
+---
+title: "Chapitre 8 - ARIMA Models"
+author: "Emulie Chhor"
+date: "Feb 27, 2023"
+output: pdf_document
+---
+
+
+
+

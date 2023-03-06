@@ -1,0 +1,112 @@
+---
+title: "Chapitre 6 - Time Series Decomposition"
+author: "Emulie Chhor"
+date: "Feb 27, 2023"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library("TTR")
+library("forecast")
+library("ggplot2")
+library("GGally")
+library("lmtest")
+library("seasonal")
+```
+
+# Load Data
+
+```{r}
+births <- scan("http://robjhyndman.com/tsdldata/data/nybirths.dat")
+births_ts <- ts(births, start = c(1946, 1))
+births_seasons <- ts(births, frequency=12, start = c(1946, 1))
+```
+
+# 6.1. Time Series Decomposition
+
+We can decompose a time series into: 
+- addictive decomposition
+- multiplicative decomposition
+
+# 6.2. Moving Averages: 
+
+- Classical Moving Averages:
+- Weighted Moving Averages:
+
+# 6.3. Classical Decomposition
+
+- Additive Decomposition: $\hat{R_t} = y_t - T_t - S_t$
+- Multiplicative Decomposition: $\hat{R_t} = y_t / (T_t * S_t)$
+
+```{r}
+decompose(births_seasons, type = 'additive') %>% 
+  autoplot()
+
+decompose(births_seasons, type = 'multiplicative') %>% 
+  autoplot()
+```
+
+# 6.4 to 6.6. More Decomposition: X11, SEATS, STL Decompositions
+
+**X11 Decomposition**
+
+```{r}
+# 
+x11_model <- births_seasons %>%  seas(x11="")
+autoplot(births_seasons, series='Data') +
+  autolayer(trendcycle(x11_model), series='Trend') +
+  autolayer(seasadj(x11_model), series = 'Seasonally Adjusted') + 
+  autolayer(births_seasons - x11_model$data[, 'seasonal'], series = 'No Seasonality')
+
+# 
+x11_model %>% 
+  seasonal() %>% 
+  ggseasonplot()
+
+# sub series plots
+x11_model %>% 
+  seasonal() %>% 
+  ggsubseriesplot()
+  
+```
+
+**SEATS Decomposition**
+
+**STL Decomposition**
+
+Advantages: 
+- Handle any type os seasonality, not only monthly and quarterly
+- Seasonality can change over time
+
+Disadvantages:
+- doesn't handle calendar events automatically
+
+Parameters:
+- $ 0 \leq \lambda \leq 1$: from multiplicative decomposition to additive decomposition
+
+```{r}
+births_seasons %>% 
+  stl(t.window = 13, s.window = 'periodic', robust = TRUE) %>% 
+  autoplot()
+```
+
+# 6.7. Measuring Strength of a Trend
+
+Measuring the strength of: 
+- Trend: $F_t = max(0, 1- \frac{Var(R_t)}{Var(T_t + R_t)})$
+- Seasonality: $F_s = max(0, 1- \frac{Var(R_t)}{Var(S_t + R_t)})$
+
+```{r}
+R_t <- x11_model$data[, 'final']
+S_t <- x11_model$data[, 'seasonal']
+T_t <- x11_model$data[, 'trend']
+
+# calculating force of trend and seasonality
+F_t <- max(0, 1- var(R_t) / var(R_t + T_t))
+F_s <- max(0, 1- var(R_t) / var(R_t + S_t))
+```
+
+# 6.8. Forecasting with Decomposition
+
+

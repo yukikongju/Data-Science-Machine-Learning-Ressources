@@ -1,0 +1,70 @@
+---
+title: "Chapitre 7 - Exponential Smoothing"
+author: "Emulie Chhor"
+date: "Feb 27, 2023"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library("TTR")
+library("forecast")
+library("ggplot2")
+library("GGally")
+library("lmtest")
+library("seasonal")
+```
+
+# Load Data
+
+```{r}
+births <- scan("http://robjhyndman.com/tsdldata/data/nybirths.dat")
+births_ts <- ts(births, start = c(1946, 1))
+births_seasons <- ts(births, frequency=12, start = c(1946, 1))
+```
+
+# 7.1. Simple Exponential Smoothing
+
+```{r}
+fc_ses <- ses(births_ts, h=5)
+accuracy(fc_ses)
+```
+
+# 7.2. Trend Methods
+
+```{r}
+# holt
+model1 <- holt(births_ts)
+model2 <- holt(births_ts, damped = TRUE, phi = 0.9, h = 15)
+```
+
+```{r}
+# crossvalidation
+errors1 <- tsCV(births_ts, holt, h=1)
+tsCV(births_ts, holt, h=1, damped = TRUE)
+tsCV(births_ts, ses, h=1)
+
+# computing MSE
+mean(errors1^2, na.rm = TRUE)
+
+```
+
+# 7.3. Holt-Winter Seasonal Method
+
+```{r}
+model4 <- hw(births_seasons, seasonal = 'additive')
+model5 <- hw(births_seasons, seasonal = 'multiplicative')
+
+
+```
+
+# 7.6.
+
+```{r}
+model6 <- ets(births_ts)
+summary(model6)
+
+
+model7 <- ets(births_ts, model = "AAN")
+```
+

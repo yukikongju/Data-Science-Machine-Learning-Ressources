@@ -1,0 +1,23 @@
+---
+title: "Chapitre 6 - Time Series Decomposition (Exercices)"
+author: "Emulie Chhor"
+date: "Feb 27, 2023"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library("TTR")
+library("forecast")
+library("ggplot2")
+library("GGally")
+library("lmtest")
+library("seasonal")
+```
+
+# Q1
+
+```{r}
+
+```
+
