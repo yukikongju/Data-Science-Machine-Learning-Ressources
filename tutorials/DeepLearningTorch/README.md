@@ -21,6 +21,12 @@
 - Time Series
 - Reinforcement Learning
 
+## Todos
+
+- [X] Transfer Learning with Custom Dataset: ResNet, DenseNet, AlexNet
+
+
+
 # Ressources
 
 - [Geometric Docs](https://pytorch-geometric.readthedocs.io/en/latest/get_started/colabs.html)
@@ -28,4 +34,5 @@
 - [Torch Examples](https://pytorch.org/examples/?utm_source=examples&utm_medium=examples-landing)
 - [UvA - Notebooks](https://uvadlc-notebooks.readthedocs.io/en/latest/index.html)
 - [Neptune AI](https://neptune.ai/blog/how-to-monitor-your-models-in-production-guide)
+- [Torch Tutorials](https://github.com/pytorch/tutorials)
 
