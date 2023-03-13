@@ -23,7 +23,10 @@
 
 ## Todos
 
+- [X] MLP and CNN demo on classification
 - [X] Transfer Learning with Custom Dataset: ResNet, DenseNet, AlexNet
+- [ ] [Mario RL](https://github.com/pytorch/tutorials/blob/main/intermediate_source/mario_rl_tutorial.py)
+- [ ] [Neural Style Transfer](https://pytorch.org/tutorials/advanced/neural_style_tutorial.html)
 
 
 
