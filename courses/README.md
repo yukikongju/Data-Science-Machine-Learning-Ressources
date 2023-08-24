@@ -6,6 +6,7 @@
 - [ ] [Advanced Machine Learning - Florian Marquard](https://pad.gwdg.de/s/2021_AdvancedMachineLearningForScience)
 - [ ] [UvA DL Notebooks - ](https://uvadlc-notebooks.readthedocs.io/en/latest/index.html)
 - [ ] [UvA Course](https://uvadlc.github.io/)
+- [ ] [Neuromatch Academy - Deep Learning](https://deeplearning.neuromatch.io/tutorials/intro.html)
 - [ ] [Graph Neural Network - Stanford CS224W](https://pytorch-geometric.readthedocs.io/en/latest/get_started/colabs.html#stanford-cs224w-tutorials)
 
 ## Signal Processing
@@ -125,3 +126,6 @@
 
 - [ ] [CSC 317- Computer Graphics - Alex Jacobson](https://github.com/alecjacobson/computer-graphics-csc317#lectureschedule)
 
+## Blogs
+
+- [ruder.io - NLP](https://www.ruder.io/)

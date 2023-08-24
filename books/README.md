@@ -2,6 +2,26 @@
 
 Here is some of the books I have read and the code that accompanies the book
 
+## Statistics
+
+**Causal Inference**
+
+- [ ] [Causal Inference for the Brave and True](https://matheusfacure.github.io/python-causality-handbook/22-Debiased-Orthogonal-Machine-Learning.html) [must]
+- [ ] [Causa Inference: What If](https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/)
+
+**Time Series**
+
+- [ ] [Time Series Forecasting in Python - Marco Peix](https://github.com/marcopeix/TimeSeriesForecastingInPython)
+
+**Social Network Analysis**
+
+- [ ] [Netowrks, Crowds and Market - Jon Kleinberg](https://www.cs.cornell.edu/home/kleinber/networks-book/) [ must ]
+
+**Information Retrieval**
+
+- [ ] [INtroduction to Information Retrieval - Christopher Manning](https://nlp.stanford.edu/IR-book/)
+
+
 ## Data Science
 
 **Data Science**
@@ -85,7 +105,7 @@ Here is some of the books I have read and the code that accompanies the book
 
 
 **Data Engineering Principles**
-- [ ] Data Gouvernance: The Definitive Guide by Evren Eryurek (read)
+- [ ] Data Governance: The Definitive Guide by Evren Eryurek (read)
 - [ ] Practical Fairness by Aileen Nielsen (read)
 - [ ] Cloud FinOps by JR Storment (read)
 - [ ] Effective DevOps by Jennifer Davis (read)
@@ -135,6 +155,20 @@ Here is some of the books I have read and the code that accompanies the book
 
 ## Ressources
 
+**Blogs**
+
 - [ML Engineering in Action by Ben Wilson](https://github.com/BenWilson2/ML-Engineering)
 - [UVA Deep Learning Course](https://uvadlc.github.io/)
+- [ML CMU](https://blog.ml.cmu.edu/)
+
+
+**Conferences**
+
+- [American Economic Association - COntinuing Education Webcast](https://www.aeaweb.org/conference/cont-ed/2023-webcasts)
+
+**Books Ressoruces**
+
+- [Data Science Ebokks - Sharma1ddharth](https://github.com/data-science-projects-and-resources/Data-Science-EBooks/tree/main)
+- [Free Data Science Books - chaconnewu](https://github.com/chaconnewu/free-data-science-books)
+
 
