@@ -71,14 +71,39 @@ au début de l'expérience (le biais)
 - We control for more variable than we should
 
 
-## 05 - The Unreasonable Effectiveness of Linear Regression [ IN PROGRESS ]
+## 05 - The Unreasonable Effectiveness of Linear Regression [ COMPLETED ]
+
+**How to Construct Linear Regression**
+
+- With a single regressor variable ie $y=\beta _0 + \beta _1 x$
+    * $\beta _1 = cov(X, Y) / Var(Y)$
+- With multiple regressor variables ie $y=\beta _0 + \beta _1 x_1 + \beta _2 x_2 + ...$
+    * $\beta = (X'X)^{-1}X'Y$
+
+**How to interpret linear regression variables**
+
+- coefficient: by how much do we expect y to increase/decrease when x changes by 1
+- pvalue: 
+
+**How to determine if the variable is causal or not**
 
 
+**How can we use Linear Regression to perform A/B Testing** [TODO]
 
 
-## 06 - Grouped and Dummy Regression
+## 06 - Grouped and Dummy Regression [ COMPLETED ]
 
-## 07 - Beyond Confounders
+**Why are not all data points created equal?**
+
+- Ex: big school have less variance than small school
+- Heteroskedasticity
+- Aggregate values occurs when we need data privacy
+- We can use weights to combat this effect
+
+- The sample with higher sample size and lower variance should be given more weight
+
+
+## 07 - Beyond Confounders [ IN PROGRESS ]
 
 ## 08 - Instrumental Variables
 
