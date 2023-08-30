@@ -16,6 +16,7 @@
 
 - [o] [Advanced Computer Vision with Python - FreeCodeCamp](https://www.youtube.com/watch?v=01sAkU_NvOY&t=6984s)
 - [ ] [OpenCV Object Detection in Games](https://www.youtube.com/playlist?list=PL1m2M8LQlzfKtkKq2lK5xko4X-8EZzFPI)
+- [ ] [OpenCV Tutorials](https://docs.opencv.org/4.x/d9/df8/tutorial_root.html)
 
 **Reinforcement Learning**
 
