@@ -10,6 +10,7 @@
 - [ ] [UvA Deep Learning - Notebooks](https://uvadlc-notebooks.readthedocs.io/en/latest/index.html)
 - [ ] [UvA Deep Learning Course](https://uvadlc.github.io/)
 - [ ] [Neural Networks: Zero to Hero - Andrej Karpathy](https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ)
+- [ ] [PyG](https://pytorch-geometric.readthedocs.io/en/latest/)
 - [ ] 
 
 **Computer Vision**

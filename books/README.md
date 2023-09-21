@@ -7,7 +7,7 @@ Here is some of the books I have read and the code that accompanies the book
 **Causal Inference**
 
 - [ ] [Causal Inference for the Brave and True](https://matheusfacure.github.io/python-causality-handbook/22-Debiased-Orthogonal-Machine-Learning.html) [must]
-- [ ] [Causa Inference: What If](https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/)
+- [ ] [Causal Inference: What If](https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/)
 
 **Time Series**
 
@@ -15,12 +15,21 @@ Here is some of the books I have read and the code that accompanies the book
 
 **Social Network Analysis**
 
-- [ ] [Netowrks, Crowds and Market - Jon Kleinberg](https://www.cs.cornell.edu/home/kleinber/networks-book/) [ must ]
+- [ ] [Networks, Crowds and Market - Jon Kleinberg](https://www.cs.cornell.edu/home/kleinber/networks-book/) [ must ]
 
 **Information Retrieval**
 
-- [ ] [INtroduction to Information Retrieval - Christopher Manning](https://nlp.stanford.edu/IR-book/)
+- [ ] [Introduction to Information Retrieval - Christopher Manning](https://nlp.stanford.edu/IR-book/)
 
+## Simulation
+
+**Numerical Methods**
+
+- [ ] [Python Numerical Methods - Berkley](https://pythonnumericalmethods.berkeley.edu/notebooks/chapter22.06-Python-ODE-Solvers.html)
+
+**Monte Carlo Methods**
+
+- [Monte Carlo Techniques in Python - Timothy Budd](https://hef.ru.nl/~tbudd/mct/mct_book.pdf)
 
 ## Data Science
 

@@ -7,17 +7,259 @@ output: pdf_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+
+# install rethinking
+library("devtools")
+# devtools::install_github("rmcelreath/rethinking", force=TRUE)
+# library("rethinking")
+
+# importing packages
 library("TTR")
 library("forecast")
 library("ggplot2")
 library("GGally")
 library("lmtest")
 library("seasonal")
+library("tsoutliers")
+library("fma")
+library("expsmooth")
+
 ```
 
-# Q1
+# Q1 - Show that a 3x5 MA is equivalent to a 7-term weighted moving average with weights ...
+
+**What is a 3x5 MA**
+
+
+**What is a 7-term weighted MA**
+
+**Proving Equivalence**
+
+To show that these two methods are equivalent, we need to show that the weights we
+find using 3x5 give us the same answer than when using the weight given by the
+7-th term weighted MA given by the system (see chat-gpt for explanation)
+
 
 ```{r}
 
 ```
+
+# Q2 - `plastics` dataset (from `fma` package)
+
+**a) Plot time series of sales**
+
+```{r}
+# plotting the time series
+autoplot(plastics)
+```
+
+Trend: it seems that the sales tend to go upward
+Seasonality: prices seems to increase the same time of the year (around Christmas)
+
+**b) Use classical multiplicative decomposition to calculate the trend-cycle and seasonal indices**
+
+```{r}
+# plotting decomposed time series
+plastics %>% 
+  decompose(type="additive") %>% 
+  autoplot()
+
+# plastics %>%
+#   decompose(type="multiplicative") %>%
+#   autoplot()
+```
+
+**c) Do the results support the graphical interpretation from a)**
+
+Yes
+
+**d) Compute and plot seasonally adjusted data**
+
+We remove seasonality component
+
+```{r}
+plastics_adjusted <- plastics - decompose(plastics)$seasonal
+
+# plot adjusted
+autoplot(plastics, col='grey', series = 'unadjusted') +
+  autolayer(plastics_adjusted, series = 'adjusted')
+
+# plot decomp
+plastics_adjusted %>% 
+  decompose(type = 'multiplicative') %>% 
+  autoplot()
+```
+
+**e) change one observation to be an outlier and recompute seasonally adjusted data. What effect has the outlier?**
+
+```{r}
+plastics_outliers <- plastics
+plastics_outliers[5] <- plastics_outliers[5] + 500
+plastics_outliers_adjusted <- plastics_outliers - decompose(plastics_outliers)$seasonal
+
+autoplot(plastics_outliers_adjusted)
+platics_outliers %>% 
+  decompose(type='multiplicative') %>% 
+  autoplot()
+```
+**f) Does it make any difference if the outlier is near the end rather than in the middle**
+
+```{r}
+length(plastics)
+
+# middle
+plastics_outliers_middle <- plastics
+plastics_outliers_middle[30] <- plastics_outliers_middle[5] + 500
+plastics_outliers_middle_adjusted <- plastics_outliers_middle - decompose(plastics_outliers_middle)$seasonal
+
+autoplot(plastics_outliers_middle_adjusted)
+platics_outliers %>% 
+  decompose(type='multiplicative') %>% 
+  autoplot()
+
+# end
+plastics_outliers_end <- plastics
+plastics_outliers_end[58] <- plastics_outliers_end[58] + 500
+plastics_outliers_end_adjusted <- plastics_outliers_end - decompose(plastics_outliers_end)$seasonal
+
+autoplot(plastics_outliers_end)
+platics_outliers %>% 
+  decompose(type='multiplicative') %>% 
+  autoplot()
+```
+
+Yes it does! It seems that when the outlier is at the end of the time series, 
+adjusting it doesn't have much effect vs when the outlier is in the middle 
+of the time series.
+
+# Q3 - X11 Decomposition - `dj` (Dow Jones)
+
+```{r}
+# 2.10. computing daily changes, plot and ACF
+ddj <- diff(dj)
+
+autoplot(dj) 
+autoplot(ddj)
+acf(ddj)
+
+# x11 decomposition on 
+dj_cleaned <- ts(dj, start="1946", frequency = 12)
+dj_x11_decomp <- dj_cleaned %>% seas(x11="")
+
+autoplot(dj_x11_decomp)
+
+# finding outliers using tso()
+# dj_decomp <- decompose(dj_cleaned, type = "multiplicative")
+# outliers <- tso(dj_decomp, types = c("AO", "LS", "TC"), maxit = 10)
+
+```
+
+# Q4 - 
+
+**a) Results of the decomposition**
+
+By looking at the decomposition, we see that from February 1978 to August 1995, 
+the number of civilian working keeps increasing over the years. There also
+seems to a seasonal component to the number of workers in the workforce: the
+number of workers seem to be the highest in March and December and the lowest 
+in January and August. 
+
+**b) Is the recession of 1991/1992 visible in the estimated components**
+
+Yes, the recession is visible in the estimated components: we see that 
+the remainder around 1991/1992 is a lot less than the expected values.
+
+# Q5 - `cangas` dataset from `expsmooth`
+
+**a) Plot the data. Effect of seasonality over time**
+
+```{r}
+autoplot(cangas)
+ggsubseriesplot(cangas)
+ggseasonplot(cangas)
+```
+It seems that in the months where it is colder (ie during the winter), Canadian gas consumption is a higher than in months when temperature is warmer.
+
+**b) STL Decomposition**
+
+```{r}
+#
+cangas %>% decompose(type='multiplicative')
+
+# stl decomposition
+cangas_stl_decomp <- stl(cangas, s.window = 12)
+autoplot(cangas_stl_decomp)
+```
+
+**c) Compare with SEATS and X11 decomposition**
+
+```{r}
+# SEATS decomposition
+cangas_seats_decomp <- cangas %>% 
+  seas()
+autoplot(cangas_seats_decomp)
+
+# x11 decomp
+cangas_x11_decomp <- cangas %>% 
+  seas(x11="")
+autoplot(cangas_x11_decomp)
+
+```
+
+The STL decomposition is a bit smoother than the x11 and SEATS decompositions.
+
+# Q6 - `bricksq` dataset
+
+**a) STL decomposition to calculate trend-cycle and seasonal indices**
+
+```{r}
+bricksq_stl <- stl(bricksq, s.window = 4)
+autoplot(bricksq_stl)
+```
+
+**b) Plot seasonally adjusted data**
+
+```{r}
+bricks_adjusted_stl <- bricksq - bricksq_stl$time.series[,1]
+bricks_adjusted_decomp <- bricksq - decompose(bricksq)$seasonal
+autoplot(bricksq, series = "Normal", col='grey') + 
+  autolayer(bricks_adjusted_stl, series = "Adjusted with decomp") +
+  autolayer(bricks_adjusted_decomp, series = "Adjusted with STL")
+```
+
+**c) Use naive method to forecast seasonally adjusted data**
+
+```{r}
+fit <- stl(bricksq, t.window=12, s.window="periodic",
+  robust=TRUE)
+fit %>% forecast(method="naive") %>%
+  autoplot()
+```
+
+**d) Use stlf() to reseasonalise the results**
+
+```{r}
+
+```
+
+
+**e) Do the residuals look uncorrelated?**
+
+**f) Repeat with a robust STL decomposition. Does it make a difference?**
+
+**g) Compare forecasts from stlf() with those from snaive() asing a test set. Which is better**
+
+# Q7 - `writing` dataset
+
+
+# Q8 - `fancy` dataset
+
+
+
+
+
+
+
+
+
 

@@ -1,5 +1,16 @@
 # Image Processing
 
+Subjects to Explore:
+- [ ] Morphological Operations for denoising
+- [ ] Thresholding Operations for image segmentation
+- [ ] Edge Detections Algorithms
+- [ ] Polynomial/spline Interpolation for Image Reconstruction
+
+Projects:
+- [ ] Image Restoration
+- [ ] Image Compression
+- [ ] Image Segmentation, Feature Extraction
+
 
 
 ## Ressources
