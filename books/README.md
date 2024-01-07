@@ -46,6 +46,11 @@ Here is some of the books I have read and the code that accompanies the book
 **Sports Analytics**
 
 
+**Quantitative Finance**
+
+- [Vinegar Hill - Finance Labs](https://sites.google.com/view/vinegarhill-financelabs/home?authuser=0)
+
+
 
 ## Machine Learning, Deep Learning and their applications
 

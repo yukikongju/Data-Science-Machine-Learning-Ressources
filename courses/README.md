@@ -120,11 +120,23 @@
 - [ ] [Homeworks](https://github.com/stat115/Homework_2020)
 
 
+## Data Engineering
+
+- CI/CD
+- Terraform
+
+## ML Ops
+
+- [Weight and Biases - Effective MLOps Library](https://www.wandb.courses/pages/w-b-courses)
+- Neptune.ai
+- [Stanford CS 2329S - Machine Learning Systems Design](https://stanford-cs329s.github.io/syllabus.html)
 
 
 ## Computer Graphics
 
 - [ ] [CSC 317- Computer Graphics - Alex Jacobson](https://github.com/alecjacobson/computer-graphics-csc317#lectureschedule)
+
+
 
 ## Blogs
 

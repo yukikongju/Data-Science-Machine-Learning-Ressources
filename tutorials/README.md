@@ -28,5 +28,6 @@
 
 **Natural Language Processing**
 
+**ML Ops**
 
-
+- [o] [Made with ML](https://madewithml.com/courses/mlops/monitoring/)
