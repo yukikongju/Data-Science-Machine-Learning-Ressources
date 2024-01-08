@@ -1,0 +1,5 @@
+accelerate
+diffusers
+numpy
+torch
+protobuff==3.20.1

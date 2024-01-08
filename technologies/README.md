@@ -40,6 +40,9 @@
 - [PyTorch Geometric](https://pytorch-geometric.readthedocs.io/en/latest/)
 - tensorflow
 
+**Diffusion Models**
+
+- [HugginFace - diffusers](https://github.com/huggingface/diffusers)
 
 ## Data Engineering / MLOps
 
