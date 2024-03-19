@@ -8,6 +8,7 @@
 - [ ] [UvA Course](https://uvadlc.github.io/)
 - [ ] [Neuromatch Academy - Deep Learning](https://deeplearning.neuromatch.io/tutorials/intro.html)
 - [ ] [Graph Neural Network - Stanford CS224W](https://pytorch-geometric.readthedocs.io/en/latest/get_started/colabs.html#stanford-cs224w-tutorials)
+- [ ] [machine-learning-zoomcamp](https://github.com/DataTalksClub/machine-learning-zoomcamp?tab=readme-ov-file)
 
 ## Signal Processing
 
@@ -124,9 +125,11 @@
 
 - CI/CD
 - Terraform
+- [data-engineering-zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 
 ## ML Ops
 
+- [mlops-zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp)
 - [Weight and Biases - Effective MLOps Library](https://www.wandb.courses/pages/w-b-courses)
 - Neptune.ai
 - [Stanford CS 2329S - Machine Learning Systems Design](https://stanford-cs329s.github.io/syllabus.html)
