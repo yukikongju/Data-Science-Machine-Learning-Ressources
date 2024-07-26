@@ -14,6 +14,8 @@ Building the following languages models:
 - model smoothing to avoid zerero division
 - one-hot encoding
 
+Running the notebook: `python3 -m notebook`
+
 ## Bag of words
 
 Steps:
