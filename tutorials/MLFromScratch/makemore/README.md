@@ -28,6 +28,7 @@ Steps:
 - [X] Basic Neural Neto with one layer
 
 - Resource: [Andrej Kaparthy - The spelled-out intro to language modeling: building makemore](https://www.youtube.com/watch?v=PaCmpygFfXo&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ&index=2&ab_channel=AndrejKarpathy)
+- [code](https://github.com/karpathy/nn-zero-to-hero/blob/master/lectures/makemore/makemore_part1_bigrams.ipynb)
 
 ## MLP
 
