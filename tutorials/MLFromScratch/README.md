@@ -21,6 +21,7 @@
 - [ ] AdaBoost
 - [ ] LDA Classifier
 	+ [Theory](https://www.youtube.com/watch?v=9SuIE_tGF-g&list=PLLTSM0eKjC2fZqeVFWBBBr8KSqnBIPMQD&index=20)
+- [ ] Diffusers
 
 ## Ressources
 
@@ -31,5 +32,6 @@
 
 
 - [CMU - Linear Regression Course](https://www.stat.cmu.edu/~cshalizi/mreg/15/)
+- [Stanley Chan - Tutorial on Diffusers Models](https://arxiv.org/pdf/2403.18103)
 
 
