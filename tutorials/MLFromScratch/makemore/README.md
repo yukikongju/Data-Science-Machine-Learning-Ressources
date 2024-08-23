@@ -41,7 +41,12 @@ Steps:
 - [ ] Train Model with gradient descent + learning rate optimization (lr decay)
 - [ ] visualize embedding
 
-- Resource: [Endrej Kaparthy - ](https://www.youtube.com/watch?v=TCH_1BHY58I&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ&index=4&ab_channel=AndrejKarpathy)
+- Resource: [Andrej Kaparthy - ](https://www.youtube.com/watch?v=TCH_1BHY58I&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ&index=4&ab_channel=AndrejKarpathy)
+
+## WaveNet
+
+
+- Resource: [Andrej Kaparthy - makemore pt5](https://www.youtube.com/watch?v=t3YJ5hKiMQ0)
 
 
 # Resources
