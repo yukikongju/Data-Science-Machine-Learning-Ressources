@@ -51,4 +51,7 @@ Steps:
 
 # Resources
 
+**Documentation**
+
+- [PyTorch nn modules](https://nn.readthedocs.io/en/rtd/training/index.html#training-a-neural-network)
 
