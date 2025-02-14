@@ -17,6 +17,28 @@ Tasks:
 3. Decide on the grain of the fact table.
 4. Create a SQL DDL script to implement the schema.
 
+Bonus:
+- multiple payments permitted
+- one order can have multiple items
+
+Answers:
+
+- Fact Tables:
+    * Orders => order_id (P), transaction_id (F), product_id (F), qty, total_price
+    * Transactions => transaction_id (P), customer_id (F), salesperson_id (F) (Degenerate table)
+- Dimension Tables:
+    * Product Dimension (type II) => product_id (P), category, subcategory, price, start_date, end_date, is_valid
+    * Customer Dimension (type I) => customer_id (P), name, address, city, state, country, membership_type
+    * Salesperson Dimension (type I) => salesperson_id (P), name, address, salary
+    * Date Dimension (type 0) => transaction_id (P), transaction_date, delivery_date, delivered_date
+
+The grain of the fact table will be order-level 
+
+Notes for self:
+- if an order has several items, how to store
+
+ChatGPT solution:
+
 ## Exercise 2 -  Snowflake Schema
 
 Given the same e-commerce platform scenario, this time, you need to design a snowflake schema. In the snowflake schema, the dimensions are normalized into multiple related tables.

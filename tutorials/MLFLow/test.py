@@ -21,6 +21,10 @@ def main():
 
     # --- load model from registry
     client = MlflowClient()
+
+    # Note: alternative: remove MLFlow metadata setup and only add the following line
+    #  client = MLflowClient(tracking_uri="http://{HOST}:{PORT}")
+
     MODEL_NAME, ARTIFACT_PATH = "tracking-quickstart", "iris_model"
     MODEL_VERSION_ALIAS = "test_model"
     client.set_registered_model_alias(MODEL_NAME, MODEL_VERSION_ALIAS, "1") # from MLFLOWUI

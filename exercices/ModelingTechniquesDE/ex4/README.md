@@ -205,12 +205,10 @@ Why does this query sort large datasets?
 How can you pre-sort data to optimize window functions?
 Can an index help, and if so, which one?
 
-4. Optimize Nested Queries
+## Exercise 9. Optimize Nested Queries
+
 Given a products table:
 
-sql
-Copy
-Edit
 CREATE TABLE products (
     id SERIAL PRIMARY KEY,
     name TEXT,
@@ -227,7 +225,7 @@ Why is this inefficient?
 How can you rewrite it using JOINs?
 Would a window function be better?
 
-5. Query Optimization with Partitioning
+## 5. Query Optimization with Partitioning
 
 Given a huge page_views table:
 
@@ -246,7 +244,8 @@ How does partition pruning help here?
 How do you check if the optimizer is scanning all partitions?
 What index strategy should be applied?
 
-6. Optimize Multi-Table JOIN Queries
+## 6. Optimize Multi-Table JOIN Queries
+
 You have these tables:
 
 CREATE TABLE users (
@@ -278,7 +277,8 @@ What indexes should be added?
 Can you rewrite the query for better performance?
 What role does denormalization play in optimization?
 
-7. Optimizing Large Aggregations
+## 7. Optimizing Large Aggregations
+
 Given a sensor_data table:
 
 CREATE TABLE sensor_data (
@@ -337,7 +337,8 @@ How can you cache results efficiently?
 Would pre-aggregating data help?
 How would you use indexing and partitioning together?
 
-10. Optimizing Full-Text Search Queries
+## 10. Optimizing Full-Text Search Queries
+
 You have a products table:
 
 CREATE TABLE products (
