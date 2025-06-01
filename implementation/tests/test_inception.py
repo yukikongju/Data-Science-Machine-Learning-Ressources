@@ -2,6 +2,7 @@ import pytest
 import torch
 
 from models.inception.inception_parts import ConvolutionBlock, InceptionBlockNaive, InceptionBlockNaivePimped, InceptionBlockV1, InceptionBlockV3_F5, InceptionBlockV3_F7, InceptionBlockV3_F10
+from models.inception.inception import InceptionNetV1
 
 @pytest.fixture
 def image() -> torch.Tensor:
@@ -10,6 +11,12 @@ def image() -> torch.Tensor:
 @pytest.fixture
 def image2() -> torch.Tensor:
     return torch.randint(0, 255, size=(5, 3, 299, 299)).float()
+
+@pytest.fixture
+def image3() -> torch.Tensor:
+    """ OG Input Tensor of Inception v1 """
+    return torch.randint(0, 255, size=(5, 3, 224, 224)).float()
+
 
 def test_convblock(image):
     B, C, H, W = image.size()
@@ -88,5 +95,11 @@ def test_inception_block_f10(image2):
     assert output.size() == (B, OUT_B1 + OUT_B2 + C, H // 2, W // 2)
      
 
-
+def test_inceptionnetv1(image3):
+    B, C, H, W = image3.size()
+    NUM_CLASSES = 1000
+    net = InceptionNetV1(in_channels=C, num_classes=NUM_CLASSES)
+    output = net(image3)
+    assert output.size() == (B, NUM_CLASSES)
+    assert torch.allclose(output.sum(dim=1), torch.ones(B), atol=1e-6)
 

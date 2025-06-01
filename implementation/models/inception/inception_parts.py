@@ -15,6 +15,7 @@ class ConvolutionBlock(nn.Module):
         super().__init__()
         self.conv = nn.Conv2d(in_channels, out_channels, **kwargs)
         self.norm = nn.BatchNorm2d(out_channels)
+        #  self.relu = nn.ReLU(inplace=True)
         self.relu = nn.ReLU()
 
     def forward(self, x):
