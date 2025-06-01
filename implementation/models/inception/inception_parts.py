@@ -229,9 +229,24 @@ class InceptionBlockV3_F10(nn.Module):
     Computer Vision"
     """
 
-    def __init__(self):
+    def __init__(self, in_channels: int, red_B1: int, mid_B1: int, 
+                 out_B1: int, red_B2: int, out_B2: int):
         super().__init__()
+        self.branch1 = nn.Sequential(
+            ConvolutionBlock(in_channels=in_channels, out_channels=red_B1, kernel_size=1),
+            ConvolutionBlock(in_channels=red_B1, out_channels=mid_B1, kernel_size=3, padding=1),
+            ConvolutionBlock(in_channels=mid_B1, out_channels=out_B1, kernel_size=3, stride=2, padding=0),
+        )
+        self.branch2 = nn.Sequential(
+                ConvolutionBlock(in_channels=in_channels, out_channels=red_B2, kernel_size=1),
+                ConvolutionBlock(in_channels=red_B2, out_channels=out_B2, kernel_size=3, stride=2, padding=0),
+        )
+        self.branch3 = nn.MaxPool2d(kernel_size=3, stride=2, padding=0)
 
     def forward(self, x):
-        pass
+        x1 = self.branch1(x)
+        x2 = self.branch2(x)
+        x3 = self.branch3(x)
+        return torch.cat([x1, x2, x3], dim=1)
+
 
