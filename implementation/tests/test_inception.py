@@ -1,7 +1,7 @@
 import pytest
 import torch
 
-from models.inception.inception_parts import ConvolutionBlock, InceptionBlockNaive, InceptionBlockNaivePimped, InceptionBlockV1, InceptionBlockV3_F5
+from models.inception.inception_parts import ConvolutionBlock, InceptionBlockNaive, InceptionBlockNaivePimped, InceptionBlockV1, InceptionBlockV3_F5, InceptionBlockV3_F7
 
 @pytest.fixture
 def image() -> torch.Tensor:
@@ -54,5 +54,25 @@ def test_inception_block_f5(image):
                                 )
     output = block(image)
     assert output.size() == (B, OUT_DOUBLE_3x3 + OUT_3x3 + RED_POOL + RED_1x1, H, W)
+
+
+def test_inception_block_f7(image):
+    B, C, H, W = image.size()
+    RED_SPLIT_3x3, CONV_SPLIT_3x3, OUT_SPLIT_3x3_1x3, OUT_SPLIT_3x3_3x1 = 16, 32, 16, 16
+    RED_SPLIT_1x1, OUT_SPLIT_1x1_1x3, OUT_SPLIT_1x1_3x1 = 96, 64, 64
+    RED_POOL, RED_1x1 = 32, 32
+
+    block = InceptionBlockV3_F7(in_channels=C, 
+                                red_split_3x3=RED_SPLIT_3x3, conv_split_3x3=CONV_SPLIT_3x3, 
+                                out_split_3x3_1x3=OUT_SPLIT_3x3_1x3, out_split_3x3_3x1=OUT_SPLIT_3x3_3x1, 
+                                red_split_1x1=RED_SPLIT_1x1, 
+                                out_split_1x1_1x3=OUT_SPLIT_1x1_1x3, out_split_1x1_3x1=OUT_SPLIT_1x1_3x1, 
+                                red_pool=RED_POOL, red_1x1=RED_1x1
+                                )
+    output = block(image)
+    assert output.size() == (B, OUT_SPLIT_3x3_1x3 + OUT_SPLIT_3x3_3x1 + 
+                             OUT_SPLIT_1x1_1x3 + OUT_SPLIT_1x1_3x1 +
+                             RED_POOL + RED_1x1, H, W)
+
 
 

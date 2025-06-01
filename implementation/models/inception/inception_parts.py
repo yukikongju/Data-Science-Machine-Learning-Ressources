@@ -148,7 +148,7 @@ class InceptionBlockV3_F5(nn.Module):
         return torch.cat([x1, x2, x3, x4], dim=1)
 
 
-class InceptionBlockV3_F6(nn.Module):
+class InceptionBlockV3_F6(nn.Module): # TODO
 
     """
     Figure 6 described in paper "Rethinking the Inception Architecture for 
@@ -158,7 +158,17 @@ class InceptionBlockV3_F6(nn.Module):
     def __init__(self):
         super().__init__()
 
+
     def forward(self, x):
+        #  x1 = self.branch1(x)
+        #  print(f"x1: {x1.shape}")
+        #  x2 = self.branch2(x)
+        #  print(f"x2: {x2.shape}")
+        #  x3 = self.branch3(x)
+        #  print(f"x3: {x3.shape}")
+        #  x4 = self.branch4(x)
+        #  print(f"x4: {x4.shape}")
+        #  return torch.cat([x1, x2, x3, x4], dim=1)
         pass
 
 
@@ -169,11 +179,47 @@ class InceptionBlockV3_F7(nn.Module):
     Computer Vision"
     """
 
-    def __init__(self):
+    def __init__(self, in_channels: int, red_split_3x3: int, conv_split_3x3: int, 
+                 out_split_3x3_1x3: int, out_split_3x3_3x1: int, 
+                 red_split_1x1: int, out_split_1x1_1x3: int, out_split_1x1_3x1: int, 
+                 red_pool: int, red_1x1: int):
         super().__init__()
+        self.branch1 = nn.Sequential(
+            ConvolutionBlock(in_channels=in_channels, out_channels=red_split_3x3, kernel_size=1),
+            ConvolutionBlock(in_channels=red_split_3x3, out_channels=conv_split_3x3, kernel_size=3, padding=1),
+        )
+        self.branch1_1 = ConvolutionBlock(in_channels=conv_split_3x3, 
+                                          out_channels=out_split_3x3_1x3, kernel_size=(1, 3), padding=(0, 1))
+        self.branch1_2 = ConvolutionBlock(in_channels=conv_split_3x3, 
+                                          out_channels=out_split_3x3_3x1, kernel_size=(3, 1), padding=(1, 0))
+
+        self.branch2 = ConvolutionBlock(in_channels=in_channels, out_channels=red_split_1x1, kernel_size=1)
+        self.branch2_1 = ConvolutionBlock(in_channels=red_split_1x1, out_channels=out_split_1x1_1x3, 
+                                          kernel_size=(1, 3), padding=(0, 1))
+        self.branch2_2 = ConvolutionBlock(in_channels=red_split_1x1, out_channels=out_split_1x1_3x1, 
+                                          kernel_size=(3, 1), padding=(1, 0))
+
+        self.branch3 = nn.Sequential(
+            nn.MaxPool2d(kernel_size=3, padding=1, stride=1), 
+            ConvolutionBlock(in_channels=in_channels, out_channels=red_pool, kernel_size=1)
+        )
+        self.branch4 = ConvolutionBlock(in_channels=in_channels,
+                                        out_channels=red_1x1, kernel_size=1)
+
 
     def forward(self, x):
-        pass
+        x1 = self.branch1(x)
+        x1_1 = self.branch1_1(x1)
+        x1_2 = self.branch1_2(x1)
+
+        x2 = self.branch2(x)
+        x2_1 = self.branch2_1(x2)
+        x2_2 = self.branch2_2(x2)
+
+        x3 = self.branch3(x)
+
+        x4 = self.branch4(x)
+        return torch.cat([x1_1, x1_2, x2_1, x2_2, x3, x4], dim=1)
 
 
 class InceptionBlockV3_F10(nn.Module):
