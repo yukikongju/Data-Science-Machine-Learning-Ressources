@@ -1,5 +1,6 @@
 import torch
 import torch.nn as nn
+from torch.nn.functional import pad
 
 class ConvolutionBlock(nn.Module):
 
@@ -71,9 +72,39 @@ class InceptionBlockV1(nn.Module):
     As described in the paper "Going Deeper with convolutions b)"
     """
 
-    def __init__(self):
+    def __init__(self, in_channels, red_1x1, red_3x3, out3x3, red_5x5, out_5x5, out_pool):
+        """
+        Arguments
+        ---------
+        red_<X>
+            out channel of the "reduction step" ie 1x1 convolution
+        out_<X>
+            out channel of the "summary step" ie 3x3 or 5x5 convolution
+        """
         super().__init__()
+        self.branch1 = ConvolutionBlock(in_channels, red_1x1, 
+                                        kernel_size=1)
+        self.branch2 = nn.Sequential(
+            ConvolutionBlock(in_channels, red_3x3, kernel_size=1),
+            ConvolutionBlock(red_3x3, out3x3, kernel_size=3, padding=1),
+        )
+        self.branch3 = nn.Sequential(
+            ConvolutionBlock(in_channels, red_5x5, kernel_size=1),
+            ConvolutionBlock(red_5x5, out_5x5, kernel_size=5, padding=2),
+        )
+        self.branch4 = nn.Sequential(
+                nn.MaxPool2d(kernel_size=3, padding=1, stride=1),
+                ConvolutionBlock(in_channels, out_pool, kernel_size=1)
+        )
 
     def forward(self, x):
-        pass
+        x1 = self.branch1(x)
+        x2 = self.branch2(x)
+        x3 = self.branch3(x)
+        x4 = self.branch4(x)
+        print(f"x1: {x1.shape}")
+        print(f"x2: {x2.shape}")
+        print(f"x3: {x3.shape}")
+        print(f"x4: {x4.shape}")
+        return torch.cat([x1, x2, x3, x4], dim=1)
 
