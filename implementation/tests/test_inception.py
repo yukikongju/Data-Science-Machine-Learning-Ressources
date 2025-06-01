@@ -1,7 +1,7 @@
 import pytest
 import torch
 
-from models.inception.inception_parts import ConvolutionBlock, InceptionBlockNaive, InceptionBlockNaivePimped, InceptionBlockV1
+from models.inception.inception_parts import ConvolutionBlock, InceptionBlockNaive, InceptionBlockNaivePimped, InceptionBlockV1, InceptionBlockV3_F5
 
 @pytest.fixture
 def image() -> torch.Tensor:
@@ -40,4 +40,19 @@ def test_inception_blockv1(image):
                              out_pool=OUT_POOL)
     output = block(image)
     assert output.size() == (B, RED_1x1 + OUT_3x3 + OUT_5x5 + OUT_POOL, H, W)
+
+
+def test_inception_block_f5(image):
+    B, C, H, W = image.size()
+    RED_DOUBLE_3x3, MID_DOUBLE_3x3, OUT_DOUBLE_3x3, RED_3x3, OUT_3x3, RED_POOL, RED_1x1 = 16, 24, 32, 96, 128, 32, 64
+    block = InceptionBlockV3_F5(in_channels=C, 
+                                red_double_3x3=RED_DOUBLE_3x3, 
+                                mid_double_3x3=MID_DOUBLE_3x3, 
+                                out_double_3x3=OUT_DOUBLE_3x3, 
+                                red_3x3=RED_3x3, out_3x3=OUT_3x3, 
+                                red_pool=RED_POOL, red_1x1=RED_1x1
+                                )
+    output = block(image)
+    assert output.size() == (B, OUT_DOUBLE_3x3 + OUT_3x3 + RED_POOL + RED_1x1, H, W)
+
 

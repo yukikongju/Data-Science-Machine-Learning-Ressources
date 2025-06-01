@@ -2,6 +2,13 @@ import torch
 import torch.nn as nn
 from torch.nn.functional import pad
 
+#  print(f"x1: {x1.shape}")
+#  print(f"x2: {x2.shape}")
+#  print(f"x3: {x3.shape}")
+#  print(f"x4: {x4.shape}")
+
+
+
 class ConvolutionBlock(nn.Module):
 
     def __init__(self, in_channels, out_channels, **kwargs):
@@ -102,9 +109,83 @@ class InceptionBlockV1(nn.Module):
         x2 = self.branch2(x)
         x3 = self.branch3(x)
         x4 = self.branch4(x)
-        print(f"x1: {x1.shape}")
-        print(f"x2: {x2.shape}")
-        print(f"x3: {x3.shape}")
-        print(f"x4: {x4.shape}")
         return torch.cat([x1, x2, x3, x4], dim=1)
+
+
+class InceptionBlockV3_F5(nn.Module):
+
+    """
+    Figure 5 described in paper "Rethinking the Inception Architecture for 
+    Computer Vision"
+    """
+
+    def __init__(self, in_channels: int, red_double_3x3: int, 
+                 mid_double_3x3: int, out_double_3x3: int, red_3x3: int, 
+                 out_3x3: int, red_pool: int, red_1x1: int):
+        super().__init__()
+        self.branch1 = nn.Sequential(
+            ConvolutionBlock(in_channels=in_channels, out_channels=red_double_3x3, kernel_size=1),
+            ConvolutionBlock(in_channels=red_double_3x3, out_channels=mid_double_3x3, kernel_size=3, padding=1),
+            ConvolutionBlock(in_channels=mid_double_3x3, out_channels=out_double_3x3, kernel_size=5, padding=2),
+        )
+        self.branch2 = nn.Sequential(
+            ConvolutionBlock(in_channels=in_channels, out_channels=red_3x3, kernel_size=1),
+            ConvolutionBlock(in_channels=red_3x3, out_channels=out_3x3, kernel_size=3, padding=1),
+        )
+        self.branch3 = nn.Sequential(
+            nn.MaxPool2d(kernel_size=3, padding=1, stride=1), 
+            ConvolutionBlock(in_channels=in_channels, out_channels=red_pool, kernel_size=1)
+        )
+        self.branch4 = ConvolutionBlock(in_channels=in_channels,
+                                        out_channels=red_1x1, kernel_size=1)
+
+
+    def forward(self, x):
+        x1 = self.branch1(x)
+        x2 = self.branch2(x)
+        x3 = self.branch3(x)
+        x4 = self.branch4(x)
+        return torch.cat([x1, x2, x3, x4], dim=1)
+
+
+class InceptionBlockV3_F6(nn.Module):
+
+    """
+    Figure 6 described in paper "Rethinking the Inception Architecture for 
+    Computer Vision"
+    """
+
+    def __init__(self):
+        super().__init__()
+
+    def forward(self, x):
+        pass
+
+
+class InceptionBlockV3_F7(nn.Module):
+
+    """
+    Figure 7 described in paper "Rethinking the Inception Architecture for 
+    Computer Vision"
+    """
+
+    def __init__(self):
+        super().__init__()
+
+    def forward(self, x):
+        pass
+
+
+class InceptionBlockV3_F10(nn.Module):
+
+    """
+    Figure 10 described in paper "Rethinking the Inception Architecture for 
+    Computer Vision"
+    """
+
+    def __init__(self):
+        super().__init__()
+
+    def forward(self, x):
+        pass
 

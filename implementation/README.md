@@ -33,7 +33,7 @@ Medium:
 - [EfficientNet](https://paperswithcode.com/method/efficientnet)
     * [paper walkthrough](https://www.youtube.com/watch?v=_OZsGQHB41s)
     * [video](https://www.youtube.com/watch?v=fR_0o25kigM&list=PLhhyoLH6IjfxeoooqP9rhU3HJIAVAJ3Vz&index=21)
-- [InceptionNet](https://paperswithcode.com/method/inception-v3)
+- [o] [InceptionNet](https://paperswithcode.com/method/inception-v3)
     * [video](https://www.youtube.com/watch?v=uQc4Fs7yx5I&list=PLhhyoLH6IjfxeoooqP9rhU3HJIAVAJ3Vz&index=19)
     * [paper 1 - going deeper with convolutions](https://arxiv.org/pdf/1409.4842)
     * [paper 2 - rethinking inception architecture](https://arxiv.org/pdf/1512.00567v3)
