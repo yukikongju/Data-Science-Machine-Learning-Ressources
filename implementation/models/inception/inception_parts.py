@@ -19,7 +19,15 @@ class ConvolutionBlock(nn.Module):
 class InceptionBlockNaive(nn.Module):
 
     """
-    As described in the paper "Going Deeper with convolutions a)"
+    As described in the paper "Going Deeper with convolutions a)
+
+    Output size at each step:
+    - Branch 1: (B, in_channels, H, W) => (B, red_1x1, H, W)
+    - Branch 2: (B, in_channels, H, W) => (B, red_3x3, H, W)
+    - Branch 3: (B, in_channels, H, W) => (B, red_5x5, H, W)
+    - Branch 4: (B, in_channels, H, W) => (B, in_channels, H, W)
+    - Output: (B, red_1x1 + red_3x3 + red_5x5 + in_channels, H, W)
+
     """
 
     def __init__(self, in_channels, red_1x1, red_3x3, red_5x5):
@@ -27,6 +35,26 @@ class InceptionBlockNaive(nn.Module):
         self.branch1 = nn.Conv2d(in_channels, red_1x1, kernel_size=1, stride=1, padding=0)
         self.branch2 = nn.Conv2d(in_channels, red_3x3, kernel_size=3, stride=1, padding=1)
         self.branch3 = nn.Conv2d(in_channels, red_5x5, kernel_size=5, stride=1, padding=2)
+        self.branch4 = nn.MaxPool2d(kernel_size=3, stride=1, padding=1)
+
+    def forward(self, x) -> torch.Tensor:
+        x1 = self.branch1(x)
+        x2 = self.branch2(x)
+        x3 = self.branch3(x)
+        x4 = self.branch4(x)
+        return torch.cat([x1, x2, x3, x4], dim=1)
+
+class InceptionBlockNaivePimped(nn.Module):
+
+    """
+    As described in the paper "Going Deeper with convolutions a). Using Convolution Block instead to normalize and apply relu"
+    """
+
+    def __init__(self, in_channels, red_1x1, red_3x3, red_5x5):
+        super().__init__()
+        self.branch1 = ConvolutionBlock(in_channels, red_1x1, kernel_size=1)
+        self.branch2 = ConvolutionBlock(in_channels, red_3x3, kernel_size=3, padding=1)
+        self.branch3 = ConvolutionBlock(in_channels, red_5x5, kernel_size=5, padding=2)
         self.branch4 = nn.MaxPool2d(kernel_size=3, stride=1, padding=1)
 
     def forward(self, x) -> torch.Tensor:
