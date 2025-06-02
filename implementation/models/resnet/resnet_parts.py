@@ -26,11 +26,16 @@ class BuildingBlock(nn.Module):
         self.conv1 = ConvolutionBlock(in_channels, out_channels, kernel_size=3, padding=1)
         self.conv2 = nn.Conv2d(out_channels, out_channels, kernel_size=3, padding=1)
         self.relu = nn.ReLU(inplace=True)
+        self.identity_downsample = None if in_channels == out_channels else ConvolutionBlock(in_channels=in_channels, out_channels=out_channels, kernel_size=1, padding=0, stride=1)
 
     def forward(self, x):
         identity = x
         out = self.conv1(x)
         out = self.conv2(out)
+
+        if self.identity_downsample:
+            identity = self.identity_downsample(identity)
+
         out += identity
         return self.relu(out)
 
