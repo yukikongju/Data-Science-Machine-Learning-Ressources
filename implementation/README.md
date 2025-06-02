@@ -34,6 +34,7 @@ Unclassified
 **GANs**
 - [GAN]
     * [video](https://www.youtube.com/watch?v=OljTVUVzPpM&list=PLhhyoLH6IjfxeoooqP9rhU3HJIAVAJ3Vz&index=25)
+    * [paper](https://arxiv.org/pdf/1406.2661v1)
 - [DCGAN]
     * [video](https://www.youtube.com/watch?v=IZtv9s_Wx9I&list=PLhhyoLH6IjfxeoooqP9rhU3HJIAVAJ3Vz&index=26)
 - [WGAN]
