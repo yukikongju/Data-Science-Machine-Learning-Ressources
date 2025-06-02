@@ -9,6 +9,10 @@
 */*/*/*/__pychache__/*
 */*/*/.Rhistory
 
+*.pyc
+*/*.pyc
+*/*/*.pyc
+
 */*/mlartifacts/*
 */*/mlruns/*
 
