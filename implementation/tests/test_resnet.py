@@ -38,14 +38,11 @@ def test_bottleneck_block(tensor2):
     output = block(tensor2)
     assert output.size() == (B, OUT, H, W)
 
-def test_resnet34(tensor3):
+def test_resnet18(tensor3):
     B, C, H, W = tensor3.size()
     NUM_CLASSES = 1000
     model = ResNet18(in_channels=C, n_classes=NUM_CLASSES)
     output = model(tensor3)
-    #  assert output.size() == (B, 64, 56, 56)
-    assert output.size() == (B, 512, 7, 7)
-
-
+    assert output.size() == (B, NUM_CLASSES)
 
 
