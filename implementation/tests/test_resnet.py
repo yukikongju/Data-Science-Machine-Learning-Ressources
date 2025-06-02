@@ -38,6 +38,14 @@ def test_bottleneck_block(tensor2):
     output = block(tensor2)
     assert output.size() == (B, OUT, H, W)
 
+def test_bottleneck_block_downsample(tensor2):
+    B, C, H, W = tensor2.size()
+    RED, MID, OUT = 64, 64, 512
+    block = BottleNeckBlock(in_channels=C, red_1x1=RED, 
+                            mid_3x3=MID, out_1x1=OUT, stride=2)
+    output = block(tensor2)
+    assert output.size() == (B, OUT, H // 2, W // 2)
+
 def test_resnet18(tensor3):
     B, C, H, W = tensor3.size()
     NUM_CLASSES = 1000
