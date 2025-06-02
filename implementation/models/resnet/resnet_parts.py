@@ -21,12 +21,12 @@ class ConvolutionBlock(nn.Module):
 
 class BuildingBlock(nn.Module):
 
-    def __init__(self, in_channels: int, out_channels: int):
+    def __init__(self, in_channels: int, out_channels: int, stride: int = 1):
         super().__init__()
-        self.conv1 = ConvolutionBlock(in_channels, out_channels, kernel_size=3, padding=1)
-        self.conv2 = nn.Conv2d(out_channels, out_channels, kernel_size=3, padding=1)
+        self.conv1 = ConvolutionBlock(in_channels, out_channels, kernel_size=3, padding=1, stride=stride)
+        self.conv2 = nn.Conv2d(out_channels, out_channels, kernel_size=3, padding=1, stride=1)
         self.relu = nn.ReLU(inplace=True)
-        self.identity_downsample = None if in_channels == out_channels else ConvolutionBlock(in_channels=in_channels, out_channels=out_channels, kernel_size=1, padding=0, stride=1)
+        self.identity_downsample = None if in_channels == out_channels else ConvolutionBlock(in_channels=in_channels, out_channels=out_channels, kernel_size=3, padding=1, stride=stride)
 
     def forward(self, x):
         identity = x

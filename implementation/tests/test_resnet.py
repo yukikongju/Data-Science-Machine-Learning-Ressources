@@ -26,9 +26,9 @@ def test_building_block(tensor1):
 def test_building_block_downsample(tensor1):
     B, C, H, W = tensor1.size()
     OUT_CHANNELS = 128
-    block = BuildingBlock(C, OUT_CHANNELS)
+    block = BuildingBlock(C, OUT_CHANNELS, stride=2)
     output = block(tensor1)
-    assert output.size() == (B, OUT_CHANNELS, H, W)
+    assert output.size() == (B, OUT_CHANNELS, H // 2, W // 2)
 
 def test_bottleneck_block(tensor2):
     B, C, H, W = tensor2.size()
