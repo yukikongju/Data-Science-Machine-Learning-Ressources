@@ -19,3 +19,7 @@
 - Building anti-cheating software against computer vision aimbot
 - Playing Matching System
 
+**Stable Diffusion**
+
+- [AUTOMATIC1111 - Stable DIffusion UI](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
+
