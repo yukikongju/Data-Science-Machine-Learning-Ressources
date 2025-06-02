@@ -7,12 +7,12 @@ Unclassified
 - Backpropagation
 - Logistic Regression as Neural Net
 - XOR with MLP
-- [ ] [ResNet](https://arxiv.org/pdf/1512.03385)
+- [X] [ResNet](https://arxiv.org/pdf/1512.03385)
     * [video](https://www.youtube.com/watch?v=DkNIBBBvcPs&list=PLhhyoLH6IjfxeoooqP9rhU3HJIAVAJ3Vz&index=20)
     * [paper](https://arxiv.org/pdf/1512.03385)
-    * [ ] [Related Papers]
-	+ [Aggregated Residual Transformations for Deep Neural Networks](https://arxiv.org/pdf/1611.05431)
-	+ [Identify Mappings in Deep Residual Networks](https://arxiv.org/pdf/1603.05027)
+    * [X] [Related Papers]
+	+ [ ] [Aggregated Residual Transformations for Deep Neural Networks](https://arxiv.org/pdf/1611.05431)
+	+ [ ] [Identify Mappings in Deep Residual Networks](https://arxiv.org/pdf/1603.05027)
 
 
 **CNNs**
@@ -28,12 +28,12 @@ Unclassified
 - [EfficientNet](https://paperswithcode.com/method/efficientnet)
     * [paper walkthrough](https://www.youtube.com/watch?v=_OZsGQHB41s)
     * [video](https://www.youtube.com/watch?v=fR_0o25kigM&list=PLhhyoLH6IjfxeoooqP9rhU3HJIAVAJ3Vz&index=21)
-- [Pix2Pix]
-    * [video](https://www.youtube.com/watch?v=SuddDSqGRzg&list=PLhhyoLH6IjfxeoooqP9rhU3HJIAVAJ3Vz&index=29)
 - [Yolov3]
     * [video](https://www.youtube.com/watch?v=Grir6TZbc1M&list=PLhhyoLH6IjfxeoooqP9rhU3HJIAVAJ3Vz&index=49)
 
 **GANs**
+- [GAN]
+    * [video](https://www.youtube.com/watch?v=OljTVUVzPpM&list=PLhhyoLH6IjfxeoooqP9rhU3HJIAVAJ3Vz&index=25)
 - [DCGAN]
     * [video](https://www.youtube.com/watch?v=IZtv9s_Wx9I&list=PLhhyoLH6IjfxeoooqP9rhU3HJIAVAJ3Vz&index=26)
 - [WGAN]
@@ -46,6 +46,8 @@ Unclassified
     * [video](https://www.youtube.com/watch?v=7FO9qDOhRCc&list=PLhhyoLH6IjfxeoooqP9rhU3HJIAVAJ3Vz&index=32)
 - [ESRGAN]
     * [video](https://www.youtube.com/watch?v=ZM4_s5dAWpI&list=PLhhyoLH6IjfxeoooqP9rhU3HJIAVAJ3Vz&index=33)
+- [Pix2Pix](https://paperswithcode.com/method/pix2pix)
+    * [video](https://www.youtube.com/watch?v=SuddDSqGRzg&list=PLhhyoLH6IjfxeoooqP9rhU3HJIAVAJ3Vz&index=29)
 
 **Autoencoders**
 
