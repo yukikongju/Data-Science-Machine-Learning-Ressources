@@ -33,4 +33,12 @@ writer_fake = SummaryWriter(f"runs/GAN_MNIST/fake")
 writer_real = SummaryWriter(f"runs/GAN_MNIST/real")
 step = 0
 
+for epoch in range(num_epochs):
+    for batch_idx, (real, _) in enumerate(loader):
+        real = real.flatten(start_dim=1)
 
+        ## TODO: Train discriminator
+
+
+        ## TODO: Train generator
+        pass
