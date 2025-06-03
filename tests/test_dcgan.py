@@ -10,12 +10,13 @@ def image() -> torch.Tensor:
 @pytest.fixture
 def noise_vector() -> torch.Tensor:
     # note: alternatively called 'latent vector' or 'z'
-    DIM_Z = 64
+    DIM_Z = 100
     return torch.randint(0, 255, size=(5, DIM_Z, 1, 1)).float()
 
 def test_discriminator(image: torch.Tensor):
     B, C, H, W = image.size()
-    DIM_Z = 64
+    #  DIM_Z = 64
+    DIM_Z = 100
     disc = Discriminator(in_channels=C, out_channels=DIM_Z, 
                          expansion=3)
     output = disc(image)

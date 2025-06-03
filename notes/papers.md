@@ -35,10 +35,12 @@ Unclassified
 - [GAN]
     * [video](https://www.youtube.com/watch?v=OljTVUVzPpM&list=PLhhyoLH6IjfxeoooqP9rhU3HJIAVAJ3Vz&index=25)
     * [paper](https://arxiv.org/pdf/1406.2661v1)
-- [DCGAN]
+- [ ] [DCGAN]
     * [paper](https://arxiv.org/pdf/1511.06434)
     * [video](https://www.youtube.com/watch?v=IZtv9s_Wx9I&list=PLhhyoLH6IjfxeoooqP9rhU3HJIAVAJ3Vz&index=26)
 - [WGAN]
+    * [ ] [WGAN paper](https://arxiv.org/pdf/1701.07875)
+    * [WGAN-GP paper improved](https://arxiv.org/abs/1704.00028)
     * [video](https://www.youtube.com/watch?v=pG0QZ7OddX4&list=PLhhyoLH6IjfxeoooqP9rhU3HJIAVAJ3Vz&index=27)
 - [CycleGAN]
     * [video](https://www.youtube.com/watch?v=4LktBHGCNfw&list=PLhhyoLH6IjfxeoooqP9rhU3HJIAVAJ3Vz&index=30)
