@@ -28,7 +28,19 @@ def dot_product(a, b):
     return np.einsum('i,i->', a, b)
 
 def matrix_vector_product(A, b):
-    pass
+    """
+    Inputs:
+    - A: matrix of shape (M, N)
+    - b: vector of shape (N, )
+
+    Output:
+    - C: vector of shape (M, )
+
+    Definition: A1 * b + A2 * b + ... + An * b
+
+    """
+    return np.einsum('ij,j->i', A, b)
+
 
 def matrix_matrix_product(A, B):
     pass
