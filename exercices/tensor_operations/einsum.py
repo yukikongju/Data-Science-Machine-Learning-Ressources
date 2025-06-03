@@ -37,13 +37,22 @@ def matrix_vector_product(A, b):
     - C: vector of shape (M, )
 
     Definition: A1 * b + A2 * b + ... + An * b
-
+    Words: For each row 'i' in matrix A, multiply b[j]
     """
     return np.einsum('ij,j->i', A, b)
 
+def matrix_matrix_multiplication(A, B):
+    """
+    Inputs:
+    - A: matrix of shape (M, N)
+    - B: matrix of shape (N, P)
 
-def matrix_matrix_product(A, B):
-    pass
+    Outputs:
+    - C: matrix of shape (M, P)
+
+    Definition: C_ij = Ai0 * B0j + Ai1 * B1j + ... + Ain * Bnj
+    """
+    return np.einsum('ik,kj->ij', A, B)
 
 def outer_product_vectors(a, b):
     pass
