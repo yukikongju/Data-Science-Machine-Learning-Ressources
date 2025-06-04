@@ -4,6 +4,7 @@ from torch.nn.functional import pad
 """
 Notes:
     - we can infer discriminator conv shape by looking at generator
+    - Formula Conv Transpose Feature Map: O = (I-1) x S - 2*P + K + output_padding
 """
 
 
@@ -59,17 +60,15 @@ class Generator(nn.Module):
             self._block(in_channels=dim_z, out_channels=features_g*16, 
                         kernel_size=4, stride=2, padding=0), # output: (B, f_g * 16, 4, 4)
             self._block(in_channels=features_g*16, out_channels=features_g*8, 
-                        kernel_size=4, stride=2, padding=0), # output: (B, f_g * 8, 8, 8)
+                        kernel_size=4, stride=2, padding=1), # output: (B, f_g * 8, 8, 8)
             self._block(in_channels=features_g*8, out_channels=features_g*4, 
-                        kernel_size=4, stride=2, padding=0), # output: (B, f_g * 4, 16, 16)
+                        kernel_size=4, stride=2, padding=1), # output: (B, f_g * 4, 16, 16)
             self._block(in_channels=features_g*4, out_channels=features_g*2, 
-                        kernel_size=4, stride=2, padding=0), # output: (B, f_g * 2, 32, 32)
-            #  self._block(in_channels=features_g*2, out_channels=features_g*1, 
-            #              kernel_size=4, stride=2, padding=0), # output: (B, f_g * 1, 64, 64)
-            #  nn.ConvTranspose2d(in_channels=features_g*2, 
-            #                     out_channels=img_channels, kernel_size=4,
-            #                     stride=2, padding=1),
-            #  nn.Tanh()
+                        kernel_size=4, stride=2, padding=1), # output: (B, f_g * 2, 32, 32)
+            nn.ConvTranspose2d(in_channels=features_g*2, 
+                               out_channels=img_channels, kernel_size=4,
+                               stride=2, padding=1),
+            nn.Tanh()
         )
 
     def _block(self, in_channels: int, out_channels: int, kernel_size: int, 
