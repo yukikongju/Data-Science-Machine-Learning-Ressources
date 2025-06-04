@@ -185,4 +185,58 @@ def pairwise_distance(X, Y):
     """
     pass
 
+def tensor_contraction(T, M):
+    """
+# T: (A, B, C)
+# M: (C, D)
+np.einsum('abc,cd->abd', T, M)
+    """
+    pass
+
+def gram_matrix(X):
+    """
+# X: (N, D) — N data points, D features
+np.einsum('nd,ne->de', X, X)
+    """
+    pass
+
+def batch_jacobian_vector_product(J, v):
+    """
+Per-sample Jacobian-Vector Product
+# J: (B, O, I) — batch of Jacobians
+# v: (B, I) — vector for each sample
+np.einsum('boi,bi->bo', J, v)
+    """
+    pass
+
+def color_transform_images(img, T):
+    """
+# img: (H, W, 3) — RGB image
+# T: (3, 3) — color transform matrix
+np.einsum('hwc,cd->hwd', img, T)
+    """
+    pass
+
+def image_correlation(patches1, patches2):
+    """
+# patches1, patches2: (N, K, K) — N patches of size K×K
+np.einsum('nkl,nkl->n', patches1, patches2)
+    """
+    pass
+
+def cross_correlation(a, b):
+    """
+
+# a, b: (B, T)
+np.einsum('bt,bt->b', a, b)
+    """
+    pass
+
+def weighted_sum_with_broadcasting(a, w):
+    """
+# a: (B, T, D) — values
+# w: (B, T) — weights
+np.einsum('btd,bt->bd', a, w)
+    """
+    pass
 
