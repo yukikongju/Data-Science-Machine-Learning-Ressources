@@ -1,7 +1,7 @@
 import numpy as np
 import pytest
 
-from exercices.tensor_operations.einsum import dot_product, vector_sum, matrix_vector_product, matrix_matrix_multiplication, outer_product_vectors, element_wise_matrix_multiplication, matrix_trace, matrix_transpose, sum_over_matrix_column, sum_over_matrix_row
+from exercices.tensor_operations.einsum import dot_product, vector_sum, matrix_vector_product, matrix_matrix_multiplication, outer_product_vectors, element_wise_matrix_multiplication, matrix_trace, matrix_transpose, sum_over_matrix_column, sum_over_matrix_row, batch_matrix_multiplication
 
 @pytest.fixture
 def a():
@@ -18,6 +18,14 @@ def A():
 @pytest.fixture
 def B():
     return np.random.randint(1, 10, (3, 5))
+
+@pytest.fixture
+def X1():
+    return np.random.randint(1, 10, (2, 3, 5))
+
+@pytest.fixture
+def X2():
+    return np.random.randint(1, 10, (2, 5, 4))
 
 def test_vector_sum(a):
     x1 = a.sum()
@@ -80,4 +88,11 @@ def test_sum_over_matrix_column(A):
     assert x1.shape == x2.shape == (A.shape[1], )
     np.testing.assert_array_equal(x1, x2)
 
+def test_batch_matrix_multiplication(X1, X2):
+    B, M, K = X1.shape
+    B, K, N = X2.shape
+    x1 = np.matmul(X1, X2)
+    x2 = batch_matrix_multiplication(X1, X2)
+    assert x1.shape == x2.shape == (B, M, N)
+    np.testing.assert_array_equal(x1, x2)
 

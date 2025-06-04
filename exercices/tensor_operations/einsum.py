@@ -106,4 +106,15 @@ def sum_over_matrix_column(A):
     return np.einsum('ij->j', A)
 
 def batch_matrix_multiplication(A, B):
-    pass
+    """
+    Input: 
+    - A: matrix of shape (B, M, K)
+    - B: matrix of shape (B, K, N)
+
+    Output:
+    - C: matrix of shape (B, M, N)
+
+    Definition: Given bth batch, compute A[b] * B[b]
+    """
+    return np.einsum('bik,bkj->bij', A, B)
+
