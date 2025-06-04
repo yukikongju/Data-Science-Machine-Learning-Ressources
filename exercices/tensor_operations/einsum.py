@@ -118,3 +118,71 @@ def batch_matrix_multiplication(A, B):
     """
     return np.einsum('bik,bkj->bij', A, B)
 
+def batch_matrix_trace(A):
+    """
+    Input: 
+    - A: (B, N, N)
+
+
+    """
+    return np.einsum('bii,bii->b', A)
+
+
+def batch_dot_product(a, b):
+    """
+    Input:
+    - a: (B, N)
+    - b: (B, N)
+
+    Output:
+    - c: (B, )
+    """
+    return np.einsum('bi,bi->b', a, b)
+
+def batch_outer_product(a, b):
+    """
+    Input:
+    - a: (B, M)
+    - b: (B, N)
+
+    Output:
+    - c: (B, M, N)
+    """
+    return np.einsum('bi,bj->bij', a, b)
+
+
+def bilinear_form(x, A):
+    """
+    Input:
+    - x: (N, )
+    - A: (N, N)
+
+    Output:
+    - s: scalar product sum 
+
+    Definition: x^t * A * x
+    """
+    pass
+
+
+def attention_mechanism(Q, K):
+    """
+    # Q: (B, H, T_q, D)
+    # K: (B, H, T_k, D)
+    np.einsum('bhtd,bhsd->bhts', Q, K)
+    """
+    pass
+
+def pairwise_distance(X, Y):
+    """
+    #  X: (N, D)
+    #  Y: (M, D)
+    #  Goal: squared Euclidean distance: ||x - y||² = x² + y² - 2xy
+    xx = np.einsum('nd,nd->n', X, X)  # (N,)
+    yy = np.einsum('md,md->m', Y, Y)  # (M,)
+    xy = np.einsum('nd,md->nm', X, Y)  # (N, M)
+    dists = xx[:, None] + yy[None, :] - 2 * xy  # shape (N, M)
+    """
+    pass
+
+
