@@ -55,23 +55,31 @@ def matrix_matrix_multiplication(A, B):
     return np.einsum('ik,kj->ij', A, B)
 
 def outer_product_vectors(a, b):
-    pass
+    """
+    Inputs:
+    - a: vector of shape (M, )
+    - b: vector of shape (N, )
 
-def batch_matrix_multiplication(A, B):
-    pass
+    Outputs:
+    - C: Matrix of shape (M, N)
+
+    Definition: C_ij = a_i * b_j
+    """
+    return np.einsum('i,j->ij', a, b)
+
 
 def element_wise_matrix_multiplication(A, B):
     """
     Equivalent to A * B
 
     """
-    pass
+    return np.einsum('ij,ij->ij', A, B)
 
 def matrix_trace(A):
-    pass
+    return np.einsum('ii->', A)
 
 def matrix_transpose(A):
-    pass
+    return np.einsum('ij->ji', A)
 
 def sum_over_matrix_row(A):
     pass
@@ -79,4 +87,5 @@ def sum_over_matrix_row(A):
 def sum_over_matrix_column(A):
     pass
 
-
+def batch_matrix_multiplication(A, B):
+    pass
