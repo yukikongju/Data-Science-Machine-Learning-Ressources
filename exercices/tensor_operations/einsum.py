@@ -82,10 +82,28 @@ def matrix_transpose(A):
     return np.einsum('ij->ji', A)
 
 def sum_over_matrix_row(A):
-    pass
+    """
+    Input:
+    - A: matrix of shape (M, N)
+
+    Output:
+    - C: vector of shape (M, )
+
+    Definition: C_i = Ai0 + Ai1 + Ai2 + .. + Ain
+    """
+    return np.einsum('ij->i', A)
 
 def sum_over_matrix_column(A):
-    pass
+    """
+    Input:
+    - A: matrix of shape (M, N)
+
+    Output:
+    - C: vector of shape (N, )
+
+    Definition: C_j = A0j + A1j + A2j + .. + Anj
+    """
+    return np.einsum('ij->j', A)
 
 def batch_matrix_multiplication(A, B):
     pass

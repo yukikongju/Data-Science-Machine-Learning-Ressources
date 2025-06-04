@@ -1,7 +1,7 @@
 import numpy as np
 import pytest
 
-from exercices.tensor_operations.einsum import dot_product, vector_sum, matrix_vector_product, matrix_matrix_multiplication, outer_product_vectors, element_wise_matrix_multiplication, matrix_trace, matrix_transpose
+from exercices.tensor_operations.einsum import dot_product, vector_sum, matrix_vector_product, matrix_matrix_multiplication, outer_product_vectors, element_wise_matrix_multiplication, matrix_trace, matrix_transpose, sum_over_matrix_column, sum_over_matrix_row
 
 @pytest.fixture
 def a():
@@ -65,7 +65,19 @@ def test_matrix_transpose(A):
     x1 = A.T
     x2 = matrix_transpose(A)
     np.testing.assert_array_equal(x1, x2)
+    assert x1.shape == x2.shape == (A.shape[1], A.shape[0])
+    
+def test_sum_over_matrix_row(A):
+    x1 = A.sum(axis=1)
+    x2 = sum_over_matrix_row(A)
+    assert x1.shape == x2.shape == (A.shape[0], )
+    np.testing.assert_array_equal(x1, x2)
     
 
+def test_sum_over_matrix_column(A):
+    x1 = A.sum(axis=0)
+    x2 = sum_over_matrix_column(A)
+    assert x1.shape == x2.shape == (A.shape[1], )
+    np.testing.assert_array_equal(x1, x2)
 
 
