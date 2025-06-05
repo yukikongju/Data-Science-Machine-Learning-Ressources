@@ -32,18 +32,22 @@ Unclassified
     * [video](https://www.youtube.com/watch?v=Grir6TZbc1M&list=PLhhyoLH6IjfxeoooqP9rhU3HJIAVAJ3Vz&index=49)
 
 **GANs**
-- [GAN]
+- [X] [GAN]
     * [video](https://www.youtube.com/watch?v=OljTVUVzPpM&list=PLhhyoLH6IjfxeoooqP9rhU3HJIAVAJ3Vz&index=25)
     * [paper](https://arxiv.org/pdf/1406.2661v1)
-- [ ] [DCGAN]
+- [X] [DCGAN]
     * [paper](https://arxiv.org/pdf/1511.06434)
     * [video](https://www.youtube.com/watch?v=IZtv9s_Wx9I&list=PLhhyoLH6IjfxeoooqP9rhU3HJIAVAJ3Vz&index=26)
 - [WGAN]
     * [ ] [WGAN paper](https://arxiv.org/pdf/1701.07875)
     * [WGAN-GP paper improved](https://arxiv.org/abs/1704.00028)
     * [video](https://www.youtube.com/watch?v=pG0QZ7OddX4&list=PLhhyoLH6IjfxeoooqP9rhU3HJIAVAJ3Vz&index=27)
-- [CycleGAN]
+- [Conditional GAN]
+    * [video](https://www.youtube.com/watch?v=Hp-jWm2SzR8&list=PLhhyoLH6IjfwIp8bZnzX8QR30TRcHO8Va&index=7&t=138s)
+- [CycleGAN](https://paperswithcode.com/method/cyclegan)
     * [video](https://www.youtube.com/watch?v=4LktBHGCNfw&list=PLhhyoLH6IjfxeoooqP9rhU3HJIAVAJ3Vz&index=30)
+    * [paper](https://arxiv.org/pdf/1703.10593v7)
+    * [code](https://github.com/AquibPy/Cycle-GAN)
 - [ProGAN]
     * [video](https://www.youtube.com/watch?v=nkQHASviYac&list=PLhhyoLH6IjfxeoooqP9rhU3HJIAVAJ3Vz&index=31)
 - [SRGAN]
@@ -126,6 +130,7 @@ Advanced:
 - [Aladdin Persson](https://www.youtube.com/@AladdinPersson)
 - [Yannic Kilcher](https://www.youtube.com/@YannicKilcher)
 - [Maciej Balawejder](https://www.youtube.com/@maciejbalawejder)
+- [Deep Learning with Yacine](https://www.youtube.com/@deeplearningexplained/videos)
 
 
 
