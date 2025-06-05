@@ -1,7 +1,7 @@
 import torch
 import pytest
 
-from models.cyclegan.cyclegan_parts import Discriminator
+from models.cyclegan.discriminator import Discriminator
 
 
 @pytest.fixture
