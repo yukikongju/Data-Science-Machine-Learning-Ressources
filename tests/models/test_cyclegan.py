@@ -2,6 +2,7 @@ import torch
 import pytest
 
 from models.cyclegan.discriminator import Discriminator
+from models.cyclegan.generator import Generator
 
 
 @pytest.fixture
@@ -10,7 +11,7 @@ def image():
 
 @pytest.fixture
 def noise():
-    return torch.randint(0, 256, size=(5, 1, 1, 1)).float()
+    return torch.randint(0, 256, size=(5, 1, 30, 30)).float()
 
 
 def test_discriminator(image):
@@ -18,5 +19,12 @@ def test_discriminator(image):
     discr = Discriminator(img_channels=C, out_features=[64, 128, 256, 512])
     output = discr(image)
     assert output.size() == (B, 1, 30, 30)
+
+def test_generator(image, noise):
+    B, C, H, W = image.size()
+    gen = Generator(img_channels=C, num_features=64, num_residual_blocks=6)
+    output = gen(image)
+    assert output.size() == (B, C, H, W)
+
 
 

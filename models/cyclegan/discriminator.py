@@ -1,9 +1,6 @@
 import torch.nn as nn
 from typing import List
 
-from torch.nn.functional import pad
-from torch.nn.utils import convert_conv2d_weight_memory_format
-
 class ConvBlock(nn.Module):
 
     def __init__(self, in_channels: int, out_channels: int, kernel_size: int, 
@@ -45,7 +42,7 @@ class Discriminator(nn.Module):
 
     def forward(self, x):
         out = self.initial(x)
-        out = self.sigmoid(self.model(out))
+        out = self.sigmoid(self.model(out)) # output: (B, 1, 30, 30)
         return out
 
 
