@@ -44,7 +44,7 @@ Unclassified
     * [video](https://www.youtube.com/watch?v=pG0QZ7OddX4&list=PLhhyoLH6IjfxeoooqP9rhU3HJIAVAJ3Vz&index=27)
 - [Conditional GAN]
     * [video](https://www.youtube.com/watch?v=Hp-jWm2SzR8&list=PLhhyoLH6IjfwIp8bZnzX8QR30TRcHO8Va&index=7&t=138s)
-- [CycleGAN](https://paperswithcode.com/method/cyclegan)
+- [X] [CycleGAN](https://paperswithcode.com/method/cyclegan)
     * [video](https://www.youtube.com/watch?v=4LktBHGCNfw&list=PLhhyoLH6IjfxeoooqP9rhU3HJIAVAJ3Vz&index=30)
     * [paper](https://arxiv.org/pdf/1703.10593v7)
     * [code](https://github.com/AquibPy/Cycle-GAN)
@@ -103,7 +103,9 @@ Tasks:
 - [Style Transfer]
     * [video](https://www.youtube.com/watch?v=imX4kSKDY7s&list=PLhhyoLH6IjfxeoooqP9rhU3HJIAVAJ3Vz&index=23)
 - [seq2seq]
+    * [papers with code](https://paperswithcode.com/methods/category/sequence-to-sequence-models)
     * [video](https://www.youtube.com/watch?v=EoGUlvhRYpk&list=PLhhyoLH6IjfxeoooqP9rhU3HJIAVAJ3Vz&index=39)
+    * [pytorch-seq2seq](https://github.com/bentrevett/pytorch-seq2seq)
     * [Related Papers]
 	+ [Sequence to Sequence Learning w/ Neural Networks](https://arxiv.org/pdf/1409.3215)
 - [Semantic Segmentation](https://paperswithcode.com/task/semantic-segmentation)
@@ -127,10 +129,13 @@ Advanced:
 
 ## Resources
 
+**YT Channels**
 - [Aladdin Persson](https://www.youtube.com/@AladdinPersson)
 - [Yannic Kilcher](https://www.youtube.com/@YannicKilcher)
 - [Maciej Balawejder](https://www.youtube.com/@maciejbalawejder)
 - [Deep Learning with Yacine](https://www.youtube.com/@deeplearningexplained/videos)
 
+**Github Repo**
+- [Aladdin Persson](https://github.com/aladdinpersson/Machine-Learning-Collection)
 
 
