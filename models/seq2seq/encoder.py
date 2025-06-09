@@ -15,6 +15,6 @@ class Encoder(nn.Module):
     def forward(self, x) -> Tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
         # x shape: (seq_length, N)
         embedding = self.dropout(self.embedding(x)) # shape: (seq_length, N, embedding_size)
-        out, (hidden, cell) = self.rnn(embedding)
+        out, (hidden, cell) = self.rnn(embedding) # out shape: (seq_length, N, hidden_size); hidden/cell shape: (num_layers, N, hidden_size)
         return out, hidden, cell
 
