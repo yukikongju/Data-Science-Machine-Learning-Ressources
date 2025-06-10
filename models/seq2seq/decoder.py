@@ -17,6 +17,7 @@ class Decoder(nn.Module):
         out = x.unsqueeze(0) # x shape: (N, ) but we want (1, N)
         embedding = self.dropout(self.embedding(out)) # embedding shape: (1, N, embedding_size)
         out, (hidden, cell) = self.rnn(embedding, (hidden, cell)) # rnn shape: (1, N, hidden_size)
-        outputs = self.fc(out.squeeze(0)) # output shape: (N, output_size)
+        out = self.fc(out) # output shape: (N, output_size)
+        outputs = out.squeeze(0)
         return outputs
         
