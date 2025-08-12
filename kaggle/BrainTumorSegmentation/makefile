@@ -97,4 +97,5 @@ stop-gpu:
 delete-gpu:
 	gcloud compute instances delete $(GPU_NAME) --zone=$(ZONE)
 
-
+ssh-gpu:
+	gcloud compute ssh $(GPU_NAME) --zone=$(ZONE)
